@@ -1,6 +1,7 @@
 /*
  * Depicts a protocol to implement bigraphs in a restful manner.
- * Copyright (C)  2012  N.M.C. Borst
+ *
+ * Copyright (C)  2012  NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
