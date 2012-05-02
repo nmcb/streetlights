@@ -1,4 +1,4 @@
 streetlights
 ============
 
-POC depicting a RESTful implementation of data access that can be structured as a bigraph.
+Proof of concept depicting a restful specification of data access to bigraphs.

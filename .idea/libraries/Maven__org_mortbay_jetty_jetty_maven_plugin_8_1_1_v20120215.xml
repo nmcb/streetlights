@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.mortbay.jetty:jetty-maven-plugin:8.1.1.v20120215">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jetty-maven-plugin/8.1.1.v20120215/jetty-maven-plugin-8.1.1.v20120215.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jetty-maven-plugin/8.1.1.v20120215/jetty-maven-plugin-8.1.1.v20120215-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/jetty-maven-plugin/8.1.1.v20120215/jetty-maven-plugin-8.1.1.v20120215-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

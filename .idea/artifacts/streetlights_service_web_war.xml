@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="streetlights-service-web:war">
+    <output-path>$PROJECT_DIR$/streetlights-service-web/target</output-path>
+    <root id="archive" name="streetlights-service-web-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="streetlights-service-web:war exploded" />
+    </root>
+  </artifact>
+</component>
