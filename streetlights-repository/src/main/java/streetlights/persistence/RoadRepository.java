@@ -25,6 +25,7 @@ import streetlights.model.infra.Road;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 /**
  * @author Marco Borst
@@ -33,6 +34,27 @@ import javax.persistence.Persistence;
 public class RoadRepository
 {
   private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
+
+  public List findAll()
+  {
+    List entities = null;
+    {
+      EntityManager manager = factory.createEntityManager();
+      try
+      {
+        // TODO implement annotated transaction declaration
+        // TODO disable autocommit on production and test
+        manager.getTransaction().begin();
+        entities = manager.createQuery("select r from Road r").getResultList();
+        manager.getTransaction().commit();
+      }
+      finally
+      {
+        manager.close();
+      }
+    }
+    return entities;
+  }
 
   public Road get(URN urn)
   {

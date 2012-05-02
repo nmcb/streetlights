@@ -21,6 +21,8 @@ package streetlights.client;
 
 import streetlights.model.infra.Road;
 
+import java.util.List;
+
 /**
  * @author Marco Borst
  * @since 03/05/12
@@ -28,4 +30,6 @@ import streetlights.model.infra.Road;
 public interface Cload
 {
   void register(Road road);
+
+  List<Road> listRoads();
 }

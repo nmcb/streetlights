@@ -25,6 +25,7 @@ import streetlights.persistence.RoadRepository;
 import streetlights.service.RoadAccess;
 
 import javax.ws.rs.PathParam;
+import java.util.List;
 
 /**
  * @author Marco Borst
@@ -33,6 +34,12 @@ import javax.ws.rs.PathParam;
 public class RoadProvider implements RoadAccess
 {
   private RoadRepository repository = new RoadRepository();
+
+  @SuppressWarnings("unchecked") // TODO remove?
+  public List<Road> list()
+  {
+    return repository.findAll();
+  }
 
   public String persist(Road road)
   {

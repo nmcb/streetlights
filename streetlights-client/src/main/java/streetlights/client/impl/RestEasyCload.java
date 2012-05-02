@@ -24,6 +24,8 @@ import streetlights.client.Cload;
 import streetlights.model.infra.Road;
 import streetlights.service.RoadAccess;
 
+import java.util.List;
+
 /**
  * @author Marco Borst
  * @since 24/04/12
@@ -36,5 +38,10 @@ public class RestEasyCload implements Cload
   {
     String url = service.persist(road);
     System.out.println("location: " + url);
+  }
+
+  public List<Road> listRoads()
+  {
+    return service.list();
   }
 }

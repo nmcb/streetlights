@@ -20,6 +20,7 @@
 package streetlights.client;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import streetlights.client.impl.RestEasyCload;
@@ -52,6 +53,18 @@ public class CloudTest
     RestEasyCload cloud = new RestEasyCload();
     cloud.register(new Road("A1"));
 
-    // Road is now persistent.
+    // TODO Test if road is persistent.
+  }
+
+  @Test
+  public void testListRoads()
+  {
+    RestEasyCload cloud = new RestEasyCload();
+    cloud.register(new Road("A1"));
+    cloud.register(new Road("A2"));
+    cloud.register(new Road("A3"));
+
+    Assert.assertEquals(3, cloud.listRoads().size());
+    // TODO Test if road is persistent.
   }
 }
