@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>streetlights</artifactId>
+    <groupId>streetlights</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>streetlights</groupId>
+  <artifactId>streetlights-client</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- modules -->
+    <dependency>
+      <groupId>streetlights</groupId>
+      <artifactId>streetlights-model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>streetlights</groupId>
+      <artifactId>streetlights-service</artifactId>
+    </dependency>
+
+    <!-- production -->
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxb-provider</artifactId>
+    </dependency>
+
+    <!-- test -->
+    <dependency>
+      <groupId>streetlights</groupId>
+      <artifactId>streetlights-server</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>  <!-- TODO add a module named streetlights-test-config with scope test -->
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

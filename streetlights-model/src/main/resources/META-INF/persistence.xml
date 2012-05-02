@@ -1,0 +1,23 @@
+<!--
+  ~ Copyright (c) 2004-2012.  NMCB B.V.  All Rights Reserved.
+  -->
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+  <persistence-unit name="streetlights" transaction-type="RESOURCE_LOCAL">
+    <description>MySQL Persistence Unit (production)</description>
+
+    <class>streetlights.model.infra.Road</class>
+    <class>streetlights.model.infra.Segment</class>
+
+    <!--<properties>-->
+    <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />-->
+    <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/streetlights" />-->
+    <!--<property name="javax.persistence.jdbc.user" value="system" />-->
+    <!--<property name="javax.persistence.jdbc.password" value="system" />-->
+
+    <!--<property name="hibernate.show_sql" value="true" />-->
+    <!--</properties>-->
+  </persistence-unit>
+</persistence>
