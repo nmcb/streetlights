@@ -17,9 +17,10 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client;
+package streetlights.client.impl;
 
 import org.jboss.resteasy.client.ProxyFactory;
+import streetlights.client.Cload;
 import streetlights.model.infra.Road;
 import streetlights.service.RoadAccess;
 
@@ -27,7 +28,7 @@ import streetlights.service.RoadAccess;
  * @author Marco Borst
  * @since 24/04/12
  */
-public class Cloud
+public class RestEasyCload implements Cload
 {
   RoadAccess service = ProxyFactory.create(RoadAccess.class, "http://localhost:8666");
 

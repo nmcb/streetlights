@@ -19,39 +19,13 @@
 
 package streetlights.client;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import streetlights.client.impl.RestEasyCload;
 import streetlights.model.infra.Road;
-import streetlights.server.ResourceServer;
 
 /**
  * @author Marco Borst
- * @since 24/04/12
+ * @since 03/05/12
  */
-public class CloudTest
+public interface Cload
 {
-  private ResourceServer server = new ResourceServer();
-
-  @Before
-  public void init()
-  {
-    server.start();
-  }
-
-  @After
-  public void cleanup()
-  {
-    server.stop();
-  }
-
-  @Test
-  public void testRegisterRoad()
-  {
-    RestEasyCload cloud = new RestEasyCload();
-    cloud.register(new Road("A1"));
-
-    // Road is now persistent.
-  }
+  void register(Road road);
 }
