@@ -35,6 +35,8 @@ import java.util.concurrent.Executors;
  */
 public class ResourceServer implements Runnable
 {
+  public static final ResourceServer instance = new ResourceServer();
+
   public static final int SERVER_PORT = 8666;
   public static final int SERVER_CONNECTION_TIMEOUT = 1000 * 60 * 60;
   public static final int SERVER_CONNECTION_LINGER_DISABLED = -1;
@@ -45,9 +47,19 @@ public class ResourceServer implements Runnable
 
   private String home;
 
+  private ResourceServer()
+  {
+    // singleton constructor;
+  }
+
   public final static void main(String[] args)
   {
-    new ResourceServer().start();
+    instance.start();
+  }
+
+  public final static ResourceServer getInstance()
+  {
+    return instance;
   }
 
   public void run()

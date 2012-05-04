@@ -19,9 +19,8 @@
 
 package streetlights.client;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import streetlights.client.impl.RestEasyCloud;
 import streetlights.model.infra.Road;
@@ -33,16 +32,18 @@ import streetlights.server.ResourceServer;
  */
 public class CloudTest
 {
-  private ResourceServer server = new ResourceServer();
+  private static ResourceServer server = ResourceServer.getInstance();
 
-  @Before
-  public void init()
+  private Cloud cloud = new RestEasyCloud();
+
+  @BeforeClass
+  public static void init()
   {
     server.start();
   }
 
-  @After
-  public void cleanup()
+  @AfterClass
+  public static void cleanup()
   {
     server.stop();
   }
@@ -50,16 +51,13 @@ public class CloudTest
   @Test
   public void testRegisterRoad()
   {
-    RestEasyCloud cloud = new RestEasyCloud();
     cloud.register(new Road("A1"));
-
     // TODO Test if road is persistent.
   }
 
   @Test
   public void testListRoads()
   {
-    RestEasyCloud cloud = new RestEasyCloud();
     cloud.register(new Road("A1"));
     cloud.register(new Road("A2"));
     // TODO Assert.assertEquals(2, cloud.listRoads().size());
