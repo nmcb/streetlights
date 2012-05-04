@@ -17,31 +17,42 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client.impl;
+package streetlights.service;
 
-import org.jboss.resteasy.client.ProxyFactory;
-import streetlights.client.Cload;
 import streetlights.model.infra.Road;
-import streetlights.service.RoadService;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import java.util.List;
 
 /**
  * @author Marco Borst
  * @since 24/04/12
  */
-public class RestEasyCload implements Cload
+@Path("/infrastructure")
+@Produces("application/xml")
+@Consumes("application/xml")
+public interface RoadService
 {
-  RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
+    @GET
+    @Path("/roads")
+    public List<Road> list();
 
-  public void register(Road road)
-  {
-    String url = service.persist(road);
-    System.out.println("location: " + url);
-  }
+    @POST
+    @Path("/roads")
+    public String persist(Road road);
 
-  public List<Road> listRoads()
-  {
-    return service.list();
-  }
+    @PUT
+    @Path("/road/{name}")
+    public Road put(Road road);
+
+    @GET
+    @Path("/road/{name}")
+    public Road get(@PathParam("name") String name);
+
 }

@@ -18,24 +18,29 @@
   -->
 
 <!DOCTYPE web-app PUBLIC
-    "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-    "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>streetlights-server</display-name>
+    <display-name>streetlights-server</display-name>
 
-  <filter>
-    <filter-name>resource-filter</filter-name>
-    <filter-class>org.jboss.resteasy.plugins.server.servlet.FilterDispatcher</filter-class>
-    <init-param>
-      <param-name>resteasy.resources</param-name>
-      <param-value>streetlights.service.web.RoadProvider</param-value>
-    </init-param>
-  </filter>
+    <filter>
+        <filter-name>resource-filter</filter-name>
+        <filter-class>org.jboss.resteasy.plugins.server.servlet.FilterDispatcher</filter-class>
+        <init-param>
+            <param-name>resteasy.resources</param-name>
+            <param-value>
+                streetlights.service.web.RoadProvider,
+                streetlights.service.web.LocalResources
+            </param-value>
+            <!--<param-name>resteasy.scan</param-name>-->
+            <!--<param-value>true</param-value>-->
+        </init-param>
+    </filter>
 
-  <filter-mapping>
-    <filter-name>resource-filter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
+    <filter-mapping>
+        <filter-name>resource-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 </web-app>

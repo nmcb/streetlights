@@ -22,7 +22,7 @@ package streetlights.service.web;
 import streetlights.model.identification.URN;
 import streetlights.model.infra.Road;
 import streetlights.persistence.RoadRepository;
-import streetlights.service.RoadAccess;
+import streetlights.service.RoadService;
 
 import javax.ws.rs.PathParam;
 import java.util.List;
@@ -31,7 +31,7 @@ import java.util.List;
  * @author Marco Borst
  * @since 04/03/12
  */
-public class RoadProvider implements RoadAccess
+public class RoadProvider implements RoadService
 {
   private RoadRepository repository = new RoadRepository();
 
@@ -43,7 +43,6 @@ public class RoadProvider implements RoadAccess
 
   public String persist(Road road)
   {
-    //
     // TODO now create our own URN format, but should look into JAXB XmlAdapters
     return repository.persist(road).toString();
   }
@@ -53,7 +52,7 @@ public class RoadProvider implements RoadAccess
     return (Road) repository.merge(road);
   }
 
-  public Road get(@PathParam("name") String name)
+  public Road get(String name)
   {
     return repository.get(URN.valueOf(name));
   }
