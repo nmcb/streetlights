@@ -36,21 +36,20 @@ import java.util.UUID;
 @Embeddable
 public final class URN implements Named, Serializable
 {
-  private final transient UUID _uuid;
-
-  @Column(name = "id") // TODO Currently a String equaling the name, awaiting answer on mapping from Gerben Schut.
-  private final String name;
+  /**
+   * Contains the name
+   */
+  @Column(name = "uuid")
+  private String uuid;
 
   public URN()
   {
-    this._uuid = UUID.randomUUID();
-    this.name = _uuid.toString();
+    this.uuid = UUID.randomUUID().toString();
   }
 
   private URN(String name)
   {
-    this._uuid = UUID.fromString(name);
-    this.name = name;
+    this.uuid = UUID.fromString(name).toString(); // handles name -> uuid parse validation
   }
 
   public static URN valueOf(String name)
@@ -66,7 +65,7 @@ public final class URN implements Named, Serializable
    */
   public String getName()
   {
-    return _uuid.toString();
+    return uuid.toString();
   }
 
   /**
@@ -99,7 +98,7 @@ public final class URN implements Named, Serializable
       if (object instanceof URN)
       {
         URN that = (URN) object;
-        return this._uuid.equals(that._uuid);
+        return this.uuid.equals(that.uuid);
       }
     }
     return false;
@@ -113,6 +112,6 @@ public final class URN implements Named, Serializable
   @Override
   public int hashCode()
   {
-    return _uuid.hashCode();
+    return uuid.hashCode();
   }
 }

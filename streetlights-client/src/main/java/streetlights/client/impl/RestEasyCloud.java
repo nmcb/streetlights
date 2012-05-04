@@ -17,51 +17,30 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client;
+package streetlights.client.impl;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import streetlights.client.impl.RestEasyCloud;
+import org.jboss.resteasy.client.ProxyFactory;
+import streetlights.client.Cloud;
 import streetlights.model.infra.Road;
-import streetlights.server.ResourceServer;
+import streetlights.service.RoadService;
+
+import java.util.List;
 
 /**
  * @author Marco Borst
  * @since 24/04/12
  */
-public class CloudTest
+public class RestEasyCloud implements Cloud
 {
-  private ResourceServer server = new ResourceServer();
+  RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
 
-  @Before
-  public void init()
+  public void register(Road road)
   {
-    server.start();
+    String url = service.persist(road);
   }
 
-  @After
-  public void cleanup()
+  public List<Road> listRoads()
   {
-    server.stop();
-  }
-
-  @Test
-  public void testRegisterRoad()
-  {
-    RestEasyCloud cloud = new RestEasyCloud();
-    cloud.register(new Road("A1"));
-
-    // TODO Test if road is persistent.
-  }
-
-  @Test
-  public void testListRoads()
-  {
-    RestEasyCloud cloud = new RestEasyCloud();
-    cloud.register(new Road("A1"));
-    cloud.register(new Road("A2"));
-    // TODO Assert.assertEquals(2, cloud.listRoads().size());
+    return service.list();
   }
 }

@@ -17,5 +17,5 @@ public interface Resources
 {
   @GET
   @Path("/find/urn/uuid/{uuid}")
-  public Response list(@PathParam("uuid") String uuid);
+  public Response find(@PathParam("uuid") String uuid);
 }

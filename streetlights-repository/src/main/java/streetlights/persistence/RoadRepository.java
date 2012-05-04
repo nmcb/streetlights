@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class RoadRepository
 {
-  private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
+  private final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
 
   public List findAll()
   {

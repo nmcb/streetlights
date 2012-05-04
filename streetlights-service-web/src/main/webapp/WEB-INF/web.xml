@@ -31,10 +31,8 @@
             <param-name>resteasy.resources</param-name>
             <param-value>
                 streetlights.service.web.RoadProvider,
-                streetlights.service.web.LocalResources
+                streetlights.service.web.ResourcesLocator
             </param-value>
-            <!--<param-name>resteasy.scan</param-name>-->
-            <!--<param-value>true</param-value>-->
         </init-param>
     </filter>
 

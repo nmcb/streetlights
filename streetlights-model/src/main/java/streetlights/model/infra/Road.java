@@ -47,7 +47,7 @@ import java.util.List;
 @Entity
 public class Road extends ModelObject
 {
-  @XmlElement(name = "id")
+  @XmlElement(name = "uuid")
   @EmbeddedId
   private URN id = new URN();
 
