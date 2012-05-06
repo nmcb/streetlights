@@ -29,7 +29,9 @@ import java.util.List;
  */
 public interface Cloud
 {
-  void register(Road road);
+  void put(Road road);
+
+  Road get(String uuid);
 
   List<Road> listRoads();
 }

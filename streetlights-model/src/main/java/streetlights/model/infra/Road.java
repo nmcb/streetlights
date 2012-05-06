@@ -21,11 +21,9 @@ package streetlights.model.infra;
 
 import org.hibernate.annotations.Index;
 import streetlights.model.ModelObject;
-import streetlights.model.identification.URN;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
@@ -47,10 +45,6 @@ import java.util.List;
 @Entity
 public class Road extends ModelObject
 {
-  @XmlElement(name = "uuid")
-  @EmbeddedId
-  private URN id = new URN();
-
   @XmlElement
   @Basic
   @Index(name = "name_idx") // Hibernate specific
@@ -69,12 +63,6 @@ public class Road extends ModelObject
   public Road(String name)
   {
     this.name = name;
-  }
-
-  @Override
-  public URN getURN()
-  {
-    return id;
   }
 
   public String getName()

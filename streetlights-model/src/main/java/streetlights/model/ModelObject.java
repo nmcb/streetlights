@@ -20,29 +20,45 @@
 package streetlights.model;
 
 import streetlights.model.identification.Named;
-import streetlights.model.identification.URN;
+
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import javax.xml.bind.annotation.XmlAttribute;
+import java.util.UUID;
 
 /**
  * @author Marco Borst
  * @since 11/03/12
  */
+@MappedSuperclass
 public abstract class ModelObject implements Named
 {
-  public void setName(String name)
+  // TODO we would prefer to keep the uuid as a UUID type so we need to find out its mapping to XML and persistency.
+  @Id
+  @XmlAttribute(name = "uuid")
+  private String uuid = UUID.randomUUID().toString();
+
+  public String getUUID()
   {
-    // implement het omhangen van alle resources en als dat fout gaat... boom!
+    return uuid;
   }
 
-  public String getName()
+  @Override
+  public final boolean equals(Object o)
   {
-    return null;
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    ModelObject that = (ModelObject) o;
+
+    if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
+
+    return true;
   }
 
-  public abstract URN getURN();
-
-  public String toString()
+  @Override
+  public final int hashCode()
   {
-    return getURN().toString();
+    return uuid != null ? uuid.hashCode() : 0;
   }
-
 }

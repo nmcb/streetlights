@@ -52,7 +52,7 @@ public interface RoadService
     public Road put(Road road);
 
     @GET
-    @Path("/road/{name}")
-    public Road get(@PathParam("name") String name);
+    @Path("/road/{uuid}")
+    public Road get(@PathParam("uuid") String uuid);
 
 }

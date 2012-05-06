@@ -21,24 +21,30 @@ package streetlights.model.identification;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 import java.util.UUID;
 
 /**
- * Defines a Universally Unique Name.
+ * Defines a Unique Resource Name.
  *
  * @author Marco Borst
  * @see {@link http://www.ietf.org/rfc/rfc4122.txt}
  * @since 11/03/12
  */
 @XmlType
+@XmlAccessorType(value = XmlAccessType.FIELD)
 @Embeddable
 public final class URN implements Named, Serializable
 {
   /**
-   * Contains the name
+   * Contains the name's uuid
    */
+  @XmlAttribute
   @Column(name = "uuid")
   private String uuid;
 

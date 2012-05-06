@@ -20,6 +20,7 @@
 package streetlights.client;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import streetlights.client.impl.RestEasyCloud;
@@ -51,15 +52,18 @@ public class CloudTest
   @Test
   public void testRegisterRoad()
   {
-    cloud.register(new Road("A1"));
+    Road expected = new Road("A1");
+    cloud.put(expected);
     // TODO Test if road is persistent.
+    Road actual = cloud.get(expected.getUUID());
+    Assert.assertEquals(expected, actual);
   }
 
   @Test
   public void testListRoads()
   {
-    cloud.register(new Road("A1"));
-    cloud.register(new Road("A2"));
+    cloud.put(new Road("A1"));
+    cloud.put(new Road("A2"));
     // TODO Assert.assertEquals(2, cloud.listRoads().size());
   }
 }

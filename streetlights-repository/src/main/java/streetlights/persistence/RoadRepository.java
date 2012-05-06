@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class RoadRepository
 {
-  private final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
+  private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
 
   public List findAll()
   {
@@ -45,7 +45,7 @@ public class RoadRepository
         // TODO implement annotated transaction declaration
         // TODO disable autocommit on production and test
         manager.getTransaction().begin();
-        entities = manager.createQuery("select r from Road r").getResultList();
+        entities = manager.createQuery("select road from Road road").getResultList();
         manager.getTransaction().commit();
       }
       finally
@@ -56,7 +56,7 @@ public class RoadRepository
     return entities;
   }
 
-  public Road get(URN urn)
+  public Road get(String uuid)
   {
     Road entity = null;
     {
@@ -66,7 +66,7 @@ public class RoadRepository
         // TODO implement annotated transaction declaration
         // TODO disable autocommit on production and test
         manager.getTransaction().begin();
-        entity = manager.find(Road.class, urn);
+        entity = manager.find(Road.class, uuid);
         manager.getTransaction().commit();
       }
       finally
@@ -77,7 +77,7 @@ public class RoadRepository
     return entity;
   }
 
-  public URN persist(Road entity)
+  public String persist(Road entity)
   {
     EntityManager manager = factory.createEntityManager();
     try
@@ -90,7 +90,7 @@ public class RoadRepository
     {
       manager.close();
     }
-    return entity.getURN();
+    return entity.getUUID();
   }
 
   public Road merge(Road entity)

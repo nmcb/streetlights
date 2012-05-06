@@ -19,12 +19,10 @@
 
 package streetlights.service.web;
 
-import streetlights.model.identification.URN;
 import streetlights.model.infra.Road;
 import streetlights.persistence.RoadRepository;
 import streetlights.service.RoadService;
 
-import javax.ws.rs.PathParam;
 import java.util.List;
 
 /**
@@ -52,8 +50,8 @@ public class RoadProvider implements RoadService
     return (Road) repository.merge(road);
   }
 
-  public Road get(String name)
+  public Road get(String uuid)
   {
-    return repository.get(URN.valueOf(name));
+    return repository.get(uuid);
   }
 }

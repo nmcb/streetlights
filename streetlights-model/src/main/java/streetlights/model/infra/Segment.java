@@ -20,10 +20,8 @@
 package streetlights.model.infra;
 
 import streetlights.model.ModelObject;
-import streetlights.model.identification.URN;
 
 import javax.persistence.Basic;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,20 +37,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Segment extends ModelObject
 {
-  @EmbeddedId
-  private URN uri;
-
   @Basic
   private String name;
 
   @ManyToOne
   private Road road;
-
-  @Override
-  public URN getURN()
-  {
-    return uri;
-  }
 
   public String getName()
   {

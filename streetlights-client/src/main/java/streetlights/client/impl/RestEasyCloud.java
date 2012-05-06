@@ -21,6 +21,7 @@ package streetlights.client.impl;
 
 import org.jboss.resteasy.client.ProxyFactory;
 import streetlights.client.Cloud;
+import streetlights.model.identification.URN;
 import streetlights.model.infra.Road;
 import streetlights.service.RoadService;
 
@@ -34,9 +35,14 @@ public class RestEasyCloud implements Cloud
 {
   RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
 
-  public void register(Road road)
+  public void put(Road road)
   {
     String url = service.persist(road);
+  }
+
+  public Road get(String uuid)
+  {
+    return service.get(uuid);
   }
 
   public List<Road> listRoads()

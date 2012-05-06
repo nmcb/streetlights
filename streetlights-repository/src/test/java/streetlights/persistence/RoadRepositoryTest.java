@@ -21,7 +21,6 @@ package streetlights.persistence;
 
 import org.junit.Before;
 import org.junit.Test;
-import streetlights.model.identification.URN;
 import streetlights.model.infra.Road;
 
 /**
@@ -43,7 +42,7 @@ public class RoadRepositoryTest
   @Test
   public void persist()
   {
-    URN urn = repository.persist(new Road("A1"));
-    System.out.println("urn: " + urn);
+    String uuid = repository.persist(new Road("A1"));
+    System.out.println("uuid: " + uuid);
   }
 }
