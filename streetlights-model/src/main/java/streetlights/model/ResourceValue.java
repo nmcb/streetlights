@@ -31,7 +31,7 @@ import java.util.UUID;
  * @since 11/03/12
  */
 @MappedSuperclass
-public abstract class ModelObject implements Named
+public abstract class ResourceValue implements Named
 {
   // TODO we would prefer to keep the uuid as a UUID type so we need to find out its mapping to XML and persistency.
   @Id
@@ -49,7 +49,7 @@ public abstract class ModelObject implements Named
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    ModelObject that = (ModelObject) o;
+    ResourceValue that = (ResourceValue) o;
 
     if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
 

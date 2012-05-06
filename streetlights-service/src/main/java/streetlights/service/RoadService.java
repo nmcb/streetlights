@@ -34,7 +34,7 @@ import java.util.List;
  * @author Marco Borst
  * @since 24/04/12
  */
-@Path("/infrastructure")
+@Path("/infra")
 @Produces("application/xml")
 @Consumes("application/xml")
 public interface RoadService

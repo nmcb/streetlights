@@ -2,7 +2,6 @@ package streetlights.service.web;
 
 import streetlights.service.Resources;
 
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 /**
@@ -12,7 +11,7 @@ import javax.ws.rs.core.Response;
 public class ResourcesLocator implements Resources
 {
   @Override
-  public Response find(String uuid)
+  public Response find(String urn)
   {
     return Response.status(666).build();
   }

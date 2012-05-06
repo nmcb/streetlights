@@ -19,7 +19,7 @@
 
 package streetlights.model.infra;
 
-import streetlights.model.ModelObject;
+import streetlights.model.ResourceValue;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Segment extends ModelObject
+public class Segment extends ResourceValue
 {
   @Basic
   private String name;

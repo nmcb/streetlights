@@ -20,7 +20,7 @@
 package streetlights.model.infra;
 
 import org.hibernate.annotations.Index;
-import streetlights.model.ModelObject;
+import streetlights.model.ResourceValue;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -43,7 +43,7 @@ import java.util.List;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-public class Road extends ModelObject
+public class Road extends ResourceValue
 {
   @XmlElement
   @Basic

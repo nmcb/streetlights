@@ -1,10 +1,11 @@
 package streetlights.service;
 
-import streetlights.model.infra.Road;
-
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 /**
  * @author Marco Borst
@@ -16,6 +17,6 @@ import java.util.List;
 public interface Resources
 {
   @GET
-  @Path("/find/urn/uuid/{uuid}")
-  public Response find(@PathParam("uuid") String uuid);
+  @Path("/find/{urn}")
+  public Response find(@PathParam("urn") String urn);
 }
