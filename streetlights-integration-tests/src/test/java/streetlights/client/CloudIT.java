@@ -31,7 +31,7 @@ import streetlights.server.ResourceServer;
  * @author Marco Borst
  * @since 24/04/12
  */
-public class CloudTest
+public class CloudIT
 {
   private static ResourceServer server = ResourceServer.getInstance();
 

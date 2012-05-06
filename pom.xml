@@ -57,6 +57,7 @@
     <module>streetlights-client</module>
     <module>streetlights-service</module>
     <module>streetlights-service-web</module>
+    <module>streetlights-integration-tests</module>
   </modules>
 
   <dependencyManagement>

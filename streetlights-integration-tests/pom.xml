@@ -28,29 +28,44 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>streetlights</groupId>
-  <artifactId>streetlights-client</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>streetlights-integration-tests</artifactId>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.12</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
-    <!-- modules -->
+    <!-- integration test -->
     <dependency>
       <groupId>streetlights</groupId>
-      <artifactId>streetlights-model</artifactId>
+      <artifactId>streetlights-server</artifactId>
     </dependency>
     <dependency>
       <groupId>streetlights</groupId>
-      <artifactId>streetlights-service</artifactId>
-    </dependency>
-
-    <!-- production -->
-    <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jaxrs</artifactId>
+      <artifactId>streetlights-client</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jaxb-provider</artifactId>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
     </dependency>
   </dependencies>
+
 </project>
