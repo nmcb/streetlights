@@ -31,9 +31,8 @@ import java.util.List;
  * @author Marco Borst
  * @since 10/03/12
  */
-public class RoadRepository
+public class RoadRepository extends Repository
 {
-  private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
 
   public List findAll()
   {

@@ -44,12 +44,12 @@ public abstract class ResourceValue implements Named
   }
 
   @Override
-  public final boolean equals(Object o)
+  public final boolean equals(Object object)
   {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == object) return true;
+    if (object == null || getClass() != object.getClass()) return false;
 
-    ResourceValue that = (ResourceValue) o;
+    ResourceValue that = (ResourceValue) object;
 
     if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
 

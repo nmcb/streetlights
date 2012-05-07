@@ -54,5 +54,4 @@ public interface RoadService
     @GET
     @Path("/road/{uuid}")
     public Road get(@PathParam("uuid") String uuid);
-
 }

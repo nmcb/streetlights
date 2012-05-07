@@ -17,40 +17,16 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.service.web;
+package streetlights.persistence;
 
-import streetlights.model.infra.Road;
-import streetlights.persistence.RoadRepository;
-import streetlights.service.RoadService;
-
-import java.util.List;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  * @author Marco Borst
- * @since 04/03/12
+ * @since 06/05/12
  */
-public class RoadProvider implements RoadService
+public class Repository
 {
-  private RoadRepository repository = new RoadRepository();
-
-  @SuppressWarnings("unchecked") // TODO remove?
-  public List<Road> list()
-  {
-    return repository.findAll();
-  }
-
-  public String persist(Road road)
-  {
-    return repository.persist(road);
-  }
-
-  public Road put(Road road)
-  {
-    return repository.merge(road);
-  }
-
-  public Road get(String uuid)
-  {
-    return repository.get(uuid);
-  }
+  protected static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
 }

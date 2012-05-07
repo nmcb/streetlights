@@ -17,12 +17,12 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.model;
+package streetlights.persistence;
 
 /**
  * @author Marco Borst
- * @since 27/03/12
+ * @since 06/05/12
  */
-public class Default
+public class LocationRepository
 {
 }

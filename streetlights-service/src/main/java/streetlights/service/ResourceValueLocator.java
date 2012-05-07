@@ -14,9 +14,9 @@ import javax.ws.rs.core.Response;
 @Path("/resources")
 @Produces("application/xml")
 @Consumes("application/xml")
-public interface Resources
+public interface ResourceValueLocator
 {
   @GET
-  @Path("/find/{urn}")
-  public Response find(@PathParam("urn") String urn);
+  @Path("/find/{uuid}")
+  public Response findByUUID(@PathParam("uuid") String uuid);
 }
