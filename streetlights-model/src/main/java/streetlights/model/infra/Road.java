@@ -42,7 +42,7 @@ import java.util.List;
 // TODO Add tests for the mappings.
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Entity
+@Entity(name = "road")
 public class Road extends ResourceValue
 {
   @XmlElement
@@ -67,7 +67,7 @@ public class Road extends ResourceValue
 
   public String getResourceName()
   {
-    return name;
+    return "road";
   }
 
   public void setName(String name)

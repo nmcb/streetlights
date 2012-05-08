@@ -64,6 +64,6 @@ public class CloudIT
   {
     cloud.put(new Road("A1"));
     cloud.put(new Road("A2"));
-    // TODO Assert.assertEquals(2, cloud.listRoads().size());
+    Assert.assertTrue(cloud.listRoads().size() >= 2);
   }
 }

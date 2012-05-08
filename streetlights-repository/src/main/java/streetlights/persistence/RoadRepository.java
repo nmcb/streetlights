@@ -44,7 +44,7 @@ public class RoadRepository extends Repository
         // TODO implement annotated transaction declaration
         // TODO disable autocommit on production and test
         manager.getTransaction().begin();
-        entities = manager.createQuery("select road from Road road").getResultList();
+        entities = manager.createQuery("select r from road r").getResultList();
         manager.getTransaction().commit();
       }
       finally
