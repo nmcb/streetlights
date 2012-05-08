@@ -23,7 +23,11 @@ import streetlights.model.identification.Named;
 
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.UUID;
 
 /**
@@ -31,16 +35,60 @@ import java.util.UUID;
  * @since 11/03/12
  */
 @MappedSuperclass
-public abstract class ResourceValue implements Named
+@XmlAccessorType(XmlAccessType.FIELD)
+public abstract class ResourceValue implements Named, Comparable<ResourceValue>
 {
-  // TODO we would prefer to keep the uuid as a UUID type so we need to find out its mapping to XML and persistency.
+  /**
+   * Contains the universally unique identifier of this value, unique during its whole persistency lifecycle.
+   */
+  // TODO we would prefer not to store the value's identifier as a String type so we need to find out a way to map a UUID to persistency.
   @Id
   @XmlAttribute(name = "uuid")
-  private String uuid = UUID.randomUUID().toString();
+  private final String uuid = UUID.randomUUID().toString();
 
-  public String getUUID()
+  /**
+   * Contains the location of the resource to which this value belongs. The location equals {@code new URI(this.getUUID())}
+   * while this value is not persistent.
+   */
+  // TODO need a way to set this when a value is registered.
+  private URI uri = newURN("uuid", uuid);
+
+  /**
+   * Creates a new unified resource name for given namespace and name.
+   *
+   * @param namespace The namespace in which the name uniquely identifies the resource.
+   * @param name      The name that identifies the resource;
+   * @return A {@code URI} with format 'urn:namespace:name'
+   */
+  public static URI newURN(String namespace, String name)
+  {
+    try
+    {
+      return new URI("urn:" + namespace + ":" + name);
+    }
+    catch (URISyntaxException e)
+    {
+      throw new RuntimeException("Unable to parse URI(\"" + "urn:" + namespace + ":" + name + "\").", e);
+    }
+  }
+
+  public abstract String getResourceName();
+
+  @Override
+  public final String getName()
+  {
+    return uri.toString();
+  }
+
+  // TODO we would prefer to expose the uuid as a UUID type, currently not working because a UUID does not map to XML.
+  public final String getUUID()
   {
     return uuid;
+  }
+
+  public final URI getURI()
+  {
+    return uri;
   }
 
   @Override
@@ -51,14 +99,24 @@ public abstract class ResourceValue implements Named
 
     ResourceValue that = (ResourceValue) object;
 
-    if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
-
-    return true;
+    return this.uuid.equals(that.uuid);
   }
 
   @Override
   public final int hashCode()
   {
-    return uuid != null ? uuid.hashCode() : 0;
+    return uuid.hashCode();
+  }
+
+  /**
+   * Resource values are ordered by there {@code URI}.
+   *
+   * @param that other resource value.
+   * @return an integer denoting the comparison of this resource value with that resource value.
+   */
+  @Override
+  public final int compareTo(ResourceValue that)
+  {
+    return this.uri.compareTo(that.uri);
   }
 }

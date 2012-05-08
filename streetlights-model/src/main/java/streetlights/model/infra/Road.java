@@ -65,7 +65,7 @@ public class Road extends ResourceValue
     this.name = name;
   }
 
-  public String getName()
+  public String getResourceName()
   {
     return name;
   }

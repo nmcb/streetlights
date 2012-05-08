@@ -43,7 +43,7 @@ public class TestURN
   }
 
   /**
-   * {@link TreeURN#getName()} needs to return this URN's name.
+   * {@link TreeURN#getResourceName()} needs to return this URN's name.
    */
   @Test
   public void testGetName()

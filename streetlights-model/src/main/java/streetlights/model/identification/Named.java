@@ -30,7 +30,7 @@ public interface Named
   /**
    * Returns the {@code String} representation of this object including its name.  Implementers of this interface are required
    * to include the name property of this object in the String representation that an implementation of this method returns.
-   * i.e. they are required to call back on {@link #getName()}.
+   * i.e. they are required to call back on {@link #getResourceName()}.
    *
    * @return the {@code String} representation of this object including its name.
    */

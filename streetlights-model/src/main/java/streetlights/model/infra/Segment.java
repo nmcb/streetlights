@@ -43,7 +43,7 @@ public class Segment extends ResourceValue
   @ManyToOne
   private Road road;
 
-  public String getName()
+  public String getResourceName()
   {
     return name;
   }
