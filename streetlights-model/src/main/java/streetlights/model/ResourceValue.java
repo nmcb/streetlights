@@ -109,7 +109,7 @@ public abstract class ResourceValue implements Named, Comparable<ResourceValue>
   }
 
   /**
-   * Resource values are ordered by there {@code URI}.
+   * Resource values are ordered by there name.
    *
    * @param that other resource value.
    * @return an integer denoting the comparison of this resource value with that resource value.
@@ -117,6 +117,6 @@ public abstract class ResourceValue implements Named, Comparable<ResourceValue>
   @Override
   public final int compareTo(ResourceValue that)
   {
-    return this.uri.compareTo(that.uri);
+    return this.getName().compareTo(that.getName());
   }
 }
