@@ -1,0 +1,27 @@
+<project name="Streetlights Entities buildscript" basedir="." default="build">
+    <!-- Load properties -->
+    <property file="build.properties"/>
+    
+    <target name="-init" depends="clean">
+        <mkdir dir="build"/>
+    </target>
+    
+    <target name="clean" description="Clean up">
+        <delete dir="build"/>
+    </target>
+    
+    <target name="build" depends="-init" description="Build project">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+    
+    <target name="jar" depends="build" description="create jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="lib/streetlights-entities.jar" basedir="build/classes">
+        </jar>
+    </target>
+    
+    <target name="deploy" depends="jar" description="deploy">
+        <copy file="lib/streetlights-entities.jar" tofile="../AndroidApp/libs/streetlight-entites.jar"/>
+    </target>
+</project>
