@@ -1,4 +1,4 @@
 streetlights
 ============
 
-Proof of concept depicting a restful specification of data access to bigraphs.
+Proof of concept depicting a restful specification of data access to graphs.
