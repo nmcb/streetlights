@@ -19,17 +19,11 @@
 
 package streetlights.model.graph;
 
-import streetlights.model.Name;
-
 /**
  * @author Marco Borst
- * @since 14/03/12
+ * @since 10/05/12
  */
-public interface Edge extends Name
+public class TestNode
 {
-  // common
-
-//  Place getSource();
-//
-//  Place getTarget();
+  Node fixture = null;
 }

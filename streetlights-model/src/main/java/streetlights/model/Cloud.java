@@ -17,19 +17,17 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.model.graph;
-
-import streetlights.model.Name;
+package streetlights.model;
 
 /**
  * @author Marco Borst
- * @since 14/03/12
+ * @since 10/05/12
  */
-public interface Edge extends Name
+public interface Cloud extends Name
 {
-  // common
+  boolean contains(Name name);
 
-//  Place getSource();
-//
-//  Place getTarget();
+  ResourceValue get(Name name);
+
+  boolean put(ResourceValue value);
 }

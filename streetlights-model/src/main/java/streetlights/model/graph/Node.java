@@ -19,6 +19,7 @@
 
 package streetlights.model.graph;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -27,5 +28,18 @@ import java.util.Set;
  */
 public interface Node
 {
+  // common methods
+
   Set<Edge> getEdges();
+
+  // place graph methods
+
+  Node getParent();
+
+  List<Node> getChildren();
+
+
+  // link graph methods
+
+  Set<Port> getPorts();
 }

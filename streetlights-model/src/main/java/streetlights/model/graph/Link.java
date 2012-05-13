@@ -21,15 +21,30 @@ package streetlights.model.graph;
 
 import streetlights.model.Name;
 
+import java.util.List;
+import java.util.Set;
+
 /**
  * @author Marco Borst
- * @since 14/03/12
+ * @since 10/05/12
  */
-public interface Edge extends Name
+public interface Link extends Edge
 {
-  // common
+  // common methods
 
-//  Place getSource();
-//
-//  Place getTarget();
+  Set<Edge> getEdges();
+
+
+  // place graph
+
+  // very expensive
+  Node getCommonParent();
+
+  List<Node> getParents();
+
+  // link graph
+
+  Name getName();
+
+  List<Port> getPorts();
 }

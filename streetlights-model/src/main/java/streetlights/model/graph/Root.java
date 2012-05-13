@@ -19,17 +19,52 @@
 
 package streetlights.model.graph;
 
-import streetlights.model.Name;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Marco Borst
- * @since 14/03/12
+ * @since 10/05/12
  */
-public interface Edge extends Name
+public class Root implements Node
 {
-  // common
+  private static Root instance = new Root();
 
-//  Place getSource();
-//
-//  Place getTarget();
+  public static Root getInstance()
+  {
+    return instance;
+  }
+
+  private Root()
+  {
+  }
+
+  public List<Node> getRoots()
+  {
+    return null;
+  }
+
+  @Override
+  public Set<Edge> getEdges()
+  {
+    throw new UnsupportedOperationException("Boom!"); // TODO Remove me.
+  }
+
+  @Override
+  public Node getParent()
+  {
+    throw new UnsupportedOperationException("Boom!"); // TODO Remove me.
+  }
+
+  @Override
+  public List<Node> getChildren()
+  {
+    throw new UnsupportedOperationException("Boom!"); // TODO Remove me.
+  }
+
+  @Override
+  public Set<Port> getPorts()
+  {
+    throw new UnsupportedOperationException("Boom!"); // TODO Remove me.
+  }
 }
