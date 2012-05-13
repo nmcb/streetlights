@@ -17,22 +17,22 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.model.graph.reference;
+package streetlights.model;
 
 /**
  * @author Marco Borst
- * @since 10/05/12
+ * @since 28/03/12
  */
-public class Values
+public interface Named
 {
-  private static Values ourInstance = new Values();
+  String getName();
 
-  public static Values getInstance()
-  {
-    return ourInstance;
-  }
-
-  private Values()
-  {
-  }
+  /**
+   * Returns the {@code String} representation of this object including its name.  Implementers of this interface are required
+   * to include the name property of this object in the String representation that an implementation of this method returns.
+   * i.e. they are required to call back on {@link #getResourceName()}.
+   *
+   * @return the {@code String} representation of this object including its name.
+   */
+  String toString();
 }

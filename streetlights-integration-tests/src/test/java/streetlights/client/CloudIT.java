@@ -53,17 +53,17 @@ public class CloudIT
   public void testRegisterRoad()
   {
     Road expected = new Road("A1");
-    cloud.put(expected);
+    cloud.register(expected);
     // TODO Test if road is persistent.
-    Road actual = cloud.get(expected.getUUID());
+    Road actual = cloud.getRoad(expected.getUUID());
     Assert.assertEquals(expected, actual);
   }
 
   @Test
   public void testListRoads()
   {
-    cloud.put(new Road("A1"));
-    cloud.put(new Road("A2"));
+    cloud.register(new Road("A1"));
+    cloud.register(new Road("A2"));
     Assert.assertTrue(cloud.listRoads().size() >= 2);
   }
 }

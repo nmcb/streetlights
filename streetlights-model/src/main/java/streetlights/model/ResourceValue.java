@@ -19,8 +19,6 @@
 
 package streetlights.model;
 
-import streetlights.model.identification.Named;
-
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.xml.bind.annotation.XmlAccessType;

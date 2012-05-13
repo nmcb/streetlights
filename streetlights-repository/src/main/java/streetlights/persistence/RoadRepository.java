@@ -19,7 +19,6 @@
 
 package streetlights.persistence;
 
-import streetlights.model.identification.URN;
 import streetlights.model.infra.Road;
 
 import javax.persistence.EntityManager;
@@ -31,8 +30,9 @@ import java.util.List;
  * @author Marco Borst
  * @since 10/03/12
  */
-public class RoadRepository extends Repository
+public class RoadRepository
 {
+  protected static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("streetlights");
 
   public List findAll()
   {
