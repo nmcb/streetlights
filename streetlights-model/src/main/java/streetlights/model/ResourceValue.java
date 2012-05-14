@@ -33,7 +33,7 @@ import java.util.UUID;
  * @since 11/03/12
  */
 @MappedSuperclass
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public abstract class ResourceValue implements Named, Comparable<ResourceValue>
 {
   /**
@@ -41,15 +41,8 @@ public abstract class ResourceValue implements Named, Comparable<ResourceValue>
    */
   // TODO we would prefer not to store the value's identifier as a String type so we need to find out a way to map a UUID to persistency.
   @Id
-  @XmlAttribute(name = "uuid")
+  @XmlAttribute
   private final String uuid = UUID.randomUUID().toString();
-
-  /**
-   * Contains the location of the resource to which this value belongs. The location equals {@code new URI(this.getUUID())}
-   * while this value is not persistent.
-   */
-  // TODO need a way to set this when a value is registered.
-  private URI uri = newURN("uuid", uuid);
 
   /**
    * Creates a new unified resource name for given namespace and name.
@@ -72,21 +65,16 @@ public abstract class ResourceValue implements Named, Comparable<ResourceValue>
 
   public abstract String getResourceName();
 
-  @Override
-  public final String getName()
-  {
-    return uri.toString();
-  }
-
   // TODO we would prefer to expose the uuid as a UUID type, currently not working because a UUID does not map to XML.
-  public final String getUUID()
+  public String getUUID()
   {
     return uuid;
   }
 
-  public final URI getURI()
+  @XmlAttribute(name = "uri")
+  public URI getURI()
   {
-    return uri;
+    return newURN("uuid", getUUID());
   }
 
   @Override

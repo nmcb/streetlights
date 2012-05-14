@@ -1,7 +1,7 @@
 /*
  * Depicts a protocol to implement bigraphs in a restful manner.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,31 +17,18 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.persistence;
-
-import org.junit.Before;
-import org.junit.Test;
-import streetlights.model.infra.Road;
+package streetlights.server;
 
 /**
+ * A simple wrapper around the {@code ResourceServer} that configures it for in-memory data storage.
+ *
  * @author Marco Borst
- * @since 10/03/12
+ * @since 14/05/12
  */
-public class RoadRepositoryTest
+public class DevelopmentServer
 {
-  private RoadRepository repository;
-  
-  private Road fixture = new Road("A1");
-
-  @Before
-  public void createRepository()
+  public static void main(String[] args)
   {
-    repository = new RoadRepository();
-  }
-
-  @Test
-  public void persist()
-  {
-    String uuid = repository.persist(new Road("A1"));
+    ResourceServer.main(args);
   }
 }
