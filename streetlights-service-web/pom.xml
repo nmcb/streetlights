@@ -22,61 +22,69 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <artifactId>streetlights</artifactId>
+    <parent>
+        <artifactId>streetlights</artifactId>
+        <groupId>streetlights</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
     <groupId>streetlights</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
+    <artifactId>streetlights-service-web</artifactId>
+    <packaging>war</packaging>
 
-  <groupId>streetlights</groupId>
-  <artifactId>streetlights-service-web</artifactId>
-  <packaging>war</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <attachClasses>true</attachClasses>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.2</version>
-        <configuration>
-          <attachClasses>true</attachClasses>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <dependencies>
+        <!-- modules -->
+        <dependency>
+            <groupId>streetlights</groupId>
+            <artifactId>streetlights-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>streetlights</groupId>
+            <artifactId>streetlights-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>streetlights</groupId>
+            <artifactId>streetlights-repository</artifactId>
+        </dependency>
 
-  <dependencies>
-    <!-- modules -->
-    <dependency>
-      <groupId>streetlights</groupId>
-      <artifactId>streetlights-model</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>streetlights</groupId>
-      <artifactId>streetlights-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>streetlights</groupId>
-      <artifactId>streetlights-repository</artifactId>
-    </dependency>
+        <!-- production -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxb-provider</artifactId>
+        </dependency>
 
-    <!-- production -->
-    <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jaxrs</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jaxb-provider</artifactId>
-    </dependency>
+        <!-- TODO hack for local testing, remove -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.3.164</version>
+        </dependency>
 
-    <!-- test -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-  </dependencies>
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
