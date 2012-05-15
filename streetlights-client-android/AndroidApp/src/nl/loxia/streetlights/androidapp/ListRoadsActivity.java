@@ -32,10 +32,8 @@ public class ListRoadsActivity extends AbstractAsyncListActivity {
     }
 
     public void refreshList(Roads roads) {
-        // TODO refresh the UI
-        for (Road road : roads.getRoads()) {
-            Log.i(TAG, road.getName() + " : " + road.getUuid());
-        }
+        RoadsAdapter adapter = new RoadsAdapter(this, roads);
+        setListAdapter(adapter);
     }
 
     private class AsyncListRoadsRequest extends AsyncTask<Void, Void, Roads> {

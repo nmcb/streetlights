@@ -8,4 +8,6 @@
     
     <string name="loading">Loading...</string>
     <string name="path_singleroad">/infra/road/f81d4fae-7dec-11d0-a765-00a0c91e6bf6</string>
+    <string name="uuid_label">uuid: </string>
+    <string name="uri_label">uri: </string>
 </resources>

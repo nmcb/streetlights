@@ -2,3 +2,5 @@ target/
 .idea/
 .svn/
 *.iml
+/streetlights-client-android/AndroidApp/bin
+/streetlights-client-android/AndroidApp/gen
