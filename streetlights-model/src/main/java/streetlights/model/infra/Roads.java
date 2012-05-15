@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,34 +18,32 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client.impl;
+package streetlights.model.infra;
 
-import org.jboss.resteasy.client.ProxyFactory;
-import streetlights.client.Cloud;
-import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
-import streetlights.service.RoadService;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Marco Borst
- * @since 24/04/12
+ * @since 15/05/12
  */
-public class RestEasyCloud implements Cloud
+// @XmlRootElement(name = "roads")
+@XmlRootElement(name = "roads")
+public class Roads
 {
-  RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
+  @XmlElement(name = "road")
+  private List<Road> roads;
 
-  public void register(Road road)
-  {
-    String url = service.persist(road);
+  public Roads() {
   }
 
-  public Road getRoad(String uuid)
-  {
-    return service.get(uuid);
+  public Roads(List<Road> roads) {
+     this.roads = new ArrayList<Road>(roads);
   }
 
-  public Roads roads()
-  {
-    return service.list();
+  public List<Road> list() {
+    return roads;
   }
 }

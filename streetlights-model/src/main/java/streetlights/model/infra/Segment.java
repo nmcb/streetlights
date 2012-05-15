@@ -48,6 +48,12 @@ public class Segment extends ResourceValue
     return name;
   }
 
+  @Override
+  public String getName()
+  {
+    return name;
+  }
+
   public void setName(String name)
   {
     this.name = name;

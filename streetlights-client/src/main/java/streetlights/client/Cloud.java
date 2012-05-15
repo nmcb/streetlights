@@ -20,8 +20,7 @@
 package streetlights.client;
 
 import streetlights.model.infra.Road;
-
-import java.util.List;
+import streetlights.model.infra.Roads;
 
 /**
  * @author Marco Borst
@@ -33,5 +32,5 @@ public interface Cloud
 
   Road getRoad(String uuid);
 
-  List<Road> listRoads();
+  Roads roads();
 }

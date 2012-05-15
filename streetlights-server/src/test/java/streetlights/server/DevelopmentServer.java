@@ -1,7 +1,7 @@
 /*
  * Depicts a protocol to implement bigraphs in a restful manner.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,34 +17,18 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client.impl;
-
-import org.jboss.resteasy.client.ProxyFactory;
-import streetlights.client.Cloud;
-import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
-import streetlights.service.RoadService;
+package streetlights.server;
 
 /**
+ * A simple wrapper around the {@code ResourceServer} that configures it for in-memory data storage.
+ *
  * @author Marco Borst
- * @since 24/04/12
+ * @since 14/05/12
  */
-public class RestEasyCloud implements Cloud
+public class DevelopmentServer
 {
-  RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
-
-  public void register(Road road)
+  public static void main(String[] args)
   {
-    String url = service.persist(road);
-  }
-
-  public Road getRoad(String uuid)
-  {
-    return service.get(uuid);
-  }
-
-  public Roads roads()
-  {
-    return service.list();
+    ResourceServer.main(args);
   }
 }

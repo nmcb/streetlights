@@ -70,6 +70,12 @@ public class Road extends ResourceValue
     return "road";
   }
 
+  @Override
+  public String getName()
+  {
+    return name;
+  }
+
   public void setName(String name)
   {
     this.name = name;

@@ -33,6 +33,7 @@ import streetlights.server.ResourceServer;
  */
 public class CloudIT
 {
+  // TODO provide a way to select free port number in a range
   private static ResourceServer server = ResourceServer.getInstance();
 
   private Cloud cloud = new RestEasyCloud();
@@ -64,6 +65,6 @@ public class CloudIT
   {
     cloud.register(new Road("A1"));
     cloud.register(new Road("A2"));
-    Assert.assertTrue(cloud.listRoads().size() >= 2);
+    Assert.assertTrue(cloud.roads().list().size() >= 2);
   }
 }

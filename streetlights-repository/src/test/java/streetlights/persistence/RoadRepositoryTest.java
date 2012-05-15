@@ -43,6 +43,5 @@ public class RoadRepositoryTest
   public void persist()
   {
     String uuid = repository.persist(new Road("A1"));
-    System.out.println("uuid: " + uuid);
   }
 }
