@@ -1,0 +1,1659 @@
+Testsuite: org.simpleframework.xml.core.ArrayTest
+Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 0.936 sec
+------------- Standard Output ---------------
+<root>
+   <array length="100">
+      <entry value="index 0"/>
+      <entry value="index 1"/>
+      <entry value="index 2"/>
+      <entry value="index 3"/>
+      <entry value="index 4"/>
+      <entry value="index 5"/>
+      <entry value="index 6"/>
+      <entry value="index 7"/>
+      <entry value="index 8"/>
+      <entry value="index 9"/>
+      <entry value="index 10"/>
+      <entry value="index 11"/>
+      <entry value="index 12"/>
+      <entry value="index 13"/>
+      <entry value="index 14"/>
+      <entry value="index 15"/>
+      <entry value="index 16"/>
+      <entry value="index 17"/>
+      <entry value="index 18"/>
+      <entry value="index 19"/>
+      <entry value="index 20"/>
+      <entry value="index 21"/>
+      <entry value="index 22"/>
+      <entry value="index 23"/>
+      <entry value="index 24"/>
+      <entry value="index 25"/>
+      <entry value="index 26"/>
+      <entry value="index 27"/>
+      <entry value="index 28"/>
+      <entry value="index 29"/>
+      <entry value="index 30"/>
+      <entry value="index 31"/>
+      <entry value="index 32"/>
+      <entry value="index 33"/>
+      <entry value="index 34"/>
+      <entry value="index 35"/>
+      <entry value="index 36"/>
+      <entry value="index 37"/>
+      <entry value="index 38"/>
+      <entry value="index 39"/>
+      <entry value="index 40"/>
+      <entry value="index 41"/>
+      <entry value="index 42"/>
+      <entry value="index 43"/>
+      <entry value="index 44"/>
+      <entry value="index 45"/>
+      <entry value="index 46"/>
+      <entry value="index 47"/>
+      <entry value="index 48"/>
+      <entry value="index 49"/>
+      <entry value="index 50"/>
+      <entry value="index 51"/>
+      <entry value="index 52"/>
+      <entry value="index 53"/>
+      <entry value="index 54"/>
+      <entry value="index 55"/>
+      <entry value="index 56"/>
+      <entry value="index 57"/>
+      <entry value="index 58"/>
+      <entry value="index 59"/>
+      <entry value="index 60"/>
+      <entry value="index 61"/>
+      <entry value="index 62"/>
+      <entry value="index 63"/>
+      <entry value="index 64"/>
+      <entry value="index 65"/>
+      <entry value="index 66"/>
+      <entry value="index 67"/>
+      <entry value="index 68"/>
+      <entry value="index 69"/>
+      <entry value="index 70"/>
+      <entry value="index 71"/>
+      <entry value="index 72"/>
+      <entry value="index 73"/>
+      <entry value="index 74"/>
+      <entry value="index 75"/>
+      <entry value="index 76"/>
+      <entry value="index 77"/>
+      <entry value="index 78"/>
+      <entry value="index 79"/>
+      <entry value="index 80"/>
+      <entry value="index 81"/>
+      <entry value="index 82"/>
+      <entry value="index 83"/>
+      <entry value="index 84"/>
+      <entry value="index 85"/>
+      <entry value="index 86"/>
+      <entry value="index 87"/>
+      <entry value="index 88"/>
+      <entry value="index 89"/>
+      <entry value="index 90"/>
+      <entry value="index 91"/>
+      <entry value="index 92"/>
+      <entry value="index 93"/>
+      <entry value="index 94"/>
+      <entry value="index 95"/>
+      <entry value="index 96"/>
+      <entry value="index 97"/>
+      <entry value="index 98"/>
+      <entry value="index 99"/>
+   </array>
+</root><root>
+   <array length="100">
+      <entry value="index 0"/>
+      <entry value="index 1"/>
+      <entry value="index 2"/>
+      <entry value="index 3"/>
+      <entry value="index 4"/>
+      <entry value="index 5"/>
+      <entry value="index 6"/>
+      <entry value="index 7"/>
+      <entry value="index 8"/>
+      <entry value="index 9"/>
+      <entry value="index 10"/>
+      <entry value="index 11"/>
+      <entry value="index 12"/>
+      <entry value="index 13"/>
+      <entry value="index 14"/>
+      <entry value="index 15"/>
+      <entry value="index 16"/>
+      <entry value="index 17"/>
+      <entry value="index 18"/>
+      <entry value="index 19"/>
+      <entry value="index 20"/>
+      <entry value="index 21"/>
+      <entry value="index 22"/>
+      <entry value="index 23"/>
+      <entry value="index 24"/>
+      <entry value="index 25"/>
+      <entry value="index 26"/>
+      <entry value="index 27"/>
+      <entry value="index 28"/>
+      <entry value="index 29"/>
+      <entry value="index 30"/>
+      <entry value="index 31"/>
+      <entry value="index 32"/>
+      <entry value="index 33"/>
+      <entry value="index 34"/>
+      <entry value="index 35"/>
+      <entry value="index 36"/>
+      <entry value="index 37"/>
+      <entry value="index 38"/>
+      <entry value="index 39"/>
+      <entry value="index 40"/>
+      <entry value="index 41"/>
+      <entry value="index 42"/>
+      <entry value="index 43"/>
+      <entry value="index 44"/>
+      <entry value="index 45"/>
+      <entry value="index 46"/>
+      <entry value="index 47"/>
+      <entry value="index 48"/>
+      <entry value="index 49"/>
+      <entry value="index 50"/>
+      <entry value="index 51"/>
+      <entry value="index 52"/>
+      <entry value="index 53"/>
+      <entry value="index 54"/>
+      <entry value="index 55"/>
+      <entry value="index 56"/>
+      <entry value="index 57"/>
+      <entry value="index 58"/>
+      <entry value="index 59"/>
+      <entry value="index 60"/>
+      <entry value="index 61"/>
+      <entry value="index 62"/>
+      <entry value="index 63"/>
+      <entry value="index 64"/>
+      <entry value="index 65"/>
+      <entry value="index 66"/>
+      <entry value="index 67"/>
+      <entry value="index 68"/>
+      <entry value="index 69"/>
+      <entry value="index 70"/>
+      <entry value="index 71"/>
+      <entry value="index 72"/>
+      <entry value="index 73"/>
+      <entry value="index 74"/>
+      <entry value="index 75"/>
+      <entry value="index 76"/>
+      <entry value="index 77"/>
+      <entry value="index 78"/>
+      <entry value="index 79"/>
+      <entry value="index 80"/>
+      <entry value="index 81"/>
+      <entry value="index 82"/>
+      <entry value="index 83"/>
+      <entry value="index 84"/>
+      <entry value="index 85"/>
+      <entry value="index 86"/>
+      <entry value="index 87"/>
+      <entry value="index 88"/>
+      <entry value="index 89"/>
+      <entry value="index 90"/>
+      <entry value="index 91"/>
+      <entry value="index 92"/>
+      <entry value="index 93"/>
+      <entry value="index 94"/>
+      <entry value="index 95"/>
+      <entry value="index 96"/>
+      <entry value="index 97"/>
+      <entry value="index 98"/>
+      <entry value="index 99"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="100" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="2" value="index 0"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="3" value="index 1"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="4" value="index 2"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="5" value="index 3"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="6" value="index 4"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="7" value="index 5"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="8" value="index 6"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="9" value="index 7"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="10" value="index 8"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="11" value="index 9"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="12" value="index 10"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="13" value="index 11"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="14" value="index 12"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="15" value="index 13"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="16" value="index 14"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="17" value="index 15"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="18" value="index 16"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="19" value="index 17"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="20" value="index 18"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="21" value="index 19"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="22" value="index 20"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="23" value="index 21"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="24" value="index 22"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="25" value="index 23"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="26" value="index 24"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="27" value="index 25"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="28" value="index 26"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="29" value="index 27"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="30" value="index 28"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="31" value="index 29"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="32" value="index 30"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="33" value="index 31"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="34" value="index 32"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="35" value="index 33"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="36" value="index 34"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="37" value="index 35"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="38" value="index 36"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="39" value="index 37"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="40" value="index 38"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="41" value="index 39"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="42" value="index 40"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="43" value="index 41"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="44" value="index 42"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="45" value="index 43"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="46" value="index 44"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="47" value="index 45"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="48" value="index 46"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="49" value="index 47"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="50" value="index 48"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="51" value="index 49"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="52" value="index 50"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="53" value="index 51"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="54" value="index 52"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="55" value="index 53"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="56" value="index 54"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="57" value="index 55"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="58" value="index 56"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="59" value="index 57"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="60" value="index 58"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="61" value="index 59"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="62" value="index 60"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="63" value="index 61"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="64" value="index 62"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="65" value="index 63"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="66" value="index 64"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="67" value="index 65"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="68" value="index 66"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="69" value="index 67"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="70" value="index 68"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="71" value="index 69"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="72" value="index 70"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="73" value="index 71"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="74" value="index 72"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="75" value="index 73"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="76" value="index 74"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="77" value="index 75"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="78" value="index 76"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="79" value="index 77"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="80" value="index 78"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="81" value="index 79"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="82" value="index 80"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="83" value="index 81"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="84" value="index 82"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="85" value="index 83"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="86" value="index 84"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="87" value="index 85"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="88" value="index 86"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="89" value="index 87"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="90" value="index 88"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="91" value="index 89"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="92" value="index 90"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="93" value="index 91"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="94" value="index 92"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="95" value="index 93"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="96" value="index 94"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="97" value="index 95"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="98" value="index 96"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="99" value="index 97"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="100" value="index 98"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="101" value="index 99"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="100" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="2" value="index 0"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="3" value="index 1"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="4" value="index 2"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="5" value="index 3"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="6" value="index 4"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="7" value="index 5"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="8" value="index 6"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="9" value="index 7"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="10" value="index 8"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="11" value="index 9"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="12" value="index 10"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="13" value="index 11"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="14" value="index 12"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="15" value="index 13"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="16" value="index 14"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="17" value="index 15"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="18" value="index 16"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="19" value="index 17"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="20" value="index 18"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="21" value="index 19"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="22" value="index 20"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="23" value="index 21"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="24" value="index 22"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="25" value="index 23"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="26" value="index 24"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="27" value="index 25"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="28" value="index 26"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="29" value="index 27"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="30" value="index 28"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="31" value="index 29"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="32" value="index 30"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="33" value="index 31"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="34" value="index 32"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="35" value="index 33"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="36" value="index 34"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="37" value="index 35"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="38" value="index 36"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="39" value="index 37"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="40" value="index 38"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="41" value="index 39"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="42" value="index 40"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="43" value="index 41"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="44" value="index 42"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="45" value="index 43"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="46" value="index 44"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="47" value="index 45"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="48" value="index 46"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="49" value="index 47"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="50" value="index 48"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="51" value="index 49"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="52" value="index 50"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="53" value="index 51"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="54" value="index 52"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="55" value="index 53"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="56" value="index 54"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="57" value="index 55"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="58" value="index 56"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="59" value="index 57"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="60" value="index 58"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="61" value="index 59"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="62" value="index 60"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="63" value="index 61"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="64" value="index 62"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="65" value="index 63"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="66" value="index 64"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="67" value="index 65"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="68" value="index 66"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="69" value="index 67"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="70" value="index 68"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="71" value="index 69"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="72" value="index 70"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="73" value="index 71"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="74" value="index 72"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="75" value="index 73"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="76" value="index 74"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="77" value="index 75"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="78" value="index 76"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="79" value="index 77"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="80" value="index 78"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="81" value="index 79"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="82" value="index 80"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="83" value="index 81"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="84" value="index 82"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="85" value="index 83"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="86" value="index 84"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="87" value="index 85"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="88" value="index 86"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="89" value="index 87"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="90" value="index 88"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="91" value="index 89"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="92" value="index 90"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="93" value="index 91"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="94" value="index 92"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="95" value="index 93"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="96" value="index 94"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="97" value="index 95"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="98" value="index 96"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="99" value="index 97"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="100" value="index 98"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="101" value="index 99"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="100">
+      <entry/>
+      <entry value="index 1"/>
+      <entry/>
+      <entry value="index 3"/>
+      <entry/>
+      <entry value="index 5"/>
+      <entry/>
+      <entry value="index 7"/>
+      <entry/>
+      <entry value="index 9"/>
+      <entry/>
+      <entry value="index 11"/>
+      <entry/>
+      <entry value="index 13"/>
+      <entry/>
+      <entry value="index 15"/>
+      <entry/>
+      <entry value="index 17"/>
+      <entry/>
+      <entry value="index 19"/>
+      <entry/>
+      <entry value="index 21"/>
+      <entry/>
+      <entry value="index 23"/>
+      <entry/>
+      <entry value="index 25"/>
+      <entry/>
+      <entry value="index 27"/>
+      <entry/>
+      <entry value="index 29"/>
+      <entry/>
+      <entry value="index 31"/>
+      <entry/>
+      <entry value="index 33"/>
+      <entry/>
+      <entry value="index 35"/>
+      <entry/>
+      <entry value="index 37"/>
+      <entry/>
+      <entry value="index 39"/>
+      <entry/>
+      <entry value="index 41"/>
+      <entry/>
+      <entry value="index 43"/>
+      <entry/>
+      <entry value="index 45"/>
+      <entry/>
+      <entry value="index 47"/>
+      <entry/>
+      <entry value="index 49"/>
+      <entry/>
+      <entry value="index 51"/>
+      <entry/>
+      <entry value="index 53"/>
+      <entry/>
+      <entry value="index 55"/>
+      <entry/>
+      <entry value="index 57"/>
+      <entry/>
+      <entry value="index 59"/>
+      <entry/>
+      <entry value="index 61"/>
+      <entry/>
+      <entry value="index 63"/>
+      <entry/>
+      <entry value="index 65"/>
+      <entry/>
+      <entry value="index 67"/>
+      <entry/>
+      <entry value="index 69"/>
+      <entry/>
+      <entry value="index 71"/>
+      <entry/>
+      <entry value="index 73"/>
+      <entry/>
+      <entry value="index 75"/>
+      <entry/>
+      <entry value="index 77"/>
+      <entry/>
+      <entry value="index 79"/>
+      <entry/>
+      <entry value="index 81"/>
+      <entry/>
+      <entry value="index 83"/>
+      <entry/>
+      <entry value="index 85"/>
+      <entry/>
+      <entry value="index 87"/>
+      <entry/>
+      <entry value="index 89"/>
+      <entry/>
+      <entry value="index 91"/>
+      <entry/>
+      <entry value="index 93"/>
+      <entry/>
+      <entry value="index 95"/>
+      <entry/>
+      <entry value="index 97"/>
+      <entry/>
+      <entry value="index 99"/>
+   </array>
+</root><root>
+   <array length="100">
+      <entry/>
+      <entry value="index 1"/>
+      <entry/>
+      <entry value="index 3"/>
+      <entry/>
+      <entry value="index 5"/>
+      <entry/>
+      <entry value="index 7"/>
+      <entry/>
+      <entry value="index 9"/>
+      <entry/>
+      <entry value="index 11"/>
+      <entry/>
+      <entry value="index 13"/>
+      <entry/>
+      <entry value="index 15"/>
+      <entry/>
+      <entry value="index 17"/>
+      <entry/>
+      <entry value="index 19"/>
+      <entry/>
+      <entry value="index 21"/>
+      <entry/>
+      <entry value="index 23"/>
+      <entry/>
+      <entry value="index 25"/>
+      <entry/>
+      <entry value="index 27"/>
+      <entry/>
+      <entry value="index 29"/>
+      <entry/>
+      <entry value="index 31"/>
+      <entry/>
+      <entry value="index 33"/>
+      <entry/>
+      <entry value="index 35"/>
+      <entry/>
+      <entry value="index 37"/>
+      <entry/>
+      <entry value="index 39"/>
+      <entry/>
+      <entry value="index 41"/>
+      <entry/>
+      <entry value="index 43"/>
+      <entry/>
+      <entry value="index 45"/>
+      <entry/>
+      <entry value="index 47"/>
+      <entry/>
+      <entry value="index 49"/>
+      <entry/>
+      <entry value="index 51"/>
+      <entry/>
+      <entry value="index 53"/>
+      <entry/>
+      <entry value="index 55"/>
+      <entry/>
+      <entry value="index 57"/>
+      <entry/>
+      <entry value="index 59"/>
+      <entry/>
+      <entry value="index 61"/>
+      <entry/>
+      <entry value="index 63"/>
+      <entry/>
+      <entry value="index 65"/>
+      <entry/>
+      <entry value="index 67"/>
+      <entry/>
+      <entry value="index 69"/>
+      <entry/>
+      <entry value="index 71"/>
+      <entry/>
+      <entry value="index 73"/>
+      <entry/>
+      <entry value="index 75"/>
+      <entry/>
+      <entry value="index 77"/>
+      <entry/>
+      <entry value="index 79"/>
+      <entry/>
+      <entry value="index 81"/>
+      <entry/>
+      <entry value="index 83"/>
+      <entry/>
+      <entry value="index 85"/>
+      <entry/>
+      <entry value="index 87"/>
+      <entry/>
+      <entry value="index 89"/>
+      <entry/>
+      <entry value="index 91"/>
+      <entry/>
+      <entry value="index 93"/>
+      <entry/>
+      <entry value="index 95"/>
+      <entry/>
+      <entry value="index 97"/>
+      <entry/>
+      <entry value="index 99"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="100" ID="1">
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="2" value="index 1"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="3" value="index 3"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="4" value="index 5"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="5" value="index 7"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="6" value="index 9"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="7" value="index 11"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="8" value="index 13"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="9" value="index 15"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="10" value="index 17"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="11" value="index 19"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="12" value="index 21"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="13" value="index 23"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="14" value="index 25"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="15" value="index 27"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="16" value="index 29"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="17" value="index 31"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="18" value="index 33"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="19" value="index 35"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="20" value="index 37"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="21" value="index 39"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="22" value="index 41"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="23" value="index 43"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="24" value="index 45"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="25" value="index 47"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="26" value="index 49"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="27" value="index 51"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="28" value="index 53"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="29" value="index 55"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="30" value="index 57"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="31" value="index 59"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="32" value="index 61"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="33" value="index 63"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="34" value="index 65"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="35" value="index 67"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="36" value="index 69"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="37" value="index 71"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="38" value="index 73"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="39" value="index 75"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="40" value="index 77"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="41" value="index 79"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="42" value="index 81"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="43" value="index 83"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="44" value="index 85"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="45" value="index 87"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="46" value="index 89"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="47" value="index 91"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="48" value="index 93"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="49" value="index 95"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="50" value="index 97"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="51" value="index 99"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="100" ID="1">
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="2" value="index 1"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="3" value="index 3"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="4" value="index 5"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="5" value="index 7"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="6" value="index 9"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="7" value="index 11"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="8" value="index 13"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="9" value="index 15"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="10" value="index 17"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="11" value="index 19"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="12" value="index 21"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="13" value="index 23"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="14" value="index 25"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="15" value="index 27"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="16" value="index 29"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="17" value="index 31"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="18" value="index 33"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="19" value="index 35"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="20" value="index 37"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="21" value="index 39"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="22" value="index 41"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="23" value="index 43"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="24" value="index 45"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="25" value="index 47"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="26" value="index 49"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="27" value="index 51"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="28" value="index 53"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="29" value="index 55"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="30" value="index 57"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="31" value="index 59"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="32" value="index 61"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="33" value="index 63"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="34" value="index 65"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="35" value="index 67"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="36" value="index 69"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="37" value="index 71"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="38" value="index 73"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="39" value="index 75"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="40" value="index 77"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="41" value="index 79"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="42" value="index 81"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="43" value="index 83"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="44" value="index 85"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="45" value="index 87"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="46" value="index 89"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="47" value="index 91"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="48" value="index 93"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="49" value="index 95"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="50" value="index 97"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="51" value="index 99"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <text>entry one</text>
+      <text>entry two</text>
+      <text>entry three</text>
+      <text>entry four</text>
+      <text>entry five</text>
+   </array>
+</root><root>
+   <array length="5">
+      <text>entry one</text>
+      <text>entry two</text>
+      <text>entry three</text>
+      <text>entry four</text>
+      <text>entry five</text>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <array length="5" ID="1">
+      <!-- java.lang.String -->
+      <text ID="2">entry one</text>
+      <!-- java.lang.String -->
+      <text ID="3">entry two</text>
+      <!-- java.lang.String -->
+      <text ID="4">entry three</text>
+      <!-- java.lang.String -->
+      <text ID="5">entry four</text>
+      <!-- java.lang.String -->
+      <text ID="6">entry five</text>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <Array length="5" ID="1">
+      <!-- java.lang.String -->
+      <Text ID="2">entry one</Text>
+      <!-- java.lang.String -->
+      <Text ID="3">entry two</Text>
+      <!-- java.lang.String -->
+      <Text ID="4">entry three</Text>
+      <!-- java.lang.String -->
+      <Text ID="5">entry four</Text>
+      <!-- java.lang.String -->
+      <Text ID="6">entry five</Text>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <text>1</text>
+      <text>2</text>
+      <text>3</text>
+      <text>4</text>
+      <text>5</text>
+   </array>
+</root><root>
+   <array length="5">
+      <text>1</text>
+      <text>2</text>
+      <text>3</text>
+      <text>4</text>
+      <text>5</text>
+   </array>
+</root>
+<root ID="0">
+   <!-- [I -->
+   <array length="5" ID="1">
+      <!-- java.lang.Integer -->
+      <text ID="2">1</text>
+      <!-- java.lang.Integer -->
+      <text ID="3">2</text>
+      <!-- java.lang.Integer -->
+      <text ID="4">3</text>
+      <!-- java.lang.Integer -->
+      <text ID="5">4</text>
+      <!-- java.lang.Integer -->
+      <text ID="6">5</text>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [I -->
+   <Array length="5" ID="1">
+      <!-- java.lang.Integer -->
+      <Text ID="2">1</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="3">2</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="4">3</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="5">4</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="6">5</Text>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <text length="6">1, 2, 3, 4, 5, 6</text>
+      <text length="6">2, 4, 6, 8, 10, 12</text>
+      <text length="6">3, 6, 9, 12, 15, 18</text>
+      <text length="6">4, 8, 12, 16, 20, 24</text>
+      <text length="6">5, 10, 15, 20, 25, 30</text>
+   </array>
+</root><root>
+   <array length="5">
+      <text length="6">1, 2, 3, 4, 5, 6</text>
+      <text length="6">2, 4, 6, 8, 10, 12</text>
+      <text length="6">3, 6, 9, 12, 15, 18</text>
+      <text length="6">4, 8, 12, 16, 20, 24</text>
+      <text length="6">5, 10, 15, 20, 25, 30</text>
+   </array>
+</root>
+<root ID="0">
+   <!-- [[I -->
+   <array length="5" ID="1">
+      <!-- [I -->
+      <text length="6" ID="2">1, 2, 3, 4, 5, 6</text>
+      <!-- [I -->
+      <text length="6" ID="3">2, 4, 6, 8, 10, 12</text>
+      <!-- [I -->
+      <text length="6" ID="4">3, 6, 9, 12, 15, 18</text>
+      <!-- [I -->
+      <text length="6" ID="5">4, 8, 12, 16, 20, 24</text>
+      <!-- [I -->
+      <text length="6" ID="6">5, 10, 15, 20, 25, 30</text>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [[I -->
+   <Array length="5" ID="1">
+      <!-- [I -->
+      <Text length="6" ID="2">1, 2, 3, 4, 5, 6</Text>
+      <!-- [I -->
+      <Text length="6" ID="3">2, 4, 6, 8, 10, 12</Text>
+      <!-- [I -->
+      <Text length="6" ID="4">3, 6, 9, 12, 15, 18</Text>
+      <!-- [I -->
+      <Text length="6" ID="5">4, 8, 12, 16, 20, 24</Text>
+      <!-- [I -->
+      <Text length="6" ID="6">5, 10, 15, 20, 25, 30</Text>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <string>entry one</string>
+      <string>entry two</string>
+      <string>entry three</string>
+      <string>entry four</string>
+      <string>entry five</string>
+   </array>
+</root><root>
+   <array length="5">
+      <string>entry one</string>
+      <string>entry two</string>
+      <string>entry three</string>
+      <string>entry four</string>
+      <string>entry five</string>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <array length="5" ID="1">
+      <!-- java.lang.String -->
+      <string ID="2">entry one</string>
+      <!-- java.lang.String -->
+      <string ID="3">entry two</string>
+      <!-- java.lang.String -->
+      <string ID="4">entry three</string>
+      <!-- java.lang.String -->
+      <string ID="5">entry four</string>
+      <!-- java.lang.String -->
+      <string ID="6">entry five</string>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <Array length="5" ID="1">
+      <!-- java.lang.String -->
+      <String ID="2">entry one</String>
+      <!-- java.lang.String -->
+      <String ID="3">entry two</String>
+      <!-- java.lang.String -->
+      <String ID="4">entry three</String>
+      <!-- java.lang.String -->
+      <String ID="5">entry four</String>
+      <!-- java.lang.String -->
+      <String ID="6">entry five</String>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <text/>
+      <text>entry two</text>
+      <text>entry three</text>
+      <text/>
+      <text/>
+   </array>
+</root><root>
+   <array length="5">
+      <text/>
+      <text>entry two</text>
+      <text>entry three</text>
+      <text/>
+      <text/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <array length="5" ID="1">
+      <text/>
+      <!-- java.lang.String -->
+      <text ID="2">entry two</text>
+      <!-- java.lang.String -->
+      <text ID="3">entry three</text>
+      <text/>
+      <text/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Ljava.lang.String; -->
+   <Array length="5" ID="1">
+      <Text/>
+      <!-- java.lang.String -->
+      <Text ID="2">entry two</Text>
+      <!-- java.lang.String -->
+      <Text ID="3">entry three</Text>
+      <Text/>
+      <Text/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <entry value="entry one"/>
+      <entry value="entry two"/>
+      <entry value="entry three"/>
+      <entry value="entry four"/>
+      <entry value="entry five"/>
+   </array>
+</root><root>
+   <array length="5">
+      <entry value="entry one"/>
+      <entry value="entry two"/>
+      <entry value="entry three"/>
+      <entry value="entry four"/>
+      <entry value="entry five"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="5" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="2" value="entry one"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="3" value="entry two"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="4" value="entry three"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="5" value="entry four"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="6" value="entry five"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="5" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="2" value="entry one"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="3" value="entry two"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="4" value="entry three"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="5" value="entry four"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="6" value="entry five"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <text value="entry one"/>
+      <text value="entry two"/>
+      <text value="entry three"/>
+      <text value="entry four"/>
+      <text value="entry five"/>
+   </array>
+</root><root>
+   <array length="5">
+      <text value="entry one"/>
+      <text value="entry two"/>
+      <text value="entry three"/>
+      <text value="entry four"/>
+      <text value="entry five"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="5" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <text ID="2" value="entry one"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <text ID="3" value="entry two"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <text ID="4" value="entry three"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <text ID="5" value="entry four"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <text ID="6" value="entry five"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="5" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Text ID="2" value="entry one"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Text ID="3" value="entry two"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Text ID="4" value="entry three"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Text ID="5" value="entry four"/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Text ID="6" value="entry five"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <entry/>
+      <entry value="entry two"/>
+      <entry/>
+      <entry/>
+      <entry value="entry five"/>
+   </array>
+</root><root>
+   <array length="5">
+      <entry/>
+      <entry value="entry two"/>
+      <entry/>
+      <entry/>
+      <entry value="entry five"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="5" ID="1">
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="2" value="entry two"/>
+      <entry/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry ID="3" value="entry five"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="5" ID="1">
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="2" value="entry two"/>
+      <Entry/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry ID="3" value="entry five"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="5">
+      <char>a</char>
+      <char>b</char>
+      <char>c</char>
+      <char>d</char>
+      <char>e</char>
+   </array>
+</root><root>
+   <array length="5">
+      <char>a</char>
+      <char>b</char>
+      <char>c</char>
+      <char>d</char>
+      <char>e</char>
+   </array>
+</root>
+<root ID="0">
+   <!-- [C -->
+   <array length="5" ID="1">
+      <!-- java.lang.Character -->
+      <char ID="2">a</char>
+      <!-- java.lang.Character -->
+      <char ID="3">b</char>
+      <!-- java.lang.Character -->
+      <char ID="4">c</char>
+      <!-- java.lang.Character -->
+      <char ID="5">d</char>
+      <!-- java.lang.Character -->
+      <char ID="6">e</char>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [C -->
+   <Array length="5" ID="1">
+      <!-- java.lang.Character -->
+      <Char ID="2">a</Char>
+      <!-- java.lang.Character -->
+      <Char ID="3">b</Char>
+      <!-- java.lang.Character -->
+      <Char ID="4">c</Char>
+      <!-- java.lang.Character -->
+      <Char ID="5">d</Char>
+      <!-- java.lang.Character -->
+      <Char ID="6">e</Char>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<root>
+   <array length="6">
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="one"/>
+      <entry/>
+      <entry/>
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="two"/>
+      <entry/>
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="three"/>
+   </array>
+</root><root>
+   <array length="6">
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="one"/>
+      <entry/>
+      <entry/>
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="two"/>
+      <entry/>
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="three"/>
+   </array>
+</root>
+<root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <array length="6" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="2" value="one"/>
+      <entry/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="3" value="two"/>
+      <entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="4" value="three"/>
+   </array>
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DifferentArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
+   <Array length="6" ID="1">
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="2" value="one"/>
+      <Entry/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="3" value="two"/>
+      <Entry/>
+      <!-- org.simpleframework.xml.core.ArrayTest$Text -->
+      <Entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="4" value="three"/>
+   </Array>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DifferentArrayExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testExample took 0.225 sec
+Testcase: testBadExample took 0.004 sec
+Testcase: testWriteArray took 0.436 sec
+Testcase: testPrimitive took 0.02 sec
+Testcase: testPrimitiveInteger took 0.017 sec
+Testcase: testPrimitiveMultidimensionalInteger took 0.025 sec
+Testcase: testDefaultPrimitive took 0.05 sec
+Testcase: testPrimitiveNull took 0.016 sec
+Testcase: testParentComposite took 0.023 sec
+Testcase: testDefaultComposite took 0.022 sec
+Testcase: testParentCompositeNull took 0.027 sec
+Testcase: testCharacter took 0.021 sec
+Testcase: testDifferentArray took 0.019 sec
+Testcase: testDirectory took 0.001 sec

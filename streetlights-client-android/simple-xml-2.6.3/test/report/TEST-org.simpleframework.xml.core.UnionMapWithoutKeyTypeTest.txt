@@ -1,0 +1,74 @@
+Testsuite: org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.374 sec
+------------- Standard Output ---------------
+<mapExample>
+   <y-node key="3">
+      <y>C</y>
+   </y-node>
+   <y-node key="2">
+      <y>B</y>
+   </y-node>
+   <z-node key="4">
+      <z>D</z>
+   </z-node>
+   <x-node key="1">
+      <x>A</x>
+   </x-node>
+</mapExample><mapExample>
+   <y-node key="3">
+      <y>C</y>
+   </y-node>
+   <y-node key="2">
+      <y>B</y>
+   </y-node>
+   <z-node key="4">
+      <z>D</z>
+   </z-node>
+   <x-node key="1">
+      <x>A</x>
+   </x-node>
+</mapExample>
+<map-example ID="0">
+   <y-node key="3">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Y -->
+      <y ID="1">C</y>
+   </y-node>
+   <y-node key="2">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Y -->
+      <y ID="2">B</y>
+   </y-node>
+   <z-node key="4">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Z -->
+      <z ID="3">D</z>
+   </z-node>
+   <x-node key="1">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$X -->
+      <x ID="4">A</x>
+   </x-node>
+</map-example>>>>>> ELEMENT=[element map-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<MapExample ID="0">
+   <YNode key="3">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Y -->
+      <Y ID="1">C</Y>
+   </YNode>
+   <YNode key="2">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Y -->
+      <Y ID="2">B</Y>
+   </YNode>
+   <ZNode key="4">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Z -->
+      <Z ID="3">D</Z>
+   </ZNode>
+   <XNode key="1">
+      <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$X -->
+      <X ID="4">A</X>
+   </XNode>
+</MapExample>>>>>> ELEMENT=[element MapExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testInlineList took 0.367 sec
+Testcase: testDirectory took 0.001 sec

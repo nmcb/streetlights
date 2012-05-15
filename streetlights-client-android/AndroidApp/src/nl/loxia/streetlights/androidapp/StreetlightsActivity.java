@@ -1,6 +1,5 @@
 package nl.loxia.streetlights.androidapp;
 
-import nl.loxia.streetlights.entities.Road;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +12,6 @@ public class StreetlightsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Road road = new Road("bla");
 
         setContentView(R.layout.main);
 

@@ -1,0 +1,105 @@
+Testsuite: org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.445 sec
+------------- Standard Output ---------------
+<example>
+   <k><![CDATA[a]]></k>
+   <v><![CDATA[b]]></v>
+</example><example>
+   <k><![CDATA[a]]></k>
+   <v><![CDATA[b]]></v>
+</example>
+<example ID="0">
+   <!-- java.lang.String -->
+   <k ID="1"><![CDATA[a]]></k>
+   <!-- java.lang.String -->
+   <v ID="2"><![CDATA[b]]></v>
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$Example]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Example ID="0">
+   <!-- java.lang.String -->
+   <K ID="1"><![CDATA[a]]></K>
+   <!-- java.lang.String -->
+   <V ID="2"><![CDATA[b]]></V>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$Example]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<exampleList a="a">
+   <e><![CDATA[1]]></e>
+   <e><![CDATA[2]]></e>
+   <e><![CDATA[3]]></e>
+   <e><![CDATA[4]]></e>
+</exampleList><exampleList a="a">
+   <e><![CDATA[1]]></e>
+   <e><![CDATA[2]]></e>
+   <e><![CDATA[3]]></e>
+   <e><![CDATA[4]]></e>
+</exampleList>
+<example-list ID="0" a="a">
+   <!-- java.lang.String -->
+   <e ID="1"><![CDATA[1]]></e>
+   <!-- java.lang.String -->
+   <e ID="2"><![CDATA[2]]></e>
+   <!-- java.lang.String -->
+   <e ID="3"><![CDATA[3]]></e>
+   <!-- java.lang.String -->
+   <e ID="4"><![CDATA[4]]></e>
+</example-list>>>>>> ELEMENT=[element example-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$ExampleList]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<ExampleList ID="0" a="a">
+   <!-- java.lang.String -->
+   <E ID="1"><![CDATA[1]]></E>
+   <!-- java.lang.String -->
+   <E ID="2"><![CDATA[2]]></E>
+   <!-- java.lang.String -->
+   <E ID="3"><![CDATA[3]]></E>
+   <!-- java.lang.String -->
+   <E ID="4"><![CDATA[4]]></E>
+</ExampleList>>>>>> ELEMENT=[element ExampleList]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$ExampleList]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+org.simpleframework.xml.core.ConstructorException: Annotation interface org.simpleframework.xml.Element does not match interface org.simpleframework.xml.Attribute for 'v' in parameter 1 of constructor public org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$InvalidExample(java.lang.String,java.lang.String)
+	at org.simpleframework.xml.core.StructureBuilder.validateAnnotations(StructureBuilder.java:816)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:794)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:760)
+	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:265)
+	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:183)
+	at org.simpleframework.xml.core.Scanner.field(Scanner.java:475)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:360)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
+	at org.simpleframework.xml.core.Support.getName(Support.java:265)
+	at org.simpleframework.xml.core.Source.getName(Source.java:240)
+	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
+	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
+	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1180)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1162)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1259)
+	at org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest.testInvalidExample(ConstructorInjectionDifferentAnnotationTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+------------- ---------------- ---------------
+
+Testcase: testDifferentAnnotations took 0.357 sec
+Testcase: testDifferentListAnnotations took 0.064 sec
+Testcase: testInvalidExample took 0.011 sec
+Testcase: testDirectory took 0.001 sec

@@ -1,0 +1,4 @@
+Testsuite: org.simpleframework.xml.transform.CurrencyTransformTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.008 sec
+
+Testcase: testCurrency took 0.003 sec

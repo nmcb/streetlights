@@ -1,0 +1,5 @@
+Testsuite: org.simpleframework.xml.core.SignatureScannerTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
+
+Testcase: testUnion took 0.096 sec
+Testcase: testUnionBigPermutation took 0.026 sec

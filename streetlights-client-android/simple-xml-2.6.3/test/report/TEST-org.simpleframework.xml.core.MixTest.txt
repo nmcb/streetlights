@@ -1,0 +1,28 @@
+Testsuite: org.simpleframework.xml.core.MixTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+------------- Standard Output ---------------
+<mixExample>
+   <calendar class="java.util.GregorianCalendar">2012-05-13 11:51:47.675 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2012-05-13 11:51:47.675 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2012-05-13 11:51:47.675 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2012-05-13 11:51:47.675 BST</calendar>
+</mixExample>
+<mix-example ID="0">
+   <!-- java.util.Calendar -->
+   <calendar class="java.util.GregorianCalendar" ID="1">2012-05-13 11:51:47.675 BST</calendar>
+</mix-example>>>>>> ELEMENT=[element mix-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<MixExample ID="0">
+   <!-- java.util.Calendar -->
+   <Calendar class="java.util.GregorianCalendar" ID="1">2012-05-13 11:51:47.675 BST</Calendar>
+</MixExample>>>>>> ELEMENT=[element MixExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testMix took 0.338 sec
+Testcase: testDirectory took 0.001 sec

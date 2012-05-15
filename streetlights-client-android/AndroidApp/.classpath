@@ -6,8 +6,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="libs/spring-android-auth-1.0.0.RC1.jar"/>
 	<classpathentry kind="lib" path="libs/spring-android-core-1.0.0.RC1.jar"/>
-	<classpathentry kind="lib" path="libs/spring-android-rest-template-1.0.0.RC1.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/StreetlightEntities"/>
-	<classpathentry kind="lib" path="libs/streetlight-entites.jar"/>
+	<classpathentry kind="lib" path="libs/spring-android-rest-template-1.0.0.RC1.jar" sourcepath="C:/Users/Tiemen/Documents/Streetlights/spring-android-1.0.0.RC1/src/spring-android-rest-template-1.0.0.RC1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/simple-xml-2.6.3.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

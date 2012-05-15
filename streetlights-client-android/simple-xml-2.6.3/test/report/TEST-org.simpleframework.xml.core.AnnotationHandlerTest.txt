@@ -1,0 +1,14 @@
+Testsuite: org.simpleframework.xml.core.AnnotationHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.063 sec
+------------- Standard Error -----------------
+@org.simpleframework.xml.Element(required=true, name=, type=void, data=false)
+@org.simpleframework.xml.Element(type=void, required=true, data=false, name=)
+@org.simpleframework.xml.ElementList(required=true, inline=false, name=, type=void, empty=true, entry=, data=false)
+@org.simpleframework.xml.ElementList(inline=false, type=void, required=true, data=false, entry=, empty=true, name=)
+@org.simpleframework.xml.ElementMap(required=true, inline=false, keyType=void, valueType=void, value=, name=, key=, empty=true, entry=, data=false, attribute=false)
+@org.simpleframework.xml.ElementMap(key=, value=, inline=false, required=true, attribute=false, valueType=void, data=false, entry=, empty=true, name=, keyType=void)
+@org.simpleframework.xml.ElementArray(required=true, name=, empty=true, entry=, data=false)
+@org.simpleframework.xml.ElementArray(required=true, data=false, entry=, empty=true, name=)
+------------- ---------------- ---------------
+
+Testcase: testHandler took 0.057 sec

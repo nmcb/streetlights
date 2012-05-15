@@ -1,0 +1,278 @@
+Testsuite: org.simpleframework.xml.core.UnionMapTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
+------------- Standard Output ---------------
+<inlineMapExample>
+   <yEntry yKey="3">
+      <y>
+         <y>C</y>
+      </y>
+   </yEntry>
+   <xEntry xKey="5">
+      <x>
+         <x>E</x>
+      </x>
+   </xEntry>
+   <yEntry yKey="2">
+      <y>
+         <y>B</y>
+      </y>
+   </yEntry>
+   <zEntry zKey="4">
+      <z>
+         <z>D</z>
+      </z>
+   </zEntry>
+   <xEntry xKey="1">
+      <x>
+         <x>A</x>
+      </x>
+   </xEntry>
+</inlineMapExample><inlineMapExample>
+   <yEntry yKey="3">
+      <y>
+         <y>C</y>
+      </y>
+   </yEntry>
+   <xEntry xKey="5">
+      <x>
+         <x>E</x>
+      </x>
+   </xEntry>
+   <yEntry yKey="2">
+      <y>
+         <y>B</y>
+      </y>
+   </yEntry>
+   <zEntry zKey="4">
+      <z>
+         <z>D</z>
+      </z>
+   </zEntry>
+   <xEntry xKey="1">
+      <x>
+         <x>A</x>
+      </x>
+   </xEntry>
+</inlineMapExample>
+<inline-map-example ID="0">
+   <y-entry y-key="3">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+      <y ID="1">
+         <!-- java.lang.String -->
+         <y ID="2">C</y>
+      </y>
+   </y-entry>
+   <x-entry x-key="5">
+      <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+      <x ID="3">
+         <!-- java.lang.String -->
+         <x ID="4">E</x>
+      </x>
+   </x-entry>
+   <y-entry y-key="2">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+      <y ID="5">
+         <!-- java.lang.String -->
+         <y ID="6">B</y>
+      </y>
+   </y-entry>
+   <z-entry z-key="4">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Z -->
+      <z ID="7">
+         <!-- java.lang.String -->
+         <z ID="8">D</z>
+      </z>
+   </z-entry>
+   <x-entry x-key="1">
+      <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+      <x ID="9">
+         <!-- java.lang.String -->
+         <x ID="10">A</x>
+      </x>
+   </x-entry>
+</inline-map-example>>>>>> ELEMENT=[element inline-map-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$InlineMapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<InlineMapExample ID="0">
+   <YEntry yKey="3">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+      <Y ID="1">
+         <!-- java.lang.String -->
+         <Y ID="2">C</Y>
+      </Y>
+   </YEntry>
+   <XEntry xKey="5">
+      <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+      <X ID="3">
+         <!-- java.lang.String -->
+         <X ID="4">E</X>
+      </X>
+   </XEntry>
+   <YEntry yKey="2">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+      <Y ID="5">
+         <!-- java.lang.String -->
+         <Y ID="6">B</Y>
+      </Y>
+   </YEntry>
+   <ZEntry zKey="4">
+      <!-- org.simpleframework.xml.core.UnionMapTest$Z -->
+      <Z ID="7">
+         <!-- java.lang.String -->
+         <Z ID="8">D</Z>
+      </Z>
+   </ZEntry>
+   <XEntry xKey="1">
+      <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+      <X ID="9">
+         <!-- java.lang.String -->
+         <X ID="10">A</X>
+      </X>
+   </XEntry>
+</InlineMapExample>>>>>> ELEMENT=[element InlineMapExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$InlineMapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<mapExample>
+   <xMap class="java.util.HashMap">
+      <xx key="2">
+         <x>
+            <x>B</x>
+         </x>
+      </xx>
+      <xx key="1">
+         <x>
+            <x>A</x>
+         </x>
+      </xx>
+   </xMap>
+</mapExample><mapExample>
+   <xMap class="java.util.HashMap">
+      <xx key="2">
+         <x>
+            <x>B</x>
+         </x>
+      </xx>
+      <xx key="1">
+         <x>
+            <x>A</x>
+         </x>
+      </xx>
+   </xMap>
+</mapExample>
+<map-example ID="0">
+   <!-- java.util.Map -->
+   <x-map class="java.util.HashMap" ID="1">
+      <xx key="2">
+         <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+         <x ID="2">
+            <!-- java.lang.String -->
+            <x ID="3">B</x>
+         </x>
+      </xx>
+      <xx key="1">
+         <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+         <x ID="4">
+            <!-- java.lang.String -->
+            <x ID="5">A</x>
+         </x>
+      </xx>
+   </x-map>
+</map-example>>>>>> ELEMENT=[element map-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<MapExample ID="0">
+   <!-- java.util.Map -->
+   <XMap class="java.util.HashMap" ID="1">
+      <Xx key="2">
+         <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+         <X ID="2">
+            <!-- java.lang.String -->
+            <X ID="3">B</X>
+         </X>
+      </Xx>
+      <Xx key="1">
+         <!-- org.simpleframework.xml.core.UnionMapTest$X -->
+         <X ID="4">
+            <!-- java.lang.String -->
+            <X ID="5">A</X>
+         </X>
+      </Xx>
+   </XMap>
+</MapExample>>>>>> ELEMENT=[element MapExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<mapExample>
+   <yMap class="java.util.HashMap">
+      <yy key="2">
+         <y>
+            <y>B</y>
+         </y>
+      </yy>
+      <yy key="1">
+         <y>
+            <y>A</y>
+         </y>
+      </yy>
+   </yMap>
+</mapExample><mapExample>
+   <yMap class="java.util.HashMap">
+      <yy key="2">
+         <y>
+            <y>B</y>
+         </y>
+      </yy>
+      <yy key="1">
+         <y>
+            <y>A</y>
+         </y>
+      </yy>
+   </yMap>
+</mapExample>
+<map-example ID="0">
+   <!-- java.util.Map -->
+   <y-map class="java.util.HashMap" ID="1">
+      <yy key="2">
+         <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+         <y ID="2">
+            <!-- java.lang.String -->
+            <y ID="3">B</y>
+         </y>
+      </yy>
+      <yy key="1">
+         <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+         <y ID="4">
+            <!-- java.lang.String -->
+            <y ID="5">A</y>
+         </y>
+      </yy>
+   </y-map>
+</map-example>>>>>> ELEMENT=[element map-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<MapExample ID="0">
+   <!-- java.util.Map -->
+   <YMap class="java.util.HashMap" ID="1">
+      <Yy key="2">
+         <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+         <Y ID="2">
+            <!-- java.lang.String -->
+            <Y ID="3">B</Y>
+         </Y>
+      </Yy>
+      <Yy key="1">
+         <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
+         <Y ID="4">
+            <!-- java.lang.String -->
+            <Y ID="5">A</Y>
+         </Y>
+      </Yy>
+   </YMap>
+</MapExample>>>>>> ELEMENT=[element MapExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testInlineList took 0.396 sec
+Testcase: testXList took 0.054 sec
+Testcase: testYList took 0.04 sec
+Testcase: testDirectory took 0.001 sec

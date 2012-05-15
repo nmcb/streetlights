@@ -1,0 +1,42 @@
+Testsuite: org.simpleframework.xml.core.UnionMixInlineTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.207 sec
+------------- Standard Error -----------------
+org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.simpleframework.xml.ElementListUnion(value=[@org.simpleframework.xml.ElementList(inline=true, type=class java.lang.Integer, required=true, data=false, entry=, empty=true, name=x), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.Double, required=true, data=false, entry=, empty=true, name=y), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.String, required=true, data=false, entry=, empty=true, name=z)]) for field 'list' private java.util.List org.simpleframework.xml.core.UnionMixInlineTest$Example.list
+	at org.simpleframework.xml.core.StructureBuilder.validateUnions(StructureBuilder.java:582)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:519)
+	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:403)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:362)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
+	at org.simpleframework.xml.core.Support.getName(Support.java:265)
+	at org.simpleframework.xml.core.Source.getName(Source.java:240)
+	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
+	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
+	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1180)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1162)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1259)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1241)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1222)
+	at org.simpleframework.xml.core.UnionMixInlineTest.testInlineMix(UnionMixInlineTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+------------- ---------------- ---------------
+
+Testcase: testInlineMix took 0.199 sec
+Testcase: testDirectory took 0.002 sec

@@ -1,0 +1,8 @@
+Testsuite: org.simpleframework.xml.core.ComplexDocumentTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.109 sec
+------------- Standard Error -----------------
+Time taken was 814
+Second time taken was 212
+------------- ---------------- ---------------
+
+Testcase: testComplexDocument took 1.104 sec

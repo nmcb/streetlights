@@ -1,0 +1,69 @@
+Testsuite: org.simpleframework.xml.transform.TimeTransformTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.405 sec
+------------- Standard Output ---------------
+<timeExample attribute="2012-05-13 11:56:27.250 BST">
+   <element class="java.sql.Time">2012-05-13 11:56:27.250 BST</element>
+   <time>2012-05-13 11:56:27.250 BST</time>
+   <list class="java.util.ArrayList">
+      <time>2012-05-13 11:56:27.250 BST</time>
+      <time>2012-05-13 11:56:27.250 BST</time>
+   </list>
+   <array length="1">
+      <time>2012-05-13 11:56:27.250 BST</time>
+   </array>
+</timeExample><timeExample attribute="2012-05-13 11:56:27.250 BST">
+   <element class="java.sql.Time">2012-05-13 11:56:27.250 BST</element>
+   <time>2012-05-13 11:56:27.250 BST</time>
+   <list class="java.util.ArrayList">
+      <time>2012-05-13 11:56:27.250 BST</time>
+      <time>2012-05-13 11:56:27.250 BST</time>
+   </list>
+   <array length="1">
+      <time>2012-05-13 11:56:27.250 BST</time>
+   </array>
+</timeExample>
+<time-example ID="0" attribute="2012-05-13 11:56:27.250 BST">
+   <!-- java.util.Date -->
+   <element class="java.sql.Time" ID="1">2012-05-13 11:56:27.250 BST</element>
+   <!-- java.sql.Time -->
+   <time ID="2">2012-05-13 11:56:27.250 BST</time>
+   <!-- java.util.Collection -->
+   <list class="java.util.ArrayList" ID="3">
+      <!-- java.sql.Time -->
+      <time ID="4">2012-05-13 11:56:27.250 BST</time>
+      <!-- java.sql.Time -->
+      <time ID="5">2012-05-13 11:56:27.250 BST</time>
+   </list>
+   <!-- [Ljava.sql.Time; -->
+   <array length="1" ID="6">
+      <!-- java.sql.Time -->
+      <time ID="7">2012-05-13 11:56:27.250 BST</time>
+   </array>
+</time-example>>>>>> ELEMENT=[element time-example]
+>>>>> TYPE=[class org.simpleframework.xml.transform.TimeTransformTest$TimeExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<TimeExample ID="0" attribute="2012-05-13 11:56:27.250 BST">
+   <!-- java.util.Date -->
+   <Element class="java.sql.Time" ID="1">2012-05-13 11:56:27.250 BST</Element>
+   <!-- java.sql.Time -->
+   <Time ID="2">2012-05-13 11:56:27.250 BST</Time>
+   <!-- java.util.Collection -->
+   <List class="java.util.ArrayList" ID="3">
+      <!-- java.sql.Time -->
+      <Time ID="4">2012-05-13 11:56:27.250 BST</Time>
+      <!-- java.sql.Time -->
+      <Time ID="5">2012-05-13 11:56:27.250 BST</Time>
+   </List>
+   <!-- [Ljava.sql.Time; -->
+   <Array length="1" ID="6">
+      <!-- java.sql.Time -->
+      <Time ID="7">2012-05-13 11:56:27.250 BST</Time>
+   </Array>
+</TimeExample>>>>>> ELEMENT=[element TimeExample]
+>>>>> TYPE=[class org.simpleframework.xml.transform.TimeTransformTest$TimeExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testTime took 0.022 sec
+Testcase: testPersistence took 0.377 sec
+Testcase: testDirectory took 0 sec

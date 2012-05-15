@@ -1,0 +1,206 @@
+Testsuite: org.simpleframework.xml.core.StrictModeTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.361 sec
+------------- Standard Output ---------------
+<exampleObjectWithAddress version="1.0">
+   <integer>123</integer>
+   <address>
+      <name>example name</name>
+      <address>example address</address>
+   </address>
+   <name>test</name>
+</exampleObjectWithAddress><exampleObjectWithAddress version="1.0">
+   <integer>123</integer>
+   <address>
+      <name>example name</name>
+      <address>example address</address>
+   </address>
+   <name>test</name>
+</exampleObjectWithAddress>
+<example-object-with-address ID="0" version="1.0">
+   <!-- java.lang.Integer -->
+   <integer ID="1">123</integer>
+   <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
+   <address ID="2">
+      <!-- java.lang.String -->
+      <name ID="3">example name</name>
+      <!-- java.lang.String -->
+      <address ID="4">example address</address>
+   </address>
+   <!-- java.lang.String -->
+   <name ID="5">test</name>
+</example-object-with-address>>>>>> ELEMENT=[element example-object-with-address]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<ExampleObjectWithAddress ID="0" version="1.0">
+   <!-- java.lang.Integer -->
+   <Integer ID="1">123</Integer>
+   <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
+   <Address ID="2">
+      <!-- java.lang.String -->
+      <Name ID="3">example name</Name>
+      <!-- java.lang.String -->
+      <Address ID="4">example address</Address>
+   </Address>
+   <!-- java.lang.String -->
+   <Name ID="5">test</Name>
+</ExampleObjectWithAddress>>>>>> ELEMENT=[element ExampleObjectWithAddress]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have a match in class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
+	at org.simpleframework.xml.core.Composite.readAttribute(Composite.java:555)
+	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:474)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:387)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
+	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
+	at org.simpleframework.xml.core.StrictModeTest.testStrictMode(StrictModeTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:708)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:510)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
+	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.StrictModeTest.testNonStrictModeMissingName(StrictModeTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
+	at org.simpleframework.xml.core.Composite.validateAttribute(Composite.java:887)
+	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:810)
+	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:784)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
+	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:891)
+	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
+	at org.simpleframework.xml.core.Composite.validateAttribute(Composite.java:887)
+	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:810)
+	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:784)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
+	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:891)
+	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:993)
+	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:845)
+	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:785)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
+	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:592)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
+------------- ---------------- ---------------
+
+Testcase: testStrictMode took 0.222 sec
+Testcase: testNonStrictMode took 0.111 sec
+Testcase: testNonStrictModeMissingName took 0.008 sec
+Testcase: testValidation took 0.009 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,27 @@
+Testsuite: org.simpleframework.xml.core.UnionInlineListWitinPathTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
+------------- Standard Output ---------------
+<department id="0">
+   <employees>
+      <manager id="1">
+         <department reference="0"/>
+         <name id="2">Tom</name>
+         <subordinates>
+            <graduate id="3">
+               <department reference="0"/>
+               <name id="4">Dick</name>
+            </graduate>
+            <assistant id="5">
+               <department reference="0"/>
+               <name id="6">Harry</name>
+            </assistant>
+         </subordinates>
+      </manager>
+      <graduate reference="3"/>
+      <assistant reference="5"/>
+   </employees>
+   <name id="7">Human Resources</name>
+</department>------------- ---------------- ---------------
+
+Testcase: testListWithPath took 0.279 sec
+Testcase: testDirectory took 0.002 sec

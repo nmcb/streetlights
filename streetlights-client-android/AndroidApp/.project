@@ -30,4 +30,11 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>libs/simple-xml-2.6.3.jar</name>
+			<type>1</type>
+			<location>C:/Users/Tiemen/Documents/git/streetlights/streetlights-client-android/simple-xml-2.6.3/jar/simple-xml-2.6.3.jar</location>
+		</link>
+	</linkedResources>
 </projectDescription>
