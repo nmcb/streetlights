@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,20 +18,32 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.client;
+package streetlights.model.infra;
 
-import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Marco Borst
- * @since 03/05/12
+ * @since 15/05/12
  */
-public interface Cloud
+// @XmlRootElement(name = "roads")
+@XmlRootElement(name = "roads")
+public class Roads
 {
-  void register(Road road);
+  @XmlElement(name = "road")
+  private List<Road> roads;
 
-  Road getRoad(String uuid);
+  public Roads() {
+  }
 
-  Roads roads();
+  public Roads(List<Road> roads) {
+     this.roads = new ArrayList<Road>(roads);
+  }
+
+  public List<Road> list() {
+    return roads;
+  }
 }

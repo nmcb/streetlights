@@ -22,9 +22,8 @@ package streetlights.client.impl;
 import org.jboss.resteasy.client.ProxyFactory;
 import streetlights.client.Cloud;
 import streetlights.model.infra.Road;
+import streetlights.model.infra.Roads;
 import streetlights.service.RoadService;
-
-import java.util.List;
 
 /**
  * @author Marco Borst
@@ -44,7 +43,7 @@ public class RestEasyCloud implements Cloud
     return service.get(uuid);
   }
 
-  public List<Road> listRoads()
+  public Roads roads()
   {
     return service.list();
   }

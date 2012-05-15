@@ -20,10 +20,9 @@
 package streetlights.service.web;
 
 import streetlights.model.infra.Road;
+import streetlights.model.infra.Roads;
 import streetlights.persistence.RoadRepository;
 import streetlights.service.RoadService;
-
-import java.util.List;
 
 /**
  * @author Marco Borst
@@ -34,9 +33,9 @@ public class RoadProvider implements RoadService
   private RoadRepository repository = new RoadRepository();
 
   @SuppressWarnings("unchecked") // TODO remove?
-  public List<Road> list()
+  public Roads list()
   {
-    return repository.findAll();
+    return new Roads(repository.findAll());
   }
 
   public String persist(Road road)

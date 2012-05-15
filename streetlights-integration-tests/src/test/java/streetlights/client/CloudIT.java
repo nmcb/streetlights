@@ -65,6 +65,6 @@ public class CloudIT
   {
     cloud.register(new Road("A1"));
     cloud.register(new Road("A2"));
-    Assert.assertTrue(cloud.listRoads().size() >= 2);
+    Assert.assertTrue(cloud.roads().list().size() >= 2);
   }
 }
