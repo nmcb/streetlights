@@ -1,10 +1,10 @@
 package nl.loxia.streetlights.androidapp;
 
-import android.app.ListActivity;
-import android.app.ProgressDialog;
+import android.app.Activity;
 import android.content.Context;
 
-public abstract class AbstractAsyncListActivity extends ListActivity implements IActivityWithProgressDialog {
+// Stupid java for not having multiple inheritance of mix-in :(
+public abstract class AbstractAsyncActivity extends Activity implements IActivityWithProgressDialog {
     private final ProgressDialogHelper progressDialog = new ProgressDialogHelper();
     private boolean destroyed = false;
 

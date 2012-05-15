@@ -8,10 +8,9 @@
         android:id="@+id/roadNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -45,4 +44,11 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segments:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
 </LinearLayout>

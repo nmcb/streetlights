@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class RoadsAdapter extends BaseAdapter {
+public class RoadsListAdapter extends BaseAdapter {
     private final LayoutInflater inflater;
     private final Roads roads;
 
-    public RoadsAdapter(Context context, Roads roads) {
+    public RoadsListAdapter(Context context, Roads roads) {
         this.inflater = LayoutInflater.from(context);
         this.roads = roads;
 
@@ -37,18 +37,16 @@ public class RoadsAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.roadslistentry, parent, false);
+            convertView = inflater.inflate(R.layout.roads_list_entry, parent, false);
         }
 
         Road road = getItem(position);
         if (road != null) {
             TextView nameView = (TextView) convertView.findViewById(R.id.roadNameLabel);
             TextView uuidView = (TextView) convertView.findViewById(R.id.roadUuidLabel);
-            TextView uriView = (TextView) convertView.findViewById(R.id.roadUriLabel);
 
             nameView.setText(road.getName());
             uuidView.setText(road.getUuid());
-            uriView.setText(road.getUri());
         }
 
         return convertView;

@@ -13,16 +13,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ListView;
 
 public class ListRoadsActivity extends AbstractAsyncListActivity {
     private static final String TAG = "ListRoadsActivity";
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.context = this;
     }
 
     @Override
@@ -32,8 +38,16 @@ public class ListRoadsActivity extends AbstractAsyncListActivity {
     }
 
     public void refreshList(Roads roads) {
-        RoadsAdapter adapter = new RoadsAdapter(this, roads);
+        RoadsListAdapter adapter = new RoadsListAdapter(this, roads);
         setListAdapter(adapter);
+    }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Road road = (Road) l.getItemAtPosition(position);
+        Intent intent = new Intent(this, ViewSingleRoadActivity.class);
+        intent.putExtra(Road.UUID, road.getUuid());
+        startActivity(intent);
     }
 
     private class AsyncListRoadsRequest extends AsyncTask<Void, Void, Roads> {
@@ -41,7 +55,7 @@ public class ListRoadsActivity extends AbstractAsyncListActivity {
 
         @Override
         protected void onPreExecute() {
-            showProgressDialog(getString(R.string.loading));
+            showProgressDialog(context, getString(R.string.loading));
         }
 
         @Override

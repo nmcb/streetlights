@@ -9,6 +9,8 @@ import org.simpleframework.xml.Root;
 
 @Root
 public class Road {
+    public static final String UUID = "uuid";
+
     @Attribute
     private String uuid;
 
