@@ -26,6 +26,17 @@ import android.widget.TextView;
 public class ViewSingleRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private TextView uuidView;
+    private Road currentRoad;
+
+    public static ViewSingleRoadFragment newInstance(Road road) {
+        ViewSingleRoadFragment fragment = new ViewSingleRoadFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putString(Road.UUID_TAG, road.getUuid().toString());
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +50,9 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
 
         uuidView = (TextView) view.findViewById(R.id.roadUuidLabel);
 
+        UUID uuid = UUID.fromString(getArguments().getString(Road.UUID_TAG));
+        loadRoadInformation(uuid);
+
         return view;
     }
 
@@ -50,12 +64,14 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
     }
 
     private void refreshUI(Road road) {
-        if (road != null) {
+        currentRoad = road;
+
+        if (currentRoad != null) {
             TextView nameView = (TextView) getView().findViewById(R.id.roadNameLabel);
             TextView uriView = (TextView) getView().findViewById(R.id.roadUriLabel);
 
-            nameView.setText(road.getName());
-            uriView.setText(road.getUri());
+            nameView.setText(currentRoad.getName());
+            uriView.setText(currentRoad.getUri());
         }
     }
 
@@ -94,5 +110,9 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
 
             refreshUI(road);
         }
+    }
+
+    public Road getCurrentRoad() {
+        return currentRoad;
     }
 }

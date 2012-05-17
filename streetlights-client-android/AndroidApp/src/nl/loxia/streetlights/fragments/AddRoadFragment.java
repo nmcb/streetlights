@@ -3,6 +3,7 @@ package nl.loxia.streetlights.fragments;
 import java.util.Arrays;
 import java.util.UUID;
 
+import nl.loxia.streetlights.androidapp.ListRoadsActivity;
 import nl.loxia.streetlights.androidapp.R;
 import nl.loxia.streetlights.androidapp.ViewSingleRoadActivity;
 import nl.loxia.streetlights.model.infra.Road;
@@ -31,6 +32,7 @@ public class AddRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private String requestedUUID;
     private TextView nameTextView;
+    private boolean dualPane;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,10 @@ public class AddRoadFragment extends AbstractAsyncFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.addroad_fragment, container, false);
+
+        // check if the dualPaneFrame is there (i.e. we're on a tablet)
+        View dualPaneFrame = getActivity().findViewById(R.id.dualPaneFrame);
+        dualPane = dualPaneFrame != null && dualPaneFrame.getVisibility() == View.VISIBLE;
 
         nameTextView = (TextView) view.findViewById(R.id.roadNameEdit);
         Button addRoadButton = (Button) view.findViewById(R.id.addRoadButton);
@@ -67,10 +73,17 @@ public class AddRoadFragment extends AbstractAsyncFragment {
     private void refreshUI(String uuid) {
         if (uuid.equals(requestedUUID)) {
             // success! Let's go view the newly added road
-            Intent intent = new Intent(activity, ViewSingleRoadActivity.class);
-            intent.putExtra(Road.UUID_TAG, uuid);
-            startActivity(intent);
-            activity.finish();
+            if (dualPane) {
+                Intent intent = new Intent(activity, ListRoadsActivity.class);
+                intent.putExtra(Road.UUID_TAG, uuid);
+                startActivity(intent);
+                activity.finish();
+            } else {
+                Intent intent = new Intent(activity, ViewSingleRoadActivity.class);
+                intent.putExtra(Road.UUID_TAG, uuid);
+                startActivity(intent);
+                activity.finish();
+            }
         } else {
             // todo show error dialog?
         }
