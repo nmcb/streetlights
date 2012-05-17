@@ -2,6 +2,9 @@ target/
 .idea/
 .svn/
 *.iml
-/streetlights-client-android/AndroidApp/bin
 /streetlights-client-android/AndroidApp/gen
 /streetlights-client-android/AndroidApp/lint.xml
+/streetlights-client-android/AndroidApp/bin/classes.dex
+/streetlights-client-android/AndroidApp/bin/resources.ap_
+/streetlights-client-android/AndroidApp/bin/classes
+/streetlights-client-android/AndroidApp/bin/res
