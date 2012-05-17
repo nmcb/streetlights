@@ -1,7 +1,6 @@
 package nl.loxia.streetlights.androidapp;
 
 import android.app.ListActivity;
-import android.app.ProgressDialog;
 import android.content.Context;
 
 public abstract class AbstractAsyncListActivity extends ListActivity implements IActivityWithProgressDialog {

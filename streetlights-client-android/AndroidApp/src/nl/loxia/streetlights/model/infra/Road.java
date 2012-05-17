@@ -14,13 +14,13 @@ public class Road {
     @Attribute
     private String uuid;
 
-    @Attribute
+    @Attribute(required = false)
     private String uri;
 
     @Element
     private String name;
 
-    @ElementList
+    @ElementList(required = false)
     private List<Segment> segments;
 
     public Road() {

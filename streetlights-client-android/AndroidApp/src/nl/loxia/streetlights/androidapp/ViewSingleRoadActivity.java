@@ -12,10 +12,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class ViewSingleRoadActivity extends AbstractAsyncActivity {
@@ -33,7 +35,20 @@ public class ViewSingleRoadActivity extends AbstractAsyncActivity {
         TextView uuidView = (TextView) findViewById(R.id.roadUuidLabel);
         uuidView.setText(uuid);
 
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         new AsyncRoadDetailRequest().execute(uuid);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case android.R.id.home:
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void refreshUI(Road road) {

@@ -5,9 +5,14 @@
     <string name="path_base">http://192.168.0.194</string>
     <string name="port">:8666</string>
     <string name="path_listroads">/infra/roads</string>
+    <string name="path_addroad">/infra/roads</string>
     
     <string name="loading">Loading…</string>
     <string name="path_singleroad">/infra/road/</string>
     <string name="uuid_label">uuid:\u0020</string>
     <string name="uri_label">uri:\u0020</string>
+    <string name="segments_header">Segments:</string>
+    <string name="add_road">Add road</string>
+    <string name="add_road_condensed">Add</string>
+    <string name="name_label">Name:</string>
 </resources>
