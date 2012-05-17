@@ -6,8 +6,6 @@ import java.util.List;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import android.util.Log;
-
 @Root
 public class Roads {
     private static Roads EMPTY_ROADS;

@@ -2,7 +2,7 @@ package nl.loxia.streetlights.androidapp;
 
 import android.content.Context;
 
-public interface IActivityWithProgressDialog {
+public interface IFragmentWithProgressDialog {
 
     public abstract void showProgressDialog(Context context, String msg);
 

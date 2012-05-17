@@ -1,14 +1,17 @@
-package nl.loxia.streetlights.androidapp;
+package nl.loxia.streetlights.fragments;
 
-import android.app.ListActivity;
+import nl.loxia.streetlights.androidapp.IFragmentWithProgressDialog;
+import nl.loxia.streetlights.androidapp.ProgressDialogHelper;
+import android.app.Fragment;
 import android.content.Context;
 
-public abstract class AbstractAsyncListActivity extends ListActivity implements IActivityWithProgressDialog {
+// Stupid java for not having multiple inheritance of mix-in :(
+public abstract class AbstractAsyncFragment extends Fragment implements IFragmentWithProgressDialog {
     private final ProgressDialogHelper progressDialog = new ProgressDialogHelper();
     private boolean destroyed = false;
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
         destroyed = true;
     }
