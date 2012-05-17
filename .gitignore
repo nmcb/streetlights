@@ -4,3 +4,4 @@ target/
 *.iml
 /streetlights-client-android/AndroidApp/bin
 /streetlights-client-android/AndroidApp/gen
+/streetlights-client-android/AndroidApp/lint.xml
