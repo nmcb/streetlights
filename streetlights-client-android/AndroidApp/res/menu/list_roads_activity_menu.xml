@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/add_road_menu_item" android:titleCondensed="@string/add_road_condensed" android:title="@string/add_road" android:showAsAction="ifRoom|withText"></item>
+    <item android:id="@+id/addRoadMenuItem" android:titleCondensed="@string/add_road_label_condensed" android:title="@string/add_road_label" android:showAsAction="ifRoom|withText"></item>
+    <item android:id="@+id/refreshMenuItem" android:title="@string/refresh_label" android:showAsAction="ifRoom|withText"></item>
     
 
 </menu>

@@ -42,7 +42,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     @Override
     public void onStart() {
         super.onStart();
-        new AsyncListRoadsRequest().execute();
+        doRequest();
     }
 
     @Override
@@ -53,11 +53,18 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-        case R.id.add_road_menu_item:
+        case R.id.addRoadMenuItem:
             startActivity(new Intent(activity, AddRoadActivity.class));
+            return true;
+        case R.id.refreshMenuItem:
+            doRequest();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void doRequest() {
+        new AsyncListRoadsRequest().execute();
     }
 
     public void refreshList(Roads roads) {

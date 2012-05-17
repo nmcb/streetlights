@@ -11,8 +11,9 @@
     <string name="path_singleroad">/infra/road/</string>
     <string name="uuid_label">uuid:\u0020</string>
     <string name="uri_label">uri:\u0020</string>
-    <string name="segments_header">Segments:</string>
-    <string name="add_road">Add road</string>
-    <string name="add_road_condensed">Add</string>
+    <string name="segments_label">Segments:</string>
+    <string name="add_road_label">Add road</string>
+    <string name="add_road_label_condensed">Add</string>
     <string name="name_label">Name:</string>
+    <string name="refresh_label">Refresh</string>
 </resources>
