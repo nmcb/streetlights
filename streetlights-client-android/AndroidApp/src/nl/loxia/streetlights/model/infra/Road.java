@@ -1,6 +1,7 @@
 package nl.loxia.streetlights.model.infra;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -9,9 +10,9 @@ import org.simpleframework.xml.Root;
 
 @Root
 public class Road {
-    public static final String UUID = "uuid";
+    public static final String UUID_TAG = "uuid";
 
-    @Attribute
+    @Attribute()
     private String uuid;
 
     @Attribute(required = false)
@@ -39,12 +40,12 @@ public class Road {
         return name;
     }
 
-    public String getUuid() {
-        return uuid;
+    public UUID getUuid() {
+        return UUID.fromString(uuid);
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid.toString();
     }
 
     public String getUri() {

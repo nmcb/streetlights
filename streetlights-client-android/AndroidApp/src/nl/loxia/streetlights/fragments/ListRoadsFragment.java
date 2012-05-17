@@ -69,7 +69,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         Road road = (Road) l.getItemAtPosition(position);
         Intent intent = new Intent(activity, ViewSingleRoadActivity.class);
-        intent.putExtra(Road.UUID, road.getUuid());
+        intent.putExtra(Road.UUID_TAG, road.getUuid().toString());
         startActivity(intent);
     }
 

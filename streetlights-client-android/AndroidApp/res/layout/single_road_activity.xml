@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/viewRoadFragment"
-        android:name="nl.loxia.streetlights.androidapp.ViewSingleRoadFragment"
+        android:name="nl.loxia.streetlights.fragments.ViewSingleRoadFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 

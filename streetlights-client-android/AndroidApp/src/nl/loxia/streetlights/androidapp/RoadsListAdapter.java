@@ -16,7 +16,6 @@ public class RoadsListAdapter extends BaseAdapter {
     public RoadsListAdapter(Context context, Roads roads) {
         this.inflater = LayoutInflater.from(context);
         this.roads = roads;
-
     }
 
     @Override
@@ -46,7 +45,7 @@ public class RoadsListAdapter extends BaseAdapter {
             TextView uuidView = (TextView) convertView.findViewById(R.id.roadUuidLabel);
 
             nameView.setText(road.getName());
-            uuidView.setText(road.getUuid());
+            uuidView.setText(road.getUuid().toString());
         }
 
         return convertView;

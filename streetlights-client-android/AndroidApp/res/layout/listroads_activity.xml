@@ -5,9 +5,10 @@
     android:orientation="vertical" >
 
     <fragment
-        android:name="nl.loxia.streetlights.androidapp.ListRoadsFragment"
+        android:name="nl.loxia.streetlights.fragments.ListRoadsFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:id="@+id/roadListFragment">
+        android:layout_height="wrap_content"
+        android:id="@+id/roadListFragment">
         <!-- Preview: layout=@layout/roads_list_entry -->
     </fragment>
 

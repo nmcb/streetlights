@@ -18,7 +18,7 @@ public class ViewSingleRoadActivity extends Activity {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        UUID uuid = UUID.fromString(getIntent().getStringExtra(Road.UUID));
+        UUID uuid = UUID.fromString(getIntent().getStringExtra(Road.UUID_TAG));
         ViewSingleRoadFragment fragment = (ViewSingleRoadFragment) getFragmentManager().findFragmentById(R.id.viewRoadFragment);
         fragment.loadRoadInformation(uuid);
     }

@@ -68,7 +68,7 @@ public class AddRoadFragment extends AbstractAsyncFragment {
         if (uuid.equals(requestedUUID)) {
             // success! Let's go view the newly added road
             Intent intent = new Intent(activity, ViewSingleRoadActivity.class);
-            intent.putExtra(Road.UUID, uuid);
+            intent.putExtra(Road.UUID_TAG, uuid);
             startActivity(intent);
             activity.finish();
         } else {
