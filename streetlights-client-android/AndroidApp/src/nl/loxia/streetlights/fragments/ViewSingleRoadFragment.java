@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import android.content.Context;
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +24,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class ViewSingleRoadFragment extends AbstractAsyncFragment {
-    private Context activity;
+    private Activity activity;
     private TextView uuidView;
 
     @Override
@@ -48,16 +48,6 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
         uuidView.setText(uuidString);
         new AsyncRoadDetailRequest().execute(uuidString);
     }
-
-    // @Override
-    // public boolean onOptionsItemSelected(MenuItem item) {
-    // switch (item.getItemId()) {
-    // case android.R.id.home:
-    // onBackPressed();
-    // return true;
-    // }
-    // return super.onOptionsItemSelected(item);
-    // }
 
     private void refreshUI(Road road) {
         if (road != null) {
