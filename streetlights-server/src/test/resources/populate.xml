@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><!--
+  ~ Proof of concept depicting a restful specification of access to
+  ~ infrastructure related data graphs.
+  ~
+  ~ Copyright (C) 2012 NMCB B.V.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see http://www.gnu.org/licenses/.
+  -->
+
+<roads>
+  <road uri="urn:uuid:c37bf773-9f2c-418e-8bd3-100000000000" uuid="c37bf773-9f2c-418e-8bd3-100000000000">
+    <name>R1</name>
+    <segments>
+      <segment uri="urn:uuid:c37bf773-9f2c-418e-8bd3-110000000000" uuid="c37bf773-9f2c-418e-8bd3-110000000000">
+        <name>R1S1</name>
+        <startCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </startCoordinates>
+        <endCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>0.0</latitude>
+          <longitude>10.0</longitude>
+        </endCoordinates>
+      </segment>
+      <segment uri="urn:uuid:c37bf773-9f2c-418e-8bd3-120000000000" uuid="c37bf773-9f2c-418e-8bd3-120000000000">
+        <name>R1S2</name>
+        <startCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>0.0</latitude>
+          <longitude>10.0</longitude>
+        </startCoordinates>
+        <endCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>10.0</latitude>
+          <longitude>10.0</longitude>
+        </endCoordinates>
+      </segment>
+    </segments>
+  </road>
+  <road uri="urn:uuid:c37bf773-9f2c-418e-8bd3-200000000000" uuid="c37bf773-9f2c-418e-8bd3-200000000000">
+    <name>R2</name>
+    <segments>
+      <segment uri="urn:uuid:c37bf773-9f2c-418e-8bd3-210000000000" uuid="c37bf773-9f2c-418e-8bd3-210000000000">
+        <name>R2S1</name>
+        <startCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>10.0</latitude>
+          <longitude>10.0</longitude>
+        </startCoordinates>
+        <endCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>10.0</latitude>
+          <longitude>20.0</longitude>
+        </endCoordinates>
+      </segment>
+      <segment uri="urn:uuid:c37bf773-9f2c-418e-8bd3-220000000000" uuid="c37bf773-9f2c-418e-8bd3-220000000000">
+        <name>R2S2</name>
+        <startCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>10.0</latitude>
+          <longitude>20.0</longitude>
+        </startCoordinates>
+        <endCoordinates>
+          <accuracy>1.0</accuracy>
+          <latitude>20.0</latitude>
+          <longitude>20.0</longitude>
+        </endCoordinates>
+      </segment>
+    </segments>
+  </road>
+</roads>

@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +33,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,49 +47,50 @@ import java.util.List;
 @Entity(name = "road")
 public class Road extends ResourceValue
 {
-  @XmlElement
-  @Basic
-  @Index(name = "name_idx") // Hibernate specific
-  private String name;
+    @XmlElement
+    @Basic
+    @Index(name = "name_idx") // Hibernate specific
+    private String name;
 
-  @OneToMany(mappedBy = "road", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-  @XmlElementWrapper(name = "segments")
-  @XmlElement(name = "segment")
-  private List<Segment> segments;
+    // TODO shouldn't fetch related resource values eagerly
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @XmlElementWrapper(name = "segments")
+    @XmlElement(name = "segment")
+    private List<Segment> segments = new ArrayList<Segment>();
 
-  // JPA Requires a public constructor, may need to provide boolean toImmutable() method  (i.e. implementing validation and setting of this entity resource's URN)
-  public Road()
-  {
-  }
+    // TODO JPA Requires a public constructor, may need to provide boolean toImmutable() method  (i.e. implementing validation and setting of this entity resource's URN)
+    public Road()
+    {
+    }
 
-  public Road(String name)
-  {
-    this.name = name;
-  }
+    public Road(String name)
+    {
+        this.name = name;
+    }
 
-  public String getResourceName()
-  {
-    return "road";
-  }
+    public String getResourceName()
+    {
+        return "road";
+    }
 
-  @Override
-  public String getName()
-  {
-    return name;
-  }
+    @Override
+    public String getName()
+    {
+        return name;
+    }
 
-  public void setName(String name)
-  {
-    this.name = name;
-  }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-  public List<Segment> getSegments()
-  {
-    return segments;
-  }
+    public List<Segment> getSegments()
+    {
+        return segments;
+    }
 
-  public void setSegments(List<Segment> segments)
-  {
-    this.segments = segments;
-  }
+    public void setSegments(List<Segment> segments)
+    {
+        this.segments = segments;
+    }
 }

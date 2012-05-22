@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,9 +20,11 @@
 
 package streetlights.persistence;
 
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import streetlights.model.infra.Road;
+import streetlights.test.util.RoadsFixture;
 
 /**
  * @author Marco Borst
@@ -29,19 +32,35 @@ import streetlights.model.infra.Road;
  */
 public class RoadRepositoryTest
 {
-  private RoadRepository repository;
-  
-  private Road fixture = new Road("A1");
+    private RoadRepository repository;
 
-  @Before
-  public void createRepository()
-  {
-    repository = new RoadRepository();
-  }
+    @Before
+    public void createRepository()
+    {
+        repository = new RoadRepository();
+    }
 
-  @Test
-  public void persist()
-  {
-    String uuid = repository.persist(new Road("A1"));
-  }
+    @Test
+    public void persistAndGetRoad()
+    {
+        String uuid = repository.persist(RoadsFixture.ROAD_WITHOUT_SEGMENTS);
+        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getUUID(), uuid);
+
+        Road actual = repository.get(uuid);
+        Assert.assertNotNull(actual);
+        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getName(), actual.getName());
+        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getSegments().size(), actual.getSegments().size());
+    }
+
+    @Test
+    public void persistAndGetRoadWithSegments()
+    {
+        String uuid = repository.persist(RoadsFixture.ROAD_WITH_SEGMENTS);
+        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getUUID(), uuid);
+
+        Road actual = repository.get(uuid);
+        Assert.assertNotNull(actual);
+        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getName(), actual.getName());
+        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getSegments().size(), actual.getSegments().size());
+    }
 }

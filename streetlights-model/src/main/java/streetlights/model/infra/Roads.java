@@ -29,21 +29,23 @@ import java.util.List;
  * @author Marco Borst
  * @since 15/05/12
  */
-// @XmlRootElement(name = "roads")
 @XmlRootElement(name = "roads")
 public class Roads
 {
-  @XmlElement(name = "road")
-  private List<Road> roads;
+    @XmlElement(name = "road")
+    private List<Road> roads;
 
-  public Roads() {
-  }
+    public Roads()
+    {
+    }
 
-  public Roads(List<Road> roads) {
-     this.roads = new ArrayList<Road>(roads);
-  }
+    public Roads(List<Road> roads)
+    {
+        this.roads = new ArrayList<Road>(roads);
+    }
 
-  public List<Road> list() {
-    return roads;
-  }
+    public List<Road> list()
+    {
+        return roads;
+    }
 }

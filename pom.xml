@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Depicts a protocol to implement bigraphs in a restful manner.
+  ~ Proof of concept depicting a restful specification of access to
+  ~ infrastructure related data graphs.
   ~
-  ~ Copyright (C)  2012  NMCB B.V.
+  ~ Copyright (C) 2012 NMCB B.V.
   ~
   ~ This program is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -21,138 +22,144 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>streetlights</groupId>
-    <artifactId>streetlights</artifactId>
-    <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+  <groupId>streetlights</groupId>
+  <artifactId>streetlights</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>jboss</id>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
+  <repositories>
+    <repository>
+      <id>jboss</id>
+      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+  </repositories>
 
-    <properties>
-        <!-- versioning production -->
-        <resteasy.version>2.3.1.GA</resteasy.version>
-        <jetty.version>8.1.1.v20120215</jetty.version>
-        <hibernate.version>4.1.1.Final</hibernate.version>
-        <uuid.version>3.1.3</uuid.version>
+  <properties>
+    <!-- versioning production -->
+    <resteasy.version>2.3.1.GA</resteasy.version>
+    <jetty.version>8.1.1.v20120215</jetty.version>
+    <hibernate.version>4.1.1.Final</hibernate.version>
+    <uuid.version>3.1.3</uuid.version>
 
-        <!-- versioning test -->
-        <junit.version>4.10</junit.version>
+    <!-- versioning test -->
+    <junit.version>4.10</junit.version>
 
-        <!-- encoding -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+    <!-- encoding -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
 
-    <modules>
-        <module>streetlights-model</module>
-        <module>streetlights-repository</module>
-        <module>streetlights-server</module>
-        <module>streetlights-client</module>
-        <module>streetlights-service</module>
-        <module>streetlights-service-web</module>
-        <module>streetlights-integration-tests</module>
-    </modules>
+  <modules>
+    <module>streetlights-model</module>
+    <module>streetlights-repository</module>
+    <module>streetlights-server</module>
+    <module>streetlights-client</module>
+    <module>streetlights-service</module>
+    <module>streetlights-service-web</module>
+    <module>streetlights-integration-tests</module>
+    <module>streetlights-test-util</module>
+  </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- modules -->
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-client</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-model</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-repository</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-service</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-service-web</artifactId>
-                <classifier>classes</classifier>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>streetlights</groupId>
-                <artifactId>streetlights-server</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+  <dependencyManagement>
+    <dependencies>
+      <!-- modules -->
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-repository</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-service-web</artifactId>
+        <classifier>classes</classifier>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>streetlights</groupId>
+        <artifactId>streetlights-test-util</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
-            <!-- production -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxrs</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxb-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.uuid</groupId>
-                <artifactId>java-uuid-generator</artifactId>
-                <version>${uuid.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>${jetty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-entitymanager</artifactId>
-                <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.18</version>
-            </dependency>
-            <!-- TODO hack for local testing, remove -->
-            <dependency>
-                <groupId>com.h2database</groupId>
-                <artifactId>h2</artifactId>
-                <version>1.3.164</version>
-            </dependency>
+      <!-- production -->
+      <dependency>
+        <groupId>org.jboss.resteasy</groupId>
+        <artifactId>resteasy-jaxrs</artifactId>
+        <version>${resteasy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jboss.resteasy</groupId>
+        <artifactId>resteasy-jaxb-provider</artifactId>
+        <version>${resteasy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.uuid</groupId>
+        <artifactId>java-uuid-generator</artifactId>
+        <version>${uuid.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.18</version>
+      </dependency>
+      <!-- TODO hack for local testing, remove -->
+      <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.3.164</version>
+      </dependency>
 
 
-            <!-- test -->
-            <!--<dependency>-->
-                <!--<groupId>com.h2database</groupId>-->
-                <!--<artifactId>h2</artifactId>-->
-                <!--<version>1.3.164</version>-->
-                <!--<scope>test</scope>-->
-            <!--</dependency>-->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+      <!-- test -->
+      <!--<dependency>-->
+      <!--<groupId>com.h2database</groupId>-->
+      <!--<artifactId>h2</artifactId>-->
+      <!--<version>1.3.164</version>-->
+      <!--<scope>test</scope>-->
+      <!--</dependency>-->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>

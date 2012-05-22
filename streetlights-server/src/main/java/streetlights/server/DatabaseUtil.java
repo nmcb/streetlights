@@ -18,41 +18,28 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.service;
+package streetlights.server;
 
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import streetlights.persistence.RoadRepository;
+import streetlights.test.util.RoadsFixture;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import java.io.File;
 
 /**
  * @author Marco Borst
- * @since 24/04/12
+ * @since 21/05/12
  */
-@Path("/infra")
-@Produces("application/xml")
-@Consumes("application/xml")
-public interface RoadService
+public class DatabaseUtil
 {
-    @GET
-    @Path("/roads")
-    public Roads list();
+    private RoadRepository repository = new RoadRepository();
 
-    @POST
-    @Path("/roads")
-    public String persist(Road road);
-
-    @PUT
-    @Path("/road/{name}")
-    public Road put(Road road);
-
-    @GET
-    @Path("/road/{uuid}")
-    public Road get(@PathParam("uuid") String uuid);
+    public void populate(File file)
+    {
+        RoadsFixture fixture = new RoadsFixture(file);
+        for (Road road : fixture.roads().list())
+        {
+          repository.persist(road);
+        }
+    }
 }

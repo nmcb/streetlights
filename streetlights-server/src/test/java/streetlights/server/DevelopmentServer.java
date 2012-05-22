@@ -1,5 +1,6 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
  * Copyright (C) 2012 NMCB B.V.
  *
@@ -27,8 +28,8 @@ package streetlights.server;
  */
 public class DevelopmentServer
 {
-  public static void main(String[] args)
-  {
-    ResourceServer.main(args);
-  }
+    public static void main(String[] args)
+    {
+        ResourceServer.main(args);
+    }
 }

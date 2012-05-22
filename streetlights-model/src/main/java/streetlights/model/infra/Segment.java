@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,10 +21,14 @@
 package streetlights.model.infra;
 
 import streetlights.model.ResourceValue;
+import streetlights.model.geo.Coordinates;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -32,40 +37,79 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Marco Borst
  * @since 04/03/12
  */
-@Entity
+@Entity(name = "segment")
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Segment extends ResourceValue
 {
-  @Basic
-  private String name;
+    @Basic
+    private String name;
 
-  @ManyToOne
-  private Road road;
+    // TODO currently uni-directional to prevent a cycle during XML serialization but should be treated as a separate resource.
+    //    @ManyToOne
+    //    private Road road;
 
-  public String getResourceName()
-  {
-    return name;
-  }
+    @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "latitude", column = @Column(name = "start_latitude")),
+        @AttributeOverride(name = "longitude", column = @Column(name = "start_longitude")),
+    })
+    // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
+    private Coordinates startCoordinates;
 
-  @Override
-  public String getName()
-  {
-    return name;
-  }
+    @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "latitude", column = @Column(name = "end_latitude")),
+        @AttributeOverride(name = "longitude", column = @Column(name = "end_longitude")),
+    })
+    // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
+    private Coordinates endCoordinates;
 
-  public void setName(String name)
-  {
-    this.name = name;
-  }
+    public Segment()
+    {
+        // JPA default constructor
+    }
 
-  public Road getRoad()
-  {
-    return road;
-  }
+    public Segment(String name, Coordinates startCoordinates, Coordinates endCoordinates)
+    {
+        this.name = name;
+        this.startCoordinates = startCoordinates;
+        this.endCoordinates = endCoordinates;
+    }
 
-  public void setRoad(Road road)
-  {
-    this.road = road;
-  }
+    public String getResourceName()
+    {
+        return name;
+    }
+
+    @Override
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public Coordinates getStartCoordinates()
+    {
+        return startCoordinates;
+    }
+
+    public void setStartCoordinates(Coordinates startCoordinates)
+    {
+        this.startCoordinates = startCoordinates;
+    }
+
+    public Coordinates getEndCoordinates()
+    {
+        return endCoordinates;
+    }
+
+    public void setEndCoordinates(Coordinates endCoordinates)
+    {
+        this.endCoordinates = endCoordinates;
+    }
 }

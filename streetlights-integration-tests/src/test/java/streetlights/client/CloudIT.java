@@ -1,7 +1,8 @@
 /*
- * Depicts a protocol to implement bigraphs in a restful manner.
+ * Proof of concept depicting a restful specification of access to
+ * infrastructure related data graphs.
  *
- * Copyright (C)  2012  NMCB B.V.
+ * Copyright (C) 2012 NMCB B.V.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,7 +56,6 @@ public class CloudIT
   {
     Road expected = new Road("A1");
     cloud.register(expected);
-    // TODO Test if road is persistent.
     Road actual = cloud.getRoad(expected.getUUID());
     Assert.assertEquals(expected, actual);
   }
