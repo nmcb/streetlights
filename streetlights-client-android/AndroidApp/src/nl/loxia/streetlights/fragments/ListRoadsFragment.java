@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.UUID;
 
 import nl.loxia.streetlights.androidapp.AddRoadActivity;
+import nl.loxia.streetlights.androidapp.ListRoadsActivity;
 import nl.loxia.streetlights.androidapp.R;
 import nl.loxia.streetlights.androidapp.RoadsListAdapter;
+import nl.loxia.streetlights.androidapp.SettingsActivity;
 import nl.loxia.streetlights.androidapp.ViewSingleRoadActivity;
 import nl.loxia.streetlights.model.infra.Road;
 import nl.loxia.streetlights.model.infra.Roads;
@@ -22,6 +24,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +33,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Context;
 
 public class ListRoadsFragment extends AbstractAsyncListFragment {
     private Activity activity;
@@ -108,6 +114,9 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         case R.id.refreshMenuItem:
             doRequestList();
             return true;
+        case R.id.overflowMenuItem:
+            overflowMenu();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -137,10 +146,21 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     public void doRequestList() {
         new AsyncListRoadsRequest().execute();
     }
+    
+    private void overflowMenu() {
+        startActivity(new Intent(activity, SettingsActivity.class));
+    }
 
     public void refreshList(Roads roads) {
         RoadsListAdapter adapter = new RoadsListAdapter(activity, roads);
         setListAdapter(adapter);
+        
+        //TEST CODE To See if the SharedPreferences Work
+        SharedPreferences settings = activity.getSharedPreferences(SettingsActivity.PREFS_NAME,
+            Activity.MODE_PRIVATE);
+        String ipAddress = settings.getString("ip_address", null);
+        Toast.makeText(activity, "IP Address: " +ipAddress, Toast.LENGTH_SHORT).show();
+        //END OF TEST CODE
 
         if (futureSelection != null) {
             setSelection(futureSelection);
