@@ -42,7 +42,7 @@ import java.util.List;
  */
 
 // TODO Add tests for the mappings.
-@XmlRootElement
+@XmlRootElement(name = "road")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity(name = "road")
 public class Road extends ResourceValue

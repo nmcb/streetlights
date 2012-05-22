@@ -30,21 +30,22 @@ import java.util.List;
  * @since 15/05/12
  */
 @XmlRootElement(name = "roads")
-public class Roads
+public class RoadsContainer
 {
     @XmlElement(name = "road")
     private List<Road> roads;
 
-    public Roads()
+    public RoadsContainer()
     {
+        // JPA default constructor
     }
 
-    public Roads(List<Road> roads)
+    public RoadsContainer(List<Road> roads)
     {
         this.roads = new ArrayList<Road>(roads);
     }
 
-    public List<Road> list()
+    public List<Road> getRoads()
     {
         return roads;
     }

@@ -24,7 +24,7 @@ import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.bio.SocketConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
-import streetlights.service.web.RoadProvider;
+import streetlights.service.web.RoadXmlProvider;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -125,7 +125,7 @@ public class ResourceServer implements Runnable
         delegate = new Server();
         try
         {
-            home = new File(RoadProvider.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getParentFile().getParent();
+            home = new File(RoadXmlProvider.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getParentFile().getParent();
             System.setProperty("jetty.home", home);
         }
         catch (Exception e)

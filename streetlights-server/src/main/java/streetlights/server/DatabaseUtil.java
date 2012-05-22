@@ -37,7 +37,7 @@ public class DatabaseUtil
     public void populate(File file)
     {
         RoadsFixture fixture = new RoadsFixture(file);
-        for (Road road : fixture.roads().list())
+        for (Road road : fixture.roads().getRoads())
         {
           repository.persist(road);
         }

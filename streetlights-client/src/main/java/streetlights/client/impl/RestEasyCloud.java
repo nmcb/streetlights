@@ -23,8 +23,8 @@ package streetlights.client.impl;
 import org.jboss.resteasy.client.ProxyFactory;
 import streetlights.client.Cloud;
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
-import streetlights.service.RoadService;
+import streetlights.model.infra.RoadsContainer;
+import streetlights.service.InfraXmlResource;
 
 /**
  * @author Marco Borst
@@ -32,7 +32,7 @@ import streetlights.service.RoadService;
  */
 public class RestEasyCloud implements Cloud
 {
-  RoadService service = ProxyFactory.create(RoadService.class, "http://localhost:8666");
+  InfraXmlResource service = ProxyFactory.create(InfraXmlResource.class, "http://localhost:8666");
 
   public void register(Road road)
   {
@@ -44,7 +44,7 @@ public class RestEasyCloud implements Cloud
     return service.get(uuid);
   }
 
-  public Roads roads()
+  public RoadsContainer roads()
   {
     return service.list();
   }

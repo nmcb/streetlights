@@ -21,22 +21,22 @@
 package streetlights.service.web;
 
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import streetlights.model.infra.RoadsContainer;
 import streetlights.persistence.RoadRepository;
-import streetlights.service.RoadService;
+import streetlights.service.InfraResource;
 
 /**
  * @author Marco Borst
  * @since 04/03/12
  */
-public class RoadProvider implements RoadService
+public class RoadXmlProvider implements InfraResource
 {
   private RoadRepository repository = new RoadRepository();
 
-  @SuppressWarnings("unchecked") // TODO remove?
-  public Roads list()
+  @SuppressWarnings("unchecked") // TODO make repository generic for find all.
+  public RoadsContainer list()
   {
-    return new Roads(repository.findAll());
+    return new RoadsContainer(repository.findAll());
   }
 
   public String persist(Road road)

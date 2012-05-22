@@ -21,7 +21,7 @@
 package streetlights.service;
 
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import streetlights.model.infra.RoadsContainer;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -33,16 +33,16 @@ import javax.ws.rs.Produces;
 
 /**
  * @author Marco Borst
- * @since 24/04/12
+ * @since 22/05/12
  */
 @Path("/infra")
-@Produces("application/xml")
-@Consumes("application/xml")
-public interface RoadService
+@Produces({"application/xml", "application/json"})
+@Consumes({"application/xml", "application/json"})
+public interface InfraResource
 {
     @GET
     @Path("/roads")
-    public Roads list();
+    public RoadsContainer list();
 
     @POST
     @Path("/roads")

@@ -21,7 +21,7 @@
 package streetlights.client;
 
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import streetlights.model.infra.RoadsContainer;
 
 /**
  * @author Marco Borst
@@ -33,5 +33,5 @@ public interface Cloud
 
   Road getRoad(String uuid);
 
-  Roads roads();
+  RoadsContainer roads();
 }

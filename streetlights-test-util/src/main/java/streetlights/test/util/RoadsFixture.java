@@ -22,7 +22,7 @@ package streetlights.test.util;
 
 import streetlights.model.geo.Coordinates;
 import streetlights.model.infra.Road;
-import streetlights.model.infra.Roads;
+import streetlights.model.infra.RoadsContainer;
 import streetlights.model.infra.Segment;
 
 import javax.xml.bind.JAXBContext;
@@ -37,7 +37,7 @@ import java.util.Arrays;
 // TODO introduce builders for related entities.
 public class RoadsFixture
 {
-    public static final Roads ROADS;
+    public static final RoadsContainer ROADS;
     public static final Road ROAD_WITHOUT_SEGMENTS;
     public static final Road ROAD_WITH_SEGMENTS;
     public static final Segment ROAD_SEGMENT_1;
@@ -52,10 +52,10 @@ public class RoadsFixture
         ROAD_WITH_SEGMENTS = new Road("R1");
         ROAD_WITH_SEGMENTS.setSegments(new ArrayList<Segment>(Arrays.asList(ROAD_SEGMENT_1, ROAD_SEGMENT_2)));
 
-        ROADS = new Roads(new ArrayList<Road>(Arrays.asList(ROAD_WITHOUT_SEGMENTS, ROAD_WITH_SEGMENTS)));
+        ROADS = new RoadsContainer(new ArrayList<Road>(Arrays.asList(ROAD_WITHOUT_SEGMENTS, ROAD_WITH_SEGMENTS)));
     }
 
-    private Roads roads;
+    private RoadsContainer roads;
 
     public RoadsFixture()
     {
@@ -67,7 +67,7 @@ public class RoadsFixture
         read(file);
     }
 
-    public Roads roads()
+    public RoadsContainer roads()
     {
         return roads;
     }
@@ -76,7 +76,7 @@ public class RoadsFixture
     {
         try
         {
-            roads = (Roads) JAXBContext.newInstance(Roads.class).createUnmarshaller().unmarshal(file);
+            roads = (RoadsContainer) JAXBContext.newInstance(RoadsContainer.class).createUnmarshaller().unmarshal(file);
         }
         catch (Exception e)
         {
@@ -88,7 +88,7 @@ public class RoadsFixture
     {
         try
         {
-            JAXBContext.newInstance(Roads.class).createMarshaller().marshal(roads(), file);
+            JAXBContext.newInstance(RoadsContainer.class).createMarshaller().marshal(roads(), file);
         }
         catch (Exception e)
         {
