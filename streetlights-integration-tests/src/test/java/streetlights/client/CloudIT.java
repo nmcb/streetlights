@@ -25,7 +25,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import streetlights.client.impl.RestEasyCloud;
-import streetlights.model.infra.Road;
+import streetlights.infra.Road;
 import streetlights.server.ResourceServer;
 
 /**

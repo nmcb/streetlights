@@ -20,7 +20,7 @@
 
 package streetlights.server;
 
-import streetlights.model.infra.Road;
+import streetlights.infra.Road;
 import streetlights.persistence.RoadRepository;
 import streetlights.test.util.RoadsSnapshot;
 

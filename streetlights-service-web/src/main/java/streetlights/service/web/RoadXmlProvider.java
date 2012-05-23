@@ -20,8 +20,8 @@
 
 package streetlights.service.web;
 
-import streetlights.model.infra.Road;
-import streetlights.model.infra.RoadsContainer;
+import streetlights.infra.Road;
+import streetlights.infra.RoadsContainer;
 import streetlights.persistence.RoadRepository;
 import streetlights.service.InfraResource;
 

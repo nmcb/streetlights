@@ -23,7 +23,7 @@ package streetlights.persistence;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import streetlights.model.infra.Road;
+import streetlights.infra.Road;
 import streetlights.test.util.RoadsSnapshot;
 
 /**

@@ -24,8 +24,8 @@
   <persistence-unit name="streetlights" transaction-type="RESOURCE_LOCAL">
     <description>MySQL Persistence Unit (production)</description>
 
-    <class>streetlights.model.infra.Road</class>
-    <class>streetlights.model.infra.Segment</class>
+    <class>streetlights.infra.Road</class>
+    <class>streetlights.infra.Segment</class>
 
   </persistence-unit>
 </persistence>

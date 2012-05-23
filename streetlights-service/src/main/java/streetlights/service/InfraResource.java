@@ -20,8 +20,8 @@
 
 package streetlights.service;
 
-import streetlights.model.infra.Road;
-import streetlights.model.infra.RoadsContainer;
+import streetlights.infra.Road;
+import streetlights.infra.RoadsContainer;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

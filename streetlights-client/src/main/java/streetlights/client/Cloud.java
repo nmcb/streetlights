@@ -20,8 +20,8 @@
 
 package streetlights.client;
 
-import streetlights.model.infra.Road;
-import streetlights.model.infra.RoadsContainer;
+import streetlights.infra.Road;
+import streetlights.infra.RoadsContainer;
 
 /**
  * @author Marco Borst

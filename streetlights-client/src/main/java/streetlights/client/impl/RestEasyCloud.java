@@ -22,8 +22,8 @@ package streetlights.client.impl;
 
 import org.jboss.resteasy.client.ProxyFactory;
 import streetlights.client.Cloud;
-import streetlights.model.infra.Road;
-import streetlights.model.infra.RoadsContainer;
+import streetlights.infra.Road;
+import streetlights.infra.RoadsContainer;
 import streetlights.service.InfraResource;
 
 /**

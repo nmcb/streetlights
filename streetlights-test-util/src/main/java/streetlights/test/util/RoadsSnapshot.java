@@ -21,9 +21,9 @@
 package streetlights.test.util;
 
 import streetlights.model.geo.Coordinates;
-import streetlights.model.infra.Road;
-import streetlights.model.infra.RoadsContainer;
-import streetlights.model.infra.Segment;
+import streetlights.infra.Road;
+import streetlights.infra.RoadsContainer;
+import streetlights.infra.Segment;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

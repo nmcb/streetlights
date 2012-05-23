@@ -65,7 +65,8 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- modules -->
+
+      <!-- Modules -->
       <dependency>
         <groupId>streetlights</groupId>
         <artifactId>streetlights-client</artifactId>
@@ -103,7 +104,7 @@
         <version>${project.version}</version>
       </dependency>
 
-      <!-- production -->
+      <!-- Resources -->
       <dependency>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-jaxrs</artifactId>
@@ -119,16 +120,22 @@
         <artifactId>resteasy-jackson-provider</artifactId>
         <version>${resteasy.version}</version>
       </dependency>
+
+      <!-- Identity -->
       <dependency>
         <groupId>com.fasterxml.uuid</groupId>
         <artifactId>java-uuid-generator</artifactId>
         <version>${uuid.version}</version>
       </dependency>
+
+      <!-- Server -->
       <dependency>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
         <version>${jetty.version}</version>
       </dependency>
+
+      <!-- Persistency -->
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
@@ -144,28 +151,24 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>5.1.18</version>
       </dependency>
-      <!-- TODO hack for local testing, remove -->
+
+      <!-- Android -->
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>4.0.1.2</version>
+        <scope>provided</scope>
+      </dependency>
+
+
+      <!-- Tests -->
       <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
         <version>1.3.164</version>
+        <!-- not scope test since used in test-util which contains it's sources in main -->
+        <!-- <scope>test</scope> -->
       </dependency>
-      <!-- Android Dependencies -->
-      <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>4.0.1.2</version>
-            <scope>provided</scope>
-    	</dependency>
-
-
-      <!-- test -->
-      <!--<dependency>-->
-      <!--<groupId>com.h2database</groupId>-->
-      <!--<artifactId>h2</artifactId>-->
-      <!--<version>1.3.164</version>-->
-      <!--<scope>test</scope>-->
-      <!--</dependency>-->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>

@@ -18,7 +18,7 @@
  * along with this program.  If not, see http://www.gnu.org/licenses/.
  */
 
-package streetlights.model.infra;
+package streetlights.infra;
 
 import org.hibernate.annotations.Index;
 import streetlights.model.ResourceValue;

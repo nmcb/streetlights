@@ -20,7 +20,7 @@
 
 package streetlights.persistence;
 
-import streetlights.model.infra.Road;
+import streetlights.infra.Road;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
