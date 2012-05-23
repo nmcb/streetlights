@@ -1,6 +1,7 @@
 target/
 .idea/
 .svn/
+.settings/
 .project
 .classpath
 .DS_Store
@@ -11,3 +12,5 @@ target/
 /streetlights-client-android/AndroidApp/bin/resources.ap_
 /streetlights-client-android/AndroidApp/bin/classes
 /streetlights-client-android/AndroidApp/bin/res
+
+/streetlights-android-module/bin/
