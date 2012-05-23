@@ -21,7 +21,7 @@
 package streetlights.infra;
 
 import streetlights.model.ResourceValue;
-import streetlights.model.geo.Coordinates;
+import streetlights.model.geo.LatLng;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -51,30 +51,30 @@ public class Segment extends ResourceValue
 
     @Embedded
     @AttributeOverrides({
-        @AttributeOverride(name = "latitude", column = @Column(name = "start_latitude")),
-        @AttributeOverride(name = "longitude", column = @Column(name = "start_longitude")),
+        @AttributeOverride(name = "lat", column = @Column(name = "start_lat")),
+        @AttributeOverride(name = "lng", column = @Column(name = "start_lng")),
     })
     // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
-    private Coordinates startCoordinates;
+    private LatLng start;
 
     @Embedded
     @AttributeOverrides({
-        @AttributeOverride(name = "latitude", column = @Column(name = "end_latitude")),
-        @AttributeOverride(name = "longitude", column = @Column(name = "end_longitude")),
+        @AttributeOverride(name = "lat", column = @Column(name = "end_lat")),
+        @AttributeOverride(name = "lng", column = @Column(name = "end_lng")),
     })
     // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
-    private Coordinates endCoordinates;
+    private LatLng end;
 
     public Segment()
     {
         // JPA default constructor
     }
 
-    public Segment(String name, Coordinates startCoordinates, Coordinates endCoordinates)
+    public Segment(String name, LatLng start, LatLng end)
     {
         this.name = name;
-        this.startCoordinates = startCoordinates;
-        this.endCoordinates = endCoordinates;
+        this.start = start;
+        this.end = end;
     }
 
     public String getResourceName()
@@ -93,23 +93,23 @@ public class Segment extends ResourceValue
         this.name = name;
     }
 
-    public Coordinates getStartCoordinates()
+    public LatLng getStart()
     {
-        return startCoordinates;
+        return start;
     }
 
-    public void setStartCoordinates(Coordinates startCoordinates)
+    public void setStart(LatLng startCoordinates)
     {
-        this.startCoordinates = startCoordinates;
+        this.start = startCoordinates;
     }
 
-    public Coordinates getEndCoordinates()
+    public LatLng getEnd()
     {
-        return endCoordinates;
+        return end;
     }
 
-    public void setEndCoordinates(Coordinates endCoordinates)
+    public void setEnd(LatLng endCoordinates)
     {
-        this.endCoordinates = endCoordinates;
+        this.end = endCoordinates;
     }
 }

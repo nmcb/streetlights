@@ -24,69 +24,75 @@ import javax.persistence.Basic;
 import javax.persistence.Embeddable;
 
 /**
+ * LatLng is a point in geographical coordinates, latitude and longitude.  Notice that although usual map projections associate
+ * longitude with the x-coordinate of the map, and latitude with the y-coordinate, the latitude coordinate is always written
+ * first, followed by the longitude.  Notice the ordering of latitude and longitude. If the noWrap flag is true, then the
+ * numbers will be used as passed, otherwise latitude will be clamped to lie between -90 degrees and +90 degrees, and longitude
+ * will be wrapped to lie between -180 degrees and +180 degrees.
+ *
  * @author Marco Borst
  * @since 21/05/12
  */
 @Embeddable
-public class Coordinates
+public class LatLng
 {
     /**
-     * The latitude coordinate, specified in decimal degrees.
+     * The latitude coordinate, specified in decimal degrees. I.e. south being the value of -90 and north the value of 90.
      */
     @Basic
-    private double latitude;
+    private double lat;
 
     /**
-     * The longitude coordinate, specified in decimal degrees.
+     * The longitude coordinate, specified in decimal degrees. I.e. west being the value of -180 and east the value of 180.
      */
     @Basic
-    private double longitude;
+    private double lng;
 
     /**
      * The accuracy denotes the accuracy level of the latitude and longitude coordinates.  It is specified in meters must be a
      * non-negative real number.  The default value is 1 meter.
      */
     // TODO required according to http://www.w3.org/TR/geolocation-API/#coordinates, needs to be mapped though but preferably not on coordinates
-    private transient double accuracy = 1d;
+    private transient double acc = 1d;
 
-    public Coordinates()
+    public LatLng()
     {
         // JPA default constructor.
     }
 
-    public Coordinates(double latitude, double longitude)
+    public LatLng(double lat, double lng)
     {
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.lat = lat;
+        this.lng = lng;
     }
 
-    public double getLatitude()
+    public double getLat()
     {
-        return latitude;
+        return lat;
     }
 
-    public void setLatitude(double latitude)
+    public void setLat(double lat)
     {
-        this.latitude = latitude;
+        this.lat = lat;
     }
 
-    public double getLongitude()
+    public double getLng()
     {
-        return longitude;
+        return lng;
     }
 
-    public void setLongitude(double longitude)
+    public void setLng(double lng)
     {
-        this.longitude = longitude;
+        this.lng = lng;
     }
 
-    public double getAccuracy()
+    public double getAcc()
     {
-        return accuracy;
+        return acc;
     }
 
-    public void setAccuracy(double accuracy)
+    public void setAcc(double acc)
     {
-        this.accuracy = accuracy;
+        this.acc = acc;
     }
 }

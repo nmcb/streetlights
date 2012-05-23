@@ -20,7 +20,7 @@
 
 package streetlights.test.util;
 
-import streetlights.model.geo.Coordinates;
+import streetlights.model.geo.LatLng;
 import streetlights.infra.Road;
 import streetlights.infra.RoadsContainer;
 import streetlights.infra.Segment;
@@ -48,8 +48,8 @@ public class RoadsSnapshot
     {
         ROAD_WITHOUT_SEGMENTS = new Road("R0");
 
-        ROAD_SEGMENT_1 = new Segment("R1S1", new Coordinates(0d, 0d), new Coordinates(0d, 10d));
-        ROAD_SEGMENT_2 = new Segment("R1S2", new Coordinates(0d, 10d), new Coordinates(10d, 10d));
+        ROAD_SEGMENT_1 = new Segment("R1S1", new LatLng(0d, 0d), new LatLng(0d, 10d));
+        ROAD_SEGMENT_2 = new Segment("R1S2", new LatLng(0d, 10d), new LatLng(10d, 10d));
         ROAD_WITH_SEGMENTS = new Road("R1");
         ROAD_WITH_SEGMENTS.setSegments(new ArrayList<Segment>(Arrays.asList(ROAD_SEGMENT_1, ROAD_SEGMENT_2)));
 
