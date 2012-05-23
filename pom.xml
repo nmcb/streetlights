@@ -56,6 +56,7 @@
     <module>streetlights-repository</module>
     <module>streetlights-server</module>
     <module>streetlights-client</module>
+    <module>streetlights-android-module</module>
     <module>streetlights-service</module>
     <module>streetlights-service-web</module>
     <module>streetlights-integration-tests</module>
