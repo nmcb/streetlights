@@ -26,6 +26,7 @@ import streetlights.model.infra.RoadsContainer;
 import streetlights.model.infra.Segment;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,7 +36,7 @@ import java.util.Arrays;
  * @since 21/05/12
  */
 // TODO introduce builders for related entities.
-public class RoadsFixture
+public class RoadsSnapshot
 {
     public static final RoadsContainer ROADS;
     public static final Road ROAD_WITHOUT_SEGMENTS;
@@ -55,40 +56,38 @@ public class RoadsFixture
         ROADS = new RoadsContainer(new ArrayList<Road>(Arrays.asList(ROAD_WITHOUT_SEGMENTS, ROAD_WITH_SEGMENTS)));
     }
 
-    private RoadsContainer roads;
+    private RoadsContainer roadsContainer;
 
-    public RoadsFixture()
+    private RoadsSnapshot()
     {
-        roads = ROADS;
+        roadsContainer = ROADS;
     }
 
-    public RoadsFixture(File file)
+    public RoadsContainer getRoadsContainer()
     {
-        read(file);
+        return roadsContainer;
     }
 
-    public RoadsContainer roads()
+    public static RoadsSnapshot fromURI(String uriRep)
     {
-        return roads;
-    }
-
-    public void read(File file)
-    {
-        try
+        File uri = null;
+        try // to load from file
         {
-            roads = (RoadsContainer) JAXBContext.newInstance(RoadsContainer.class).createUnmarshaller().unmarshal(file);
+            uri = new File(uriRep); // TODO but goto uri
+            RoadsContainer container = (RoadsContainer) JAXBContext.newInstance(RoadsContainer.class).createUnmarshaller().unmarshal(uri);
+            return new RoadsSnapshot();
         }
-        catch (Exception e)
+        catch (JAXBException e)
         {
-            throw new RuntimeException("Unable to read fixture from file " + file.getPath(), e);
+            throw new RuntimeException("Unable to resolve `uri:" + uri + "`", e.getLinkedException());
         }
     }
 
     public void write(File file)
     {
-        try
+        try // try to load from file
         {
-            JAXBContext.newInstance(RoadsContainer.class).createMarshaller().marshal(roads(), file);
+            JAXBContext.newInstance(RoadsContainer.class).createMarshaller().marshal(getRoadsContainer(), file);
         }
         catch (Exception e)
         {
@@ -99,6 +98,6 @@ public class RoadsFixture
     public static void main(String[] args)
     {
         // writes the fixture to file
-        new RoadsFixture().write(new File(args[0]));
+        new RoadsSnapshot().write(new File(args[0]));
     }
 }

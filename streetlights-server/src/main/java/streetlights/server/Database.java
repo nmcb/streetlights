@@ -22,22 +22,20 @@ package streetlights.server;
 
 import streetlights.model.infra.Road;
 import streetlights.persistence.RoadRepository;
-import streetlights.test.util.RoadsFixture;
-
-import java.io.File;
+import streetlights.test.util.RoadsSnapshot;
 
 /**
  * @author Marco Borst
  * @since 21/05/12
  */
-public class DatabaseUtil
+public class Database
 {
     private RoadRepository repository = new RoadRepository();
 
-    public void populate(File file)
+    // TODO uri parameter should be typed.
+    public void load(String uri)
     {
-        RoadsFixture fixture = new RoadsFixture(file);
-        for (Road road : fixture.roads().getRoads())
+        for (Road road : RoadsSnapshot.fromURI(uri).getRoadsContainer().getRoads())
         {
           repository.persist(road);
         }

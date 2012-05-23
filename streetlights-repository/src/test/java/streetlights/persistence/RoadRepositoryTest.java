@@ -24,7 +24,7 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import streetlights.model.infra.Road;
-import streetlights.test.util.RoadsFixture;
+import streetlights.test.util.RoadsSnapshot;
 
 /**
  * @author Marco Borst
@@ -43,24 +43,24 @@ public class RoadRepositoryTest
     @Test
     public void persistAndGetRoad()
     {
-        String uuid = repository.persist(RoadsFixture.ROAD_WITHOUT_SEGMENTS);
-        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getUUID(), uuid);
+        String uuid = repository.persist(RoadsSnapshot.ROAD_WITHOUT_SEGMENTS);
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITHOUT_SEGMENTS.getUUID(), uuid);
 
         Road actual = repository.get(uuid);
         Assert.assertNotNull(actual);
-        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getName(), actual.getName());
-        Assert.assertEquals(RoadsFixture.ROAD_WITHOUT_SEGMENTS.getSegments().size(), actual.getSegments().size());
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITHOUT_SEGMENTS.getName(), actual.getName());
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITHOUT_SEGMENTS.getSegments().size(), actual.getSegments().size());
     }
 
     @Test
     public void persistAndGetRoadWithSegments()
     {
-        String uuid = repository.persist(RoadsFixture.ROAD_WITH_SEGMENTS);
-        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getUUID(), uuid);
+        String uuid = repository.persist(RoadsSnapshot.ROAD_WITH_SEGMENTS);
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITH_SEGMENTS.getUUID(), uuid);
 
         Road actual = repository.get(uuid);
         Assert.assertNotNull(actual);
-        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getName(), actual.getName());
-        Assert.assertEquals(RoadsFixture.ROAD_WITH_SEGMENTS.getSegments().size(), actual.getSegments().size());
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITH_SEGMENTS.getName(), actual.getName());
+        Assert.assertEquals(RoadsSnapshot.ROAD_WITH_SEGMENTS.getSegments().size(), actual.getSegments().size());
     }
 }

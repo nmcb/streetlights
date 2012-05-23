@@ -53,16 +53,18 @@ public class ResourceServer implements Runnable
         // singleton constructor;
     }
 
-    public final static void main(String[] args)
+    public static void main(String[] args)
     {
-        if (args.length > 1 && args[0].equals("-p"))
+        if (args.length != 0)
         {
-            new DatabaseUtil().populate(new File(args[1]));
+            // TODO remove or filter development environment specific location
+            String uri = args[0];
+            new Database().load(uri);
         }
         instance.start();
     }
 
-    public final static ResourceServer getInstance()
+    public static ResourceServer getInstance()
     {
         return instance;
     }
