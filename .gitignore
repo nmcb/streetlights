@@ -1,6 +1,9 @@
 target/
 .idea/
 .svn/
+.project
+.classpath
+.DS_Store
 *.iml
 /streetlights-client-android/AndroidApp/gen
 /streetlights-client-android/AndroidApp/lint.xml
