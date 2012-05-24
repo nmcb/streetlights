@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ViewSingleRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
@@ -75,12 +76,13 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
         }
     }
 
-    private class AsyncRoadDetailRequest extends AsyncTask<String, Void, Road> {
+    private class AsyncRoadDetailRequest extends AsyncTask<String, Void, Road> implements ICancelableAsyncTask {
         private static final String TAG = "AsyncRoadDetailRequest";
+        private volatile boolean cancelled = false;
 
         @Override
         protected void onPreExecute() {
-            showProgressDialog(activity, getString(R.string.loading));
+            showProgressDialog(activity, this, getString(R.string.loading));
         }
 
         @Override
@@ -99,16 +101,29 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
                 return stateList;
             } catch (RestClientException e) {
                 Log.e(TAG, "Error during request", e);
-                // TODO display error for user
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(activity, "Error during request", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
             return null;
         }
 
         @Override
         protected void onPostExecute(Road road) {
-            dismissProgressDialog();
+            if (!cancelled) {
+                dismissProgressDialog();
 
-            refreshUI(road);
+                refreshUI(road);
+            }
+        }
+
+        @Override
+        public void cancel() {
+            cancelled = true;
+            dismissProgressDialog();
         }
     }
 

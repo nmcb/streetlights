@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.UUID;
 
 import nl.loxia.streetlights.androidapp.AddRoadActivity;
-import nl.loxia.streetlights.androidapp.ListRoadsActivity;
 import nl.loxia.streetlights.androidapp.R;
 import nl.loxia.streetlights.androidapp.RoadsListAdapter;
 import nl.loxia.streetlights.androidapp.SettingsActivity;
@@ -33,9 +32,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Context;
 
 public class ListRoadsFragment extends AbstractAsyncListFragment {
     private Activity activity;
@@ -97,6 +94,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     @Override
     public void onStart() {
         super.onStart();
+        setListAdapter(new RoadsListAdapter(activity, Roads.emptyRoads()));
         doRequestList();
     }
 
@@ -146,7 +144,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     public void doRequestList() {
         new AsyncListRoadsRequest().execute();
     }
-    
+
     private void overflowMenu() {
         startActivity(new Intent(activity, SettingsActivity.class));
     }
@@ -154,13 +152,12 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     public void refreshList(Roads roads) {
         RoadsListAdapter adapter = new RoadsListAdapter(activity, roads);
         setListAdapter(adapter);
-        
-        //TEST CODE To See if the SharedPreferences Work
-        SharedPreferences settings = activity.getSharedPreferences(SettingsActivity.PREFS_NAME,
-            Activity.MODE_PRIVATE);
+
+        // TEST CODE To See if the SharedPreferences Work
+        SharedPreferences settings = activity.getSharedPreferences(SettingsActivity.PREFS_NAME, Activity.MODE_PRIVATE);
         String ipAddress = settings.getString("ip_address", null);
-        Toast.makeText(activity, "IP Address: " +ipAddress, Toast.LENGTH_SHORT).show();
-        //END OF TEST CODE
+        Toast.makeText(activity, "IP Address: " + ipAddress, Toast.LENGTH_SHORT).show();
+        // END OF TEST CODE
 
         if (futureSelection != null) {
             setSelection(futureSelection);
@@ -173,12 +170,19 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         showDetails(position);
     }
 
-    private class AsyncListRoadsRequest extends AsyncTask<Void, Void, Roads> {
+    private class AsyncListRoadsRequest extends AsyncTask<Void, Void, Roads> implements ICancelableAsyncTask {
         private static final String TAG = "AsyncListRoadsRequest";
+        private volatile boolean cancelled = false;
 
         @Override
         protected void onPreExecute() {
-            showProgressDialog(activity, getString(R.string.loading));
+            showProgressDialog(activity, this, getString(R.string.loading));
+        }
+
+        @Override
+        public void cancel() {
+            cancelled = true;
+            dismissProgressDialog();
         }
 
         @Override
@@ -200,17 +204,24 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
                 }
             } catch (RestClientException e) {
                 Log.e(TAG, "Error during request", e);
-                // TODO display error for user
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(activity, "Error during request", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
             return roads;
         }
 
         @Override
         protected void onPostExecute(Roads roads) {
-            Log.i(TAG, "onPostExecute: " + roads.getRoads().size() + "roads received");
-            dismissProgressDialog();
+            if (!cancelled) {
+                Log.i(TAG, "onPostExecute: " + roads.getRoads().size() + "roads received");
 
-            refreshList(roads);
+                refreshList(roads);
+                dismissProgressDialog();
+            }
         }
     }
 

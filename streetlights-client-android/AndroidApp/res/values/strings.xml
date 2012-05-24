@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Streetlights</string>
     <string name="button_listroads_text">Get roads</string>
-    <string name="path_base">http://172.19.3.200</string>
+    <string name="path_base">http://192.168.0.194</string>
     <string name="port">:8666</string>
     <string name="path_listroads">/infra/roads</string>
     <string name="path_addroad">/infra/roads</string>

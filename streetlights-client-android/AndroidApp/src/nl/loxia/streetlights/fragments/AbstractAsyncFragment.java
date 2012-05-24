@@ -17,8 +17,8 @@ public abstract class AbstractAsyncFragment extends Fragment implements IFragmen
     }
 
     @Override
-    public void showProgressDialog(Context context, String msg) {
-        progressDialog.show(context, msg);
+    public void showProgressDialog(Context context, ICancelableAsyncTask task, String msg) {
+        progressDialog.show(context, task, msg);
     }
 
     @Override

@@ -27,6 +27,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
@@ -63,11 +64,16 @@ public class AddRoadFragment extends AbstractAsyncFragment {
 
     protected void addRoad() {
         String name = nameTextView.getText().toString();
-        requestedUUID = UUID.randomUUID().toString();
 
-        Road newRoad = new Road(name, requestedUUID);
+        if (name.isEmpty()) {
+            Toast.makeText(activity, "Please fill in the \"name\" field before adding", Toast.LENGTH_SHORT).show();
+        } else {
+            requestedUUID = UUID.randomUUID().toString();
 
-        new AsyncRoadDetailRequest().execute(newRoad);
+            Road newRoad = new Road(name, requestedUUID);
+
+            new AsyncRoadDetailRequest().execute(newRoad);
+        }
     }
 
     private void refreshUI(String uuid) {
@@ -85,16 +91,16 @@ public class AddRoadFragment extends AbstractAsyncFragment {
                 activity.finish();
             }
         } else {
-            // todo show error dialog?
+            Toast.makeText(activity, "Error: response UUID different than request UUID when adding road", Toast.LENGTH_LONG).show();
         }
     }
 
-    private class AsyncRoadDetailRequest extends AsyncTask<Road, Void, String> {
+    private class AsyncRoadDetailRequest extends AsyncTask<Road, Void, String> implements ICancelableAsyncTask {
         private static final String TAG = "AsyncRoadDetailRequest";
 
         @Override
         protected void onPreExecute() {
-            showProgressDialog(activity, getString(R.string.loading));
+            showProgressDialog(activity, this, getString(R.string.loading));
         }
 
         @Override
@@ -112,7 +118,12 @@ public class AddRoadFragment extends AbstractAsyncFragment {
                 return uuid;
             } catch (RestClientException e) {
                 Log.e(TAG, "Error during request", e);
-                // TODO display error for user
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(activity, "Error during request", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
             return null;
         }
@@ -122,6 +133,16 @@ public class AddRoadFragment extends AbstractAsyncFragment {
             dismissProgressDialog();
 
             refreshUI(uuid);
+        }
+
+        @Override
+        public void cancel() {
+            activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(activity, "Adding a road can not be cancelled", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }
