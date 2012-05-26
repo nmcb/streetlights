@@ -33,7 +33,7 @@ public class AddRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private String requestedUUID;
     private TextView nameTextView;
-    private boolean dualPane;
+    private boolean dualPane;    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,7 +105,12 @@ public class AddRoadFragment extends AbstractAsyncFragment {
 
         @Override
         protected String doInBackground(Road... road) {
-            final String url = getString(R.string.path_base) + getString(R.string.port) + getString(R.string.path_addroad);
+//            String ipAddress = settings.getString("ip_address", null);
+//            String portNumber = settings.getString("port_number", null);
+            String ipAddress = "http://172.19.3.200";
+            String portNumber = ":8666";
+            
+            final String url = ipAddress + portNumber + getString(R.string.path_addroad);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
             HttpEntity<Road> requestEntity = new HttpEntity<Road>(road[0], requestHeaders);

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nl.loxia.streetlights.androidapp"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk android:minSdkVersion="14" 
               android:targetSdkVersion="14"/>
@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".ViewSingleRoadActivity"></activity>
         <activity android:name=".AddRoadActivity"></activity>
-        <activity android:name="SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
     </application>
-
+    
+    
 </manifest>

@@ -15,8 +15,9 @@
     <string name="add_road_label">Add road</string>
     <string name="add_road_label_condensed">Add</string>
     <string name="name_label">Name:</string>
-    <string name="menu_label">Settings</string>
+    <string name="settings_label">Settings</string>
     <string name="refresh_label">Refresh</string>
     <string name="ip_address_label">IP Address:\u0020</string>
     <string name="ip_address">169.1.33.</string>
+    <string name="port_number_label">Port Number:\u0020</string>
 </resources>

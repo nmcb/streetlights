@@ -22,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -36,6 +37,7 @@ import android.widget.Toast;
 
 public class ListRoadsFragment extends AbstractAsyncListFragment {
     private Activity activity;
+    private Context context;
     private boolean dualPane;
     private int currentSelection = -1;
     private UUID futureSelection;
@@ -113,7 +115,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
             doRequestList();
             return true;
         case R.id.overflowMenuItem:
-            overflowMenu();
+            settingsMenu();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -145,7 +147,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         new AsyncListRoadsRequest().execute();
     }
 
-    private void overflowMenu() {
+    private void settingsMenu() {
         startActivity(new Intent(activity, SettingsActivity.class));
     }
 
@@ -186,11 +188,14 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         }
 
         @Override
-        protected Roads doInBackground(Void... params) {
+        protected Roads doInBackground(Void... params) {            
+            String ipAddress = "http://172.19.3.200";
+            String portNumber = ":8666";
+            
             Log.i(TAG, "doInBackground");
             Roads roads = Roads.emptyRoads();
 
-            final String url = getString(R.string.path_base) + getString(R.string.port) + getString(R.string.path_listroads);
+            final String url = ipAddress + portNumber + getString(R.string.path_listroads);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
             HttpEntity<?> requestEntity = new HttpEntity<Object>(requestHeaders);
