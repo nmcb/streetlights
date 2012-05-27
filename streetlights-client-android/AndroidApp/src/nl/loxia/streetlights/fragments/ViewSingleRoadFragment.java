@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.UUID;
 
 import nl.loxia.streetlights.androidapp.R;
-import nl.loxia.streetlights.androidapp.SettingsActivity;
 import nl.loxia.streetlights.model.infra.Road;
 
 import org.springframework.http.HttpEntity;
@@ -30,7 +29,6 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private TextView uuidView;
     private Road currentRoad;
-    SharedPreferences settings = activity.getSharedPreferences(SettingsActivity.PREFS_NAME, Activity.MODE_PRIVATE);
 
     public static ViewSingleRoadFragment newInstance(Road road) {
         ViewSingleRoadFragment fragment = new ViewSingleRoadFragment();
@@ -90,12 +88,9 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
 
         @Override
         protected Road doInBackground(String... uuid) {
-//            String ipAddress = settings.getString("ip_address", null);
-//            String portNumber = settings.getString("port_number", null);
-            String ipAddress = "http://172.19.3.200";
-            String portNumber = ":8666";
+            String ipAddress = Settings.getSetting(activity, "ip_address", null);
             
-            final String url = ipAddress + portNumber + getString(R.string.path_singleroad)
+            final String url = ipAddress + getString(R.string.path_singleroad)
                     + uuid[0];
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));

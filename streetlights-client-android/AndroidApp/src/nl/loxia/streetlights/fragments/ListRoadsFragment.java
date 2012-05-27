@@ -16,7 +16,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import android.app.Activity;
@@ -24,7 +23,6 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,12 +39,13 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     private boolean dualPane;
     private int currentSelection = -1;
     private UUID futureSelection;
+    private String ipAddress;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.activity = getActivity();
-
+        
         setHasOptionsMenu(true);
     }
 
@@ -114,7 +113,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         case R.id.refreshMenuItem:
             doRequestList();
             return true;
-        case R.id.overflowMenuItem:
+        case R.id.settingsMenuItem:
             settingsMenu();
             return true;
         }
@@ -155,11 +154,6 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
         RoadsListAdapter adapter = new RoadsListAdapter(activity, roads);
         setListAdapter(adapter);
 
-        // TEST CODE To See if the SharedPreferences Work
-        SharedPreferences settings = activity.getSharedPreferences(SettingsActivity.PREFS_NAME, Activity.MODE_PRIVATE);
-        String ipAddress = settings.getString("ip_address", null);
-        Toast.makeText(activity, "IP Address: " + ipAddress, Toast.LENGTH_SHORT).show();
-        // END OF TEST CODE
 
         if (futureSelection != null) {
             setSelection(futureSelection);
@@ -178,7 +172,8 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
 
         @Override
         protected void onPreExecute() {
-            showProgressDialog(activity, this, getString(R.string.loading));
+            //TODO Fix the error
+            //showProgressDialog(activity, this, getString(R.string.loading));           
         }
 
         @Override
@@ -189,13 +184,13 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
 
         @Override
         protected Roads doInBackground(Void... params) {            
-            String ipAddress = "http://172.19.3.200";
-            String portNumber = ":8666";
-            
             Log.i(TAG, "doInBackground");
             Roads roads = Roads.emptyRoads();
+            
+            ipAddress = Settings.getSetting(activity, "ip_address", null);
 
-            final String url = ipAddress + portNumber + getString(R.string.path_listroads);
+            final String url = ipAddress + getString(R.string.path_listroads);
+            Log.i(TAG, "URI: " +url);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
             HttpEntity<?> requestEntity = new HttpEntity<Object>(requestHeaders);
@@ -207,15 +202,26 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
                 if (stateList != null && stateList.getRoads() != null) {
                     roads = stateList;
                 }
-            } catch (RestClientException e) {
-                Log.e(TAG, "Error during request", e);
+            } catch (Exception e) {
+                Log.e(TAG, "Error parsing URI:" +ipAddress);
+                Settings.clearSettings(activity);
+                
                 activity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(activity, "Error during request", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Error parsing URI: " +ipAddress, Toast.LENGTH_SHORT).show();
                     }
                 });
-            }
+            } 
+//            catch (RestClientException e) {
+//                Log.e(TAG, "Error during request", e);
+//                activity.runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Toast.makeText(activity, "Error during request", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//            } 
             return roads;
         }
 
@@ -244,6 +250,5 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
                 break;
             }
         }
-
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/ipAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/firstDivider"
+        android:paddingTop="10dip"
+        android:text="@string/ip_address_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ipAddressEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ipAddressLabel"
+        android:hint="192.168.0.1"
+        android:inputType="number|text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <View android:id="@+id/firstDivider"
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:layout_margin="5dip"
+        android:layout_below="@id/ipAddressLabel"
+        android:background="#C0C0C0" />
+
+    <TextView
+        android:id="@+id/portNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dip"
+        android:layout_alignLeft="@+id/firstDivider"
+        android:layout_below="@+id/firstDivider"
+        android:text="@string/port_number_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <EditText
+        android:id="@+id/portNumberEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/portNumberLabel"
+        android:layout_alignBottom="@+id/portNumberLabel"
+        android:layout_toRightOf="@+id/portNumberLabel"
+        android:hint="1337"
+        android:inputType="number|text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</RelativeLayout>

@@ -2,6 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/addRoadMenuItem" android:titleCondensed="@string/add_road_label_condensed" android:title="@string/add_road_label" android:icon="@drawable/ic_action_road_add" android:showAsAction="ifRoom|withText"></item>
     <item android:id="@+id/refreshMenuItem" android:title="@string/refresh_label" android:icon="@drawable/ic_action_refresh" android:showAsAction="ifRoom|withText"></item>
-    <item android:id="@+id/overflowMenuItem" android:title="@string/settings_label" android:icon="@drawable/ic_action_overflow"></item>
-
+    <item android:id="@+id/settingsMenuItem" android:title="@string/settings_label" android:icon="@drawable/ic_action_overflow"></item>
 </menu>
