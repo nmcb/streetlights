@@ -15,7 +15,6 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -89,8 +88,9 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
         @Override
         protected Road doInBackground(String... uuid) {
             String ipAddress = Settings.getSetting(activity, "ip_address", null);
+            String portNumber = Settings.getSetting(activity, "port_number", ":8666");
             
-            final String url = ipAddress + getString(R.string.path_singleroad)
+            final String url = ipAddress + portNumber + getString(R.string.path_singleroad)
                     + uuid[0];
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));

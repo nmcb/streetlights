@@ -40,6 +40,7 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     private int currentSelection = -1;
     private UUID futureSelection;
     private String ipAddress;
+    private String portNumber;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -147,7 +148,26 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
     }
 
     private void settingsMenu() {
+        if(dualPane) {
+            //Check what fragment is currently shown, replace if needed.
+            SettingsFragment settingsFragment = null;
+            Fragment currentFragment = getFragmentManager().findFragmentById(R.id.dualPaneFrame);
+            if(currentFragment instanceof SettingsFragment) {
+                settingsFragment = (SettingsFragment) currentFragment;
+            }
+            if(settingsFragment == null) {
+                settingsFragment = new SettingsFragment();
+                
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.dualPaneFrame, settingsFragment);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        }
+        else {
         startActivity(new Intent(activity, SettingsActivity.class));
+        }
     }
 
     public void refreshList(Roads roads) {
@@ -188,8 +208,9 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
             Roads roads = Roads.emptyRoads();
             
             ipAddress = Settings.getSetting(activity, "ip_address", null);
+            portNumber = Settings.getSetting(activity, "port_number", ":8666");
 
-            final String url = ipAddress + getString(R.string.path_listroads);
+            final String url = ipAddress + portNumber + getString(R.string.path_listroads);
             Log.i(TAG, "URI: " +url);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));

@@ -48,7 +48,11 @@ public class SettingsFragment extends Fragment {
         portNumber = portNumberText.getText().toString();
         
 
-        Settings.saveSetting(getActivity(), "ip_address", "http://"+ipAddress+":"+portNumber);
-
+        Settings.saveSetting(getActivity(), "ip_address", "http://"+ipAddress);
+        Settings.saveSetting(activity, "port_number", ":"+portNumber);
+    }
+    
+    public String getIpAddress() {
+        return ipAddress;
     }
 }

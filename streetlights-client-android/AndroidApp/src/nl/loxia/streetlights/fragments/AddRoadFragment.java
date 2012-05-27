@@ -105,9 +105,10 @@ public class AddRoadFragment extends AbstractAsyncFragment {
 
         @Override
         protected String doInBackground(Road... road) {
-            String ipAddress = Settings.getSetting(getActivity(), "ip_address", null);
+            String ipAddress = Settings.getSetting(activity, "ip_address", null);
+            String portNumber = Settings.getSetting(activity, "port_number", ":8666");
             
-            final String url = ipAddress + getString(R.string.path_addroad);
+            final String url = ipAddress + portNumber + getString(R.string.path_addroad);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
             HttpEntity<Road> requestEntity = new HttpEntity<Road>(road[0], requestHeaders);
