@@ -72,12 +72,6 @@ public abstract class ResourceValue implements Named, Comparable<ResourceValue>
     return uuid;
   }
 
-  @XmlAttribute(name = "uri")
-  public URI getURI()
-  {
-    return newURN("uuid", getUUID());
-  }
-
   @Override
   public final boolean equals(Object object)
   {

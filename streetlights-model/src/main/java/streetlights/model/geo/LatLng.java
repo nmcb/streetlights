@@ -22,6 +22,9 @@ package streetlights.model.geo;
 
 import javax.persistence.Basic;
 import javax.persistence.Embeddable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * LatLng is a point in geographical coordinates, latitude and longitude.  Notice that although usual map projections associate
@@ -34,6 +37,8 @@ import javax.persistence.Embeddable;
  * @since 21/05/12
  */
 @Embeddable
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LatLng
 {
     /**
