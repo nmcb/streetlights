@@ -225,7 +225,6 @@ public class ListRoadsFragment extends AbstractAsyncListFragment {
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Error parsing URI:" +ipAddress);
-                Settings.clearSettings(activity);
                 
                 activity.runOnUiThread(new Runnable() {
                     @Override

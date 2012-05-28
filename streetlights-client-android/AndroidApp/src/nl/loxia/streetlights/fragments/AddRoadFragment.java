@@ -33,7 +33,8 @@ public class AddRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private String requestedUUID;
     private TextView nameTextView;
-    private boolean dualPane;    
+    private boolean dualPane;
+    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,8 +70,8 @@ public class AddRoadFragment extends AbstractAsyncFragment {
             Toast.makeText(activity, "Please fill in the \"name\" field before adding", Toast.LENGTH_SHORT).show();
         } else {
             requestedUUID = UUID.randomUUID().toString();
-
-            Road newRoad = new Road(name, requestedUUID);
+            
+            Road newRoad = new Road(name, requestedUUID, "52.038732", "5.177254");
 
             new AsyncRoadDetailRequest().execute(newRoad);
         }

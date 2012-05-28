@@ -20,6 +20,12 @@ public class Road {
 
     @Element
     private String name;
+    
+    @Attribute(required = false)
+    private String longitude;
+    
+    @Attribute(required = false)
+    private String latitude;
 
     @ElementList(required = false)
     private List<Segment> segments;
@@ -27,9 +33,27 @@ public class Road {
     public Road() {
     }
 
-    public Road(String name, String uuid) {
+    public Road(String name, String uuid, String longitude, String latitude) {
         this.name = name;
         this.uuid = uuid;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
     public void setName(String name) {

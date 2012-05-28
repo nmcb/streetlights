@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <!-- Name -->
     <TextView
         android:id="@+id/roadNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <LinearLayout
+	
+	<!-- UUID -->
+	<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -27,6 +29,7 @@
 
     </LinearLayout>
 
+	<!-- URI -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -43,7 +46,36 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+    
+    <!-- LongLat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
+        <TextView
+            android:id="@+id/longlatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/longlat_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/longlatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="getPlaceLocation"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </LinearLayout>
+    
+    <View android:id="@+id/firstDivider"
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:layout_margin="1dip"
+        android:background="#C0C0C0" />
+
+    <!-- Segments -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"

@@ -15,6 +15,8 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +30,8 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
     private Activity activity;
     private TextView uuidView;
     private Road currentRoad;
+    private String longitude;
+    private String latitude;    
 
     public static ViewSingleRoadFragment newInstance(Road road) {
         ViewSingleRoadFragment fragment = new ViewSingleRoadFragment();
@@ -70,10 +74,25 @@ public class ViewSingleRoadFragment extends AbstractAsyncFragment {
         if (currentRoad != null) {
             TextView nameView = (TextView) getView().findViewById(R.id.roadNameLabel);
             TextView uriView = (TextView) getView().findViewById(R.id.roadUriLabel);
-
+            TextView longlatView = (TextView) getView().findViewById(R.id.longlatLabel);
+            
+            longitude = "52.089164";
+            latitude = "5.113439";
+            
             nameView.setText(currentRoad.getName());
             uriView.setText(currentRoad.getUri());
+            
+            //TODO Change the hard entered values for the ones you can get from currentRoad object. for some reason even after setting the long and lat in AddRoad it loses the values, don't know why yet.
+            longlatView.setText(currentRoad.getLongitude() + ", " +currentRoad.getLatitude());
         }
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
     }
 
     private class AsyncRoadDetailRequest extends AsyncTask<String, Void, Road> implements ICancelableAsyncTask {

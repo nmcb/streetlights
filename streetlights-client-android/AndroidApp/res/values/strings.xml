@@ -20,4 +20,5 @@
     <string name="ip_address_label">IP Address:\u0020</string>
     <string name="ip_address">169.1.33.</string>
     <string name="port_number_label">Port Number:\u0020</string>
+    <string name="longlat_title">Place (Long, Lat):\u0020</string>
 </resources>
