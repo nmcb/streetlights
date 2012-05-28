@@ -25,12 +25,12 @@
       <segment uuid="c37bf773-9f2c-418e-8bd3-110000000000">
         <name>R1S1</name>
         <start>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>0.0</lat>
           <lng>0.0</lng>
         </start>
         <end>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>0.0</lat>
           <lng>10.0</lng>
         </end>
@@ -38,12 +38,12 @@
       <segment uuid="c37bf773-9f2c-418e-8bd3-120000000000">
         <name>R1S2</name>
         <start>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>0.0</lat>
           <lng>10.0</lng>
         </start>
         <end>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>10.0</lat>
           <lng>10.0</lng>
         </end>
@@ -56,12 +56,12 @@
       <segment uuid="c37bf773-9f2c-418e-8bd3-210000000000">
         <name>R2S1</name>
         <start>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>10.0</lat>
           <lng>10.0</lng>
         </start>
         <end>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>10.0</lat>
           <lng>20.0</lng>
         </end>
@@ -69,12 +69,12 @@
       <segment uuid="c37bf773-9f2c-418e-8bd3-220000000000">
         <name>R2S2</name>
         <start>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>10.0</lat>
           <lng>20.0</lng>
         </start>
         <end>
-          <accuracy>1.0</accuracy>
+          <acc>1.0</acc>
           <lat>20.0</lat>
           <lng>20.0</lng>
         </end>
