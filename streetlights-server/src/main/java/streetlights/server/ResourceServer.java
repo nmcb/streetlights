@@ -56,11 +56,10 @@ public class ResourceServer implements Runnable
     public static void main(String[] args)
     {
         if (args.length != 0)
-        {
-            // TODO remove or filter development environment specific location
-            String uri = args[0];
-            new Database().load(uri);
-        }
+    {
+        // TODO remove or filter development environment specific location
+        new Database().load(args[0]);
+    }
         instance.start();
     }
 

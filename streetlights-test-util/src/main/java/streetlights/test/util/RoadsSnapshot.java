@@ -63,6 +63,11 @@ public class RoadsSnapshot
         roadsContainer = ROADS;
     }
 
+    private RoadsSnapshot(RoadsContainer container)
+    {
+        this.roadsContainer = container;
+    }
+
     public RoadsContainer getRoadsContainer()
     {
         return roadsContainer;
@@ -75,7 +80,7 @@ public class RoadsSnapshot
         {
             uri = new File(uriRep); // TODO but goto uri
             RoadsContainer container = (RoadsContainer) JAXBContext.newInstance(RoadsContainer.class).createUnmarshaller().unmarshal(uri);
-            return new RoadsSnapshot();
+            return new RoadsSnapshot(container);
         }
         catch (JAXBException e)
         {
