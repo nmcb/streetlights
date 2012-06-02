@@ -20,10 +20,10 @@
 
 package streetlights.test.util;
 
-import streetlights.model.geo.LatLng;
 import streetlights.infra.Road;
 import streetlights.infra.RoadsContainer;
 import streetlights.infra.Segment;
+import streetlights.model.geo.LatLng;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -78,7 +78,7 @@ public class RoadsSnapshot
         File uri = null;
         try // to load from file
         {
-            uri = new File(uriRep); // TODO but goto uri
+            uri = new File(getHomePath(), uriRep); // TODO but goto uri
             RoadsContainer container = (RoadsContainer) JAXBContext.newInstance(RoadsContainer.class).createUnmarshaller().unmarshal(uri);
             return new RoadsSnapshot(container);
         }
@@ -87,6 +87,16 @@ public class RoadsSnapshot
             throw new RuntimeException("Unable to resolve `uri:" + uri + "`", e.getLinkedException());
         }
     }
+
+    // TODO remove me, temporary needed to resolve different working directories when used from within IDEA and Maven.
+    private static File getHomePath()
+    {
+        String classFileHome = RoadsSnapshot.class.getProtectionDomain().getCodeSource().getLocation().getFile();
+
+        // remove ./streetlights-test-util/target/classes and where in the streetlights home directory
+        return new File(classFileHome).getParentFile().getParentFile().getParentFile();
+    }
+
 
     public void write(File file)
     {
