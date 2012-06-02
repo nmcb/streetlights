@@ -27,14 +27,15 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author Marco Borst
@@ -43,19 +44,22 @@ import java.util.List;
 
 // TODO Add tests for the mappings.
 @XmlRootElement(name = "road")
-@XmlAccessorType(XmlAccessType.FIELD)
 @Entity(name = "road")
 public class Road extends ResourceValue
 {
-    @XmlElement
+    /**
+     * Contains the universally unique identifier of this value, unique during its complete persistency lifecycle.
+     */
+    // TODO we would prefer not to store the value's identifier as a String type so we need to find out a way to map a UUID to persistency.
+    @Id
+    private String uuid = UUID.randomUUID().toString();
+
     @Basic
     @Index(name = "name_idx") // Hibernate specific
     private String name;
 
     // TODO shouldn't fetch related resource values eagerly
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    @XmlElementWrapper(name = "segments")
-    @XmlElement(name = "segment")
     private List<Segment> segments = new ArrayList<Segment>();
 
     // TODO JPA Requires a public constructor, may need to provide boolean toImmutable() method  (i.e. implementing validation and setting of this entity resource's URN)
@@ -68,11 +72,26 @@ public class Road extends ResourceValue
         this.name = name;
     }
 
+    @Override
     public String getResourceName()
     {
         return "road";
     }
 
+    @XmlAttribute
+    @Override
+    public String getUUID()
+    {
+        return uuid;
+    }
+
+    @Override
+    public void setUUID(String uuid)
+    {
+        this.uuid = uuid;
+    }
+
+    @XmlElement
     @Override
     public String getName()
     {
@@ -84,6 +103,8 @@ public class Road extends ResourceValue
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "segments")
+    @XmlElement(name = "segment")
     public List<Segment> getSegments()
     {
         return segments;

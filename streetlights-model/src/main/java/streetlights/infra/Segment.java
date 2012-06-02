@@ -29,19 +29,29 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.UUID;
 
 /**
  * @author Marco Borst
  * @since 04/03/12
  */
 @Entity(name = "segment")
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "segment")
 public class Segment extends ResourceValue
 {
+    /**
+     * Contains the universally unique identifier of this value, unique during its complete persistency lifecycle.
+     */
+    // TODO we would prefer not to store the value's identifier as a String type so we need to find out a way to map a UUID to persistency.
+    @Id
+    @XmlAttribute
+    private String uuid = UUID.randomUUID().toString();
+
     @Basic
     private String name;
 
@@ -77,9 +87,22 @@ public class Segment extends ResourceValue
         this.end = end;
     }
 
+    @Override
     public String getResourceName()
     {
         return name;
+    }
+
+    @Override
+    public String getUUID()
+    {
+        return uuid;
+    }
+
+    // TODO remove me, we need this for JSON (Jackson) which doesn't allow field accessors.
+    public void setUUID(String uuid)
+    {
+        this.uuid = uuid;
     }
 
     @Override

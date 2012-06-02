@@ -84,7 +84,7 @@ public class RoadsSnapshot
         }
         catch (JAXBException e)
         {
-            throw new RuntimeException("Unable to resolve `uri:" + uri + "`", e.getLinkedException());
+            throw new RuntimeException("Unable to resolve `uri:" + uri + "`", e);
         }
     }
 
