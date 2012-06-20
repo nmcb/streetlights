@@ -20,7 +20,6 @@
 
 package streetlights.infra;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import streetlights.model.ResourceValue;
 import streetlights.model.geo.LatLng;
 
@@ -31,8 +30,6 @@ import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.UUID;
