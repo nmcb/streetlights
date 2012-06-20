@@ -20,63 +20,224 @@
 
 <roads>
   <road uuid="c37bf773-9f2c-418e-8bd3-100000000000">
-    <name>R1</name>
+    <name>A12</name>
     <segments>
       <segment uuid="c37bf773-9f2c-418e-8bd3-110000000000">
-        <name>R1S1</name>
+        <name>A12-S1</name>
         <start>
           <acc>1.0</acc>
-          <lat>0.0</lat>
-          <lng>0.0</lng>
+          <lat>52.0618</lat>
+          <lng>4.3739</lng>
         </start>
         <end>
           <acc>1.0</acc>
-          <lat>0.0</lat>
-          <lng>10.0</lng>
+          <lat>52.0462</lat>
+          <lng>4.5051</lng>
         </end>
       </segment>
       <segment uuid="c37bf773-9f2c-418e-8bd3-120000000000">
-        <name>R1S2</name>
+        <name>A12-S2</name>
         <start>
           <acc>1.0</acc>
-          <lat>0.0</lat>
-          <lng>10.0</lng>
+          <lat>52.0462</lat>
+          <lng>4.5051</lng>
         </start>
         <end>
           <acc>1.0</acc>
-          <lat>10.0</lat>
-          <lng>10.0</lng>
+          <lat>52.0204</lat>
+          <lng>4.6520</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-130000000000">
+        <name>A12-S3</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0204</lat>
+          <lng>4.6520</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>4.7427</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-140000000000">
+        <name>A12-S4</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>4.7427</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>5.0681</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-150000000000">
+        <name>A12-S5</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>5.0681</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0546</lat>
+          <lng>5.1437</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-160000000000">
+        <name>A12-S6</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0546</lat>
+          <lng>5.1437</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0250</lat>
+          <lng>5.6099</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-170000000000">
+        <name>A12-S7</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0250</lat>
+          <lng>5.6099</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0085</lat>
+          <lng>5.9326</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-180000000000">
+        <name>A12-S8</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0085</lat>
+          <lng>5.9326</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.9053</lat>
+          <lng>6.1606</lng>
         </end>
       </segment>
     </segments>
   </road>
   <road uuid="c37bf773-9f2c-418e-8bd3-200000000000">
-    <name>R2</name>
+    <name>A2</name>
     <segments>
       <segment uuid="c37bf773-9f2c-418e-8bd3-210000000000">
-        <name>R2S1</name>
+        <name>A2-S1</name>
         <start>
           <acc>1.0</acc>
-          <lat>10.0</lat>
-          <lng>10.0</lng>
+          <lat>52.3274</lat>
+          <lng>4.9143</lng>
         </start>
         <end>
           <acc>1.0</acc>
-          <lat>10.0</lat>
-          <lng>20.0</lng>
+          <lat>52.2244</lat>
+          <lng>4.9878</lng>
         </end>
       </segment>
       <segment uuid="c37bf773-9f2c-418e-8bd3-220000000000">
-        <name>R2S2</name>
+        <name>A2-S2</name>
         <start>
           <acc>1.0</acc>
-          <lat>10.0</lat>
-          <lng>20.0</lng>
+          <lat>52.2244</lat>
+          <lng>4.9878</lng>
         </start>
         <end>
           <acc>1.0</acc>
-          <lat>20.0</lat>
-          <lng>20.0</lng>
+          <lat>52.1672</lat>
+          <lng>4.9837</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-230000000000">
+        <name>A2-S3</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.1672</lat>
+          <lng>4.9837</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.1027</lat>
+          <lng>5.0613</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-240000000000">
+        <name>A2-S4</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>5.0613</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>5.0681</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-250000000000">
+        <name>A2-S5</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0656</lat>
+          <lng>5.0681</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>52.0183</lat>
+          <lng>5.0647</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-260000000000">
+        <name>A2-S6</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0183</lat>
+          <lng>5.0647</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>51.9764</lat>
+          <lng>5.1038</lng>
+        </end>
+      </segment>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-270000000000">
+        <name>A2-S7</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>51.9764</lat>
+          <lng>5.1038</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>51.8188</lat>
+          <lng>5.2590</lng>
+        </end>
+      </segment>
+    </segments>
+  </road>
+  <road uuid="c37bf773-9f2c-418e-8bd3-300000000000">
+    <name>A27</name>
+    <segments>
+      <segment uuid="c37bf773-9f2c-418e-8bd3-310000000000">
+        <name>A27-S1</name>
+        <start>
+          <acc>1.0</acc>
+          <lat>52.0546</lat>
+          <lng>5.1437</lng>
+        </start>
+        <end>
+          <acc>1.0</acc>
+          <lat>51.9764</lat>
+          <lng>5.1038</lng>
         </end>
       </segment>
     </segments>
