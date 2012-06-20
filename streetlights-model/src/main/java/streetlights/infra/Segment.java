@@ -20,6 +20,7 @@
 
 package streetlights.infra;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import streetlights.model.ResourceValue;
 import streetlights.model.geo.LatLng;
 
@@ -63,6 +64,7 @@ public class Segment extends ResourceValue
     @AttributeOverrides({
         @AttributeOverride(name = "lat", column = @Column(name = "start_lat")),
         @AttributeOverride(name = "lng", column = @Column(name = "start_lng")),
+        @AttributeOverride(name = "acc", column = @Column(name = "start_acc"))
     })
     // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
     private LatLng start;
@@ -71,6 +73,7 @@ public class Segment extends ResourceValue
     @AttributeOverrides({
         @AttributeOverride(name = "lat", column = @Column(name = "end_lat")),
         @AttributeOverride(name = "lng", column = @Column(name = "end_lng")),
+        @AttributeOverride(name = "acc", column = @Column(name = "end_acc"))
     })
     // TODO should move to http://www.w3.org/TR/geolocation-API/#position which includes a timestamp
     private LatLng end;

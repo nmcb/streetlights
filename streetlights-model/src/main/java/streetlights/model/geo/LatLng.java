@@ -20,7 +20,6 @@
 
 package streetlights.model.geo;
 
-import javax.persistence.Basic;
 import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -44,21 +43,18 @@ public class LatLng
     /**
      * The latitude coordinate, specified in decimal degrees. I.e. south being the value of -90 and north the value of 90.
      */
-    @Basic
     private double lat;
 
     /**
      * The longitude coordinate, specified in decimal degrees. I.e. west being the value of -180 and east the value of 180.
      */
-    @Basic
     private double lng;
 
     /**
-     * The accuracy denotes the accuracy level of the latitude and longitude coordinates.  It is specified in meters must be a
-     * non-negative real number.  The default value is 1 meter.
+     * The accuracy denotes the accuracy level of the latitude and longitude coordinates.  It is specified in meters must be
+     * a non-negative real number.  The default value is 1 meter.
      */
-    // TODO required according to http://www.w3.org/TR/geolocation-API/#coordinates, needs to be mapped though but preferably not on coordinates
-    private transient double acc = 1d;
+    private double acc = 1d;
 
     public LatLng()
     {
