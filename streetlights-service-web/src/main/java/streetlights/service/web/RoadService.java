@@ -22,8 +22,12 @@ package streetlights.service.web;
 
 import streetlights.infra.Road;
 import streetlights.infra.RoadsContainer;
+import streetlights.infra.Segment;
+import streetlights.model.geo.LatLng;
 import streetlights.persistence.RoadRepository;
 import streetlights.service.InfraResource;
+
+import java.util.Arrays;
 
 /**
  * @author Marco Borst
@@ -41,6 +45,11 @@ public class RoadService implements InfraResource
 
   public String persist(Road road)
   {
+    // TODO remove me, temp hack to make sure we have at least one segment.
+    if (road.getSegments().size() == 0) {
+        road.setSegments(Arrays.asList(new Segment(road.getName() + "-S1", new LatLng(51d, 4d), new LatLng(51d, 5d))));
+    }
+
     return repository.persist(road);
   }
 
